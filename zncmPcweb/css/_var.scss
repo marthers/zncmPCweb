@@ -1,0 +1,14 @@
+$font_st: '宋体';
+$font_ms: 'Microsoft Yahei';
+$font_ar: arial;
+
+$head_c: #000;
+$tit_c: #333;
+$item_c: #555;
+$placeholder_c: #999;
+$red_c: #f70808;
+$bd_c: #a9a9a9;
+
+@function px2Percent($size, $scale){
+	@return ($size / $scale * 100) * 1%;
+}

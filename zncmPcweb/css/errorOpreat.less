@@ -1,0 +1,243 @@
+.main .leftNav ul li .statisticalManagement a .sMIcon{
+	background: url(../img/infoProcess_ico.png) no-repeat center center;
+}
+.main .rightCon .tit{
+	position: relative;
+	z-index: 1;
+}
+.main .rightCon .tit > ul .data_list{
+	width: 200px;
+	height: 46px;
+}
+tr{
+	& .td_one{
+		width: 12%;
+		& .bd_box,& .top_box,& .bot_box{
+			position: relative;
+		    display: inline-block;
+		    width: 16px;
+		    height: 16px;
+		    border: 1px solid #ccc;
+		    margin-right: 10px;
+		    cursor: pointer;
+		}
+	}
+	& .td_two{
+		width: 15%;
+	}
+	& .td_three{
+		width: 15%;
+	}
+	& .td_four{
+		width: 15%;
+	}
+	& .td_five{
+		width: 22%;
+	}
+	& .td_six{
+		width: 21%;
+		&>a{
+			font: 18px iconfont;
+			color: #999;
+		}
+		&>a:hover{
+			color:#5da5e4;
+		}
+	}
+}
+.main .rightCon .tableDisplay{
+	border-bottom: 1px solid #ccc;
+	&>table{
+		border: 1px solid #ccc;
+		border-bottom: none;
+	}
+} 
+
+.main .rightCon .tableDisplay table tbody tr.tr_opreate{
+	height: 86px;
+	&:hover{
+		background-color: transparent;
+	}
+	& .td_one,& .page_opreate{
+		position: relative;
+		border: none;
+	}
+	& .td_one{
+		border-left: 1px solid #fff;
+	}
+	& .page_opreate{
+		border-right: 1px solid #fff;
+	}
+	& .td_opreate{
+		border: none;
+	}
+}
+.info_process{
+	background: url(../img/infoProcess.png) no-repeat;
+}
+span.del{
+	margin-right: 10px;
+}
+.w78{
+	display: inline-block;
+    width: 78px;
+    height: 30px;
+    margin-right: 5px;
+    cursor: pointer;
+    font: 12px/28px 'Microsoft Yahei';
+    border: 1px solid #ccc;
+    text-align: center;
+    &:hover{
+    	color: #666;
+    	background-color: #f5f5f5;
+    }
+}
+.page_opreate{
+	text-align: right!important;
+}
+.page_list{
+	display: inline-block;
+	&>li{
+		display: inline-block;
+		width: 30px;
+	    height: 30px;
+	    margin-right: 5px;
+	    cursor: pointer;
+	    font: 12px/28px 'Microsoft Yahei';
+	    border: 1px solid #ccc;
+	    text-align: center;
+	    &.active{
+	    	color: #666;
+	    	background-color: #f5f5f5;
+	    }
+	}
+}
+
+.btn_opreate{
+	display: inline-block;
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    font: 12px/28px 'Microsoft Yahei';
+    border: 1px solid #ccc;
+    text-align: center;
+    &:hover{
+    	color: #666;
+    	background-color: #f5f5f5;
+    }
+}
+.search_bar{
+	position: relative;
+	display: inline-block;
+	width: 37%;
+	height: 34px;
+	font: 12px/32px 'Microsoft Yahei';
+	padding-left: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	& .search{
+		width: 270px;
+		height: 32px;
+	}
+	&>a{
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		font: 26px iconfont;
+		margin-top: -14px;
+		color: #999;
+		cursor: pointer;
+	}
+}
+input[type='checkbox']{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+}
+.pofix{
+	z-index: 9999;
+}
+.main .rightCon .tit .info .time .chaJian{
+	width: 46%;
+	&>i{
+		display: none;
+	}
+}
+.main .rightCon .tit .info .time .timeDetails{
+	width: 48%;
+}
+//弹出层
+.pop .close{
+	top: 30px;
+}
+.pop .ok{
+	bottom: 9px;
+}
+@media screen and ( min-width: 1990px ) {
+	.main .rightCon .tit .info .time{
+		width: 60%;
+	}
+	.main .rightCon .tit .info .time .chaJian{
+		width: 47%;
+	}
+	.main .rightCon .tit .info .time .timeDetails{
+		width: 50%;
+	}
+}
+@media screen and ( max-width: 1800px ) {
+	.main .rightCon .tit .info .time .timeDetails{
+		width: 50%;
+	}
+}
+@media screen and ( max-width: 1440px ) {
+	.main .rightCon .tit .info{
+		width: 80%;
+		width: 75%\9;
+	}
+	.main .rightCon .tit .info .time{
+		width: 60%\9;
+	}
+	.main .rightCon .chaJian i{
+		display: none;
+	}
+}
+@media screen and ( max-width: 1280px ) {
+	.main .rightCon .tit .info{
+		width: 73%;
+	}
+	.search_bar .search{
+		width: 250px;
+	}
+}
+@media screen and ( max-width: 1024px ) {
+	.main .rightCon .tit > ul .data_list{
+		width: 145px\9;
+	}
+	.main .rightCon .tit .info{
+		width: 96%;
+		padding-top: 8px;	
+		& .time{
+			width: 58%;
+		}
+	}
+	.main .rightCon .tit .info .time .chaJian{
+		width: 46%;
+	}
+	.main .rightCon .tit .info .time .timeDetails{
+		width: 52%;
+	}
+	.search_bar{
+	 	width: 40%;
+	 	& .search{
+			width: 248px;
+		} 
+	}
+	.btn_opreate{
+		width: 50px;
+	}
+	span.del{
+		margin-right: 5px;
+	}
+}

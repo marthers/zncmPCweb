@@ -1,0 +1,668 @@
+table {
+  border-collapse: inherit;
+}
+.iconfont {
+  font-size: 24px;
+  padding: 0;
+}
+body {
+  position: relative;
+}
+.main .rightCon {
+  margin-right: 3%;
+}
+.main .rightCon h2 {
+  border-bottom: 1px solid #cccccc;
+}
+.personalInformation {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.personalInformation a {
+  display: block;
+  margin-left: 15px;
+}
+.personalInformation dd {
+  margin-left: 55px;
+  padding-top: 30px;
+  color: #666;
+}
+.personalInformation dd p {
+  margin-bottom: 15px;
+}
+.vip {
+  margin-bottom: 30px;
+}
+.vip a {
+  display: block;
+  width: 72px;
+  height: 30px;
+  color: #b8b8b8;
+  text-align: center;
+}
+.vip .v1 {
+  position: relative;
+}
+.vip .v1 a {
+  font-size: 28px;
+  color: #e9ba13;
+}
+.vip .v1 .explanation {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+}
+.vip .v1 .explanation dl {
+  color: #ed7b00;
+}
+.vip .v1:hover .Vip1 {
+  display: block;
+}
+.vip .v2 {
+  position: relative;
+}
+.vip .v2 a {
+  font-size: 45px;
+  margin-top: -11px;
+}
+.vip .v2 .explanation {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+}
+.vip .v2:hover .Vip2 {
+  display: block;
+}
+.vip .v2Color a {
+  color: #f89e00;
+}
+.vip .v2Color dl {
+  color: #ed7b00;
+}
+.vip .v2Color .Vip2 {
+  border: 1px solid #ed7b00;
+}
+.vip .v2Color .Vip2 .one {
+  color: #ed7b00;
+}
+.vip .v3 {
+  position: relative;
+}
+.vip .v3 a {
+  font-size: 33px;
+  margin-top: -2px;
+}
+.vip .v3 .explanation {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+}
+.vip .v3:hover .Vip3 {
+  display: block;
+}
+.vip .v3Color a {
+  color: #f27200;
+}
+.vip .v3Color dl {
+  color: #ed7b00;
+}
+.vip .v3Color .Vip3 {
+  border: 1px solid #ed7b00;
+}
+.vip .v3Color .Vip3 .one {
+  color: #ed7b00;
+}
+.vip span {
+  margin-top: 20px;
+  display: block;
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(left, #e9e9e9, #dbdbdb);
+  background: -webkit-linear-gradient(left, #e9e9e9, #dbdbdb);
+  background: -moz-linear-gradient(left, #e9e9e9, #dbdbdb);
+  background: -ms-linear-gradient(left, #e9e9e9, #dbdbdb);
+  background: -o-linear-gradient(left, #e9e9e9, #dbdbdb);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#dbdbdb',GradientType='1')";
+  /* IE8 */
+}
+.vip .line23 {
+  background: linear-gradient(left, #dbdbdb, #bcbcbc);
+  background: -webkit-linear-gradient(left, #dbdbdb, #bcbcbc);
+  background: -moz-linear-gradient(left, #dbdbdb, #bcbcbc);
+  background: -ms-linear-gradient(left, #dbdbdb, #bcbcbc);
+  background: -o-linear-gradient(left, #dbdbdb, #bcbcbc);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#bcbcbc',GradientType='1')";
+  /* IE8 */
+}
+.vip .upgradeV2 {
+  background: linear-gradient(left, #f5e99c, #fab95a);
+  background: -webkit-linear-gradient(left, #f5e99c, #fab95a);
+  background: -moz-linear-gradient(left, #f5e99c, #fab95a);
+  background: -ms-linear-gradient(left, #f5e99c, #fab95a);
+  background: -o-linear-gradient(left, #f5e99c, #fab95a);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5e99c', endColorstr='#fab95a',GradientType='1')";
+  /* IE8 */
+}
+.vip .upgradeV3 {
+  background: linear-gradient(left, #faae4a, #ff7900);
+  background: -webkit-linear-gradient(left, #faae4a, #ff7900);
+  background: -moz-linear-gradient(left, #faae4a, #ff7900);
+  background: -ms-linear-gradient(left, #faae4a, #ff7900);
+  background: -o-linear-gradient(left, #faae4a, #ff7900);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#faae4a', endColorstr='#ff7900',GradientType='1')";
+  /* IE8 */
+}
+.explanation {
+  display: none;
+  position: relative;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  background-color: #fff;
+  z-index: 1;
+}
+.explanation .sj {
+  position: absolute;
+  left: 30px;
+  font: 20px SimSun;
+}
+.explanation .one {
+  top: -11px;
+  color: #ccc;
+}
+.explanation .two {
+  top: -10px;
+  color: #fff;
+}
+.Vip1 {
+  border: 1px solid #ed7b00;
+}
+.Vip1 .one {
+  color: #ed7b00;
+}
+.addBox {
+  width: 100%;
+  height: 55px;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  display: none;
+  overflow: hidden;
+}
+.addBox ul li {
+  height: 55px;
+}
+.addBox ul li:last-of-type {
+  margin-left: 42%;
+  line-height: 55px;
+}
+.addBox ul input {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #cccccc;
+  margin-top: 14px;
+  margin-left: 34px;
+  text-indent: 5px;
+}
+.addBox ul span {
+  color: #ed1313;
+}
+.addBox ul .success {
+  color: #666;
+  display: block;
+  margin-left: 10px;
+}
+.addBox ul .successIcon {
+  font-size: 20px;
+  color: #5cb85c;
+}
+.addBox ul a.cancel.btn,
+.addBox ul a.determine.btn {
+  height: 28px;
+  border-radius: 4px;
+  padding: 3px 18px;
+  margin-top: -3px;
+  background-color: #eee;
+  color: #666;
+  border: 1px solid #cccccc;
+  position: relative;
+  behavior: url(pie.htc);
+}
+.addBox ul a.determine.btn {
+  margin-left: 50px;
+  margin-right: 20px;
+}
+.addBox ul a.cancel.btn {
+  margin-right: 30px;
+}
+.addBox ul a.cancel:hover,
+.addBox ul a.cancel.active,
+.addBox ul a.determine.active {
+  background: linear-gradient(top, #93b9e5, #66a3d2);
+  background: -webkit-linear-gradient(top, #93b9e5, #66a3d2);
+  background: -moz-linear-gradient(top, #93b9e5, #66a3d2);
+  background: -ms-linear-gradient(top, #93b9e5, #66a3d2);
+  background: -o-linear-gradient(top, #93b9e5, #66a3d2);
+  border: 1px solid #89d5f2;
+  color: #fff;
+}
+.tableDisplay {
+  position: relative;
+  padding-bottom: 80px;
+}
+.tableDisplay dl {
+  border: 1px solid #cccccc;
+  height: 60px;
+}
+.tableDisplay dl dt span {
+  display: block;
+  line-height: 60px;
+  font-weight: normal;
+  color: #666666;
+}
+.tableDisplay dl dt .lineBg {
+  width: 4px;
+  height: 18px;
+  background-color: #38a3d5;
+  margin: 21px 13px 12px 20px;
+}
+.tableDisplay dl dd a {
+  display: block;
+  margin-right: 40px;
+}
+.tableDisplay dl dd a span {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  color: #3ba3e5;
+}
+.tableDisplay dl dd a .iconfont {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.tableDisplay dl dd.menu {
+  margin-left: 20px;
+}
+.tableDisplay dl dd.menu .btn-group {
+  height: 57px;
+  width: 40px;
+  margin-right: 80px;
+}
+.tableDisplay dl dd.menu .btn-group a.dropdown-toggle {
+  display: block;
+  margin-right: 80px;
+  height: 16px;
+  line-height: 16px;
+  width: 40px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  background-color: #ffffff;
+  margin-top: 5px;
+}
+.tableDisplay dl dd.menu .btn-group a.dropdown-toggle span {
+  display: inline-block;
+  height: 16px;
+  line-height: 16px;
+  color: #999999;
+}
+.tableDisplay dl dd.menu .btn-group a.dropdown-toggle span.caret {
+  height: 0;
+  line-height: 0;
+}
+.tableDisplay dl dd.menu .btn-group .dropdown-menu li a {
+  width: 220px;
+  text-align: center;
+  margin-right: 0;
+  color: #999999;
+}
+.tableDisplay table {
+  width: 100%;
+  border-left: 1px solid #cccccc;
+}
+.tableDisplay table thead tr {
+  height: 50px;
+}
+.tableDisplay table thead tr td {
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  text-align: center;
+}
+.tableDisplay table thead tr .userAccount {
+  width: 25%;
+}
+.tableDisplay table thead tr .userEmail {
+  width: 25%;
+}
+.tableDisplay table thead tr .user {
+  width: 15%;
+}
+.tableDisplay table thead tr .modifyPermissions {
+  width: 35%;
+}
+.tableDisplay table tbody tr {
+  height: 50px;
+}
+.tableDisplay table tbody tr td {
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  text-align: center;
+}
+.tableDisplay table tbody tr td a {
+  padding: 0 3%;
+  display: inline-block;
+  box-sizing: border-box;
+  color: #999;
+}
+.tableDisplay table tbody tr td a:hover {
+  color: #2a7ce0;
+}
+.tableDisplay table tbody tr td a:last-of-type:hover {
+  color: #999;
+}
+.tableDisplay table tbody tr .userAccount {
+  width: 25%;
+}
+.tableDisplay table tbody tr .userEmail {
+  width: 25%;
+}
+.tableDisplay table tbody tr .user {
+  width: 15%;
+}
+.tableDisplay table tbody tr .modifyPermissions {
+  width: 35%;
+}
+.tableDisplay table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+.tableDisplay .page {
+  width: 400px;
+  height: 50px;
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+}
+.accountManagementPop {
+  background-image: url(../img/accountManagement.png);
+  height: 260px;
+  margin-top: -130px;
+}
+.mask_txt {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  transform: translate3d(-50%, -50%, 0);
+  width: 420px;
+  background-color: #fff;
+  display: none;
+}
+.mask_txt h3 {
+  height: 40px;
+  font: 18px/40px 'Microsoft Yahei';
+  padding: 0 14px 0 24px;
+  color: #fff;
+  background-color: #3593c3;
+}
+.mask_txt h3 i {
+  font: 22px/40px iconfont;
+  cursor: pointer;
+}
+.mask_txt .mask_cont {
+  height: 110px;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  box-sizing: border-box;
+}
+.mask_txt .mask_cont p {
+  height: 100%;
+  text-indent: 2em;
+  box-sizing: border-box;
+}
+.mask_txt footer {
+  height: 44px;
+}
+.mask_txt footer i {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  font: 16px/30px 'Microsoft Yahei';
+  margin: 7px 35px 0 0;
+  color: #fff;
+  background-color: #3593c3;
+  cursor: pointer;
+}
+.deletePop {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -120px 0 0 -220px;
+  width: 440px;
+  height: 240px;
+  background: url(../img/deletePop.png) no-repeat center center;
+  z-index: 100;
+}
+.deletePop .yes,
+.deletePop .no {
+  width: 80px;
+  height: 34px;
+  display: block;
+  position: absolute;
+}
+.deletePop .yes {
+  left: 89px;
+  bottom: 56px;
+}
+.deletePop .no {
+  left: 259px;
+  bottom: 56px;
+}
+.modifyPop,
+.viewPop {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -200px 0 0 -175px;
+  width: 350px;
+  height: 406px;
+  box-shadow: 0px 0px 2px 0 rgba(153, 153, 153, 0.6);
+  background-color: #fff;
+  z-index: 100;
+  border: 1px solid #bbbbbb;
+}
+.modifyPop h4,
+.viewPop h4 {
+  height: 50px;
+  line-height: 50px;
+  background-color: #3593c3;
+  color: #fff;
+  padding-left: 38px;
+  border: 1px solid #3593c3;
+}
+.modifyPop span,
+.viewPop span {
+  color: #3593c3;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+.modifyPop .tit,
+.viewPop .tit {
+  width: 180px;
+}
+.modifyPop a.icon1:link,
+.viewPop a.icon1:link,
+.modifyPop a.icon1:visited,
+.viewPop a.icon1:visited,
+.modifyPop a.icon1:hover,
+.viewPop a.icon1:hover,
+.modifyPop a.icon1:active,
+.viewPop a.icon1:active {
+  color: #3593c3;
+}
+.modifyPop a.icon1:after,
+.viewPop a.icon1:after {
+  content: "\e60c";
+  font: 24px iconfont;
+}
+.modifyPop a.icon2:after,
+.viewPop a.icon2:after {
+  content: "\e60d";
+  font: 24px iconfont;
+}
+.modifyPop .ok,
+.viewPop .ok,
+.modifyPop .yes,
+.viewPop .yes {
+  position: absolute;
+  width: 80px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #fff;
+  background-color: #48A3D0;
+  right: 35px;
+  bottom: 20px;
+}
+.modifyPop .closeBtn,
+.viewPop .closeBtn {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  color: #fff;
+}
+.modifyPop .wu span,
+.viewPop .wu span {
+  color: #999;
+}
+.modifyPop .wu a,
+.viewPop .wu a {
+  color: #999;
+}
+.modifyPop ul,
+.viewPop ul {
+  padding: 20px 35px;
+}
+@media screen and (max-width: 1380px) {
+  .personalInformation a img {
+    width: 100px;
+    height: 100px;
+  }
+  .personalInformation dd {
+    padding-top: 20px;
+  }
+  .personalInformation dd p {
+    margin-bottom: 10px;
+  }
+  .personalInformation {
+    padding-bottom: 10px;
+  }
+  .vip {
+    margin-bottom: 19px;
+  }
+  .vip .v1 a {
+    font-size: 24px;
+    padding-top: 4px;
+  }
+  .vip .v2 a {
+    font-size: 40px;
+    margin-top: -7px;
+  }
+  .vip .v3 a {
+    font-size: 29px;
+    margin-top: 0px;
+  }
+  .vip span {
+    width: 150px;
+    height: 3px;
+  }
+  .deletePop {
+    background-size: 80%;
+  }
+  .deletePop .yes {
+    left: 108px;
+    bottom: 65px;
+  }
+  .deletePop .no {
+    left: 246px;
+    bottom: 65px;
+  }
+  .modifyPop,
+  .viewPop {
+    margin: -175px 0 0 -150px;
+    width: 300px;
+    height: 330px;
+  }
+  .modifyPop h4,
+  .viewPop h4 {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+    font-size: 16px;
+  }
+  .modifyPop span,
+  .viewPop span {
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+  }
+  .modifyPop .tit,
+  .viewPop .tit {
+    width: 160px;
+  }
+  .modifyPop a.icon1:after,
+  .viewPop a.icon1:after {
+    content: "\e60c";
+    font: 20px iconfont;
+  }
+  .modifyPop a.icon2:after,
+  .viewPop a.icon2:after {
+    content: "\e60d";
+    font: 20px iconfont;
+  }
+  .modifyPop .ok,
+  .viewPop .ok,
+  .modifyPop .yes,
+  .viewPop .yes {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    right: 25px;
+    bottom: 20px;
+  }
+  .modifyPop .closeBtn,
+  .viewPop .closeBtn {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    color: #fff;
+  }
+  .modifyPop ul,
+  .viewPop ul {
+    padding: 10px 25px;
+  }
+  .personalInformation dd {
+    margin-left: 35px;
+  }
+  .main .rightCon {
+    margin-right: 2%;
+  }
+}
+@media screen and (max-width: 1054px) {
+  .addBox ul a.cancel.btn,
+  .addBox ul a.determine.btn {
+    padding: 3px 18px;
+  }
+  .addBox ul a.determine.btn {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .addBox ul a.cancel.btn {
+    margin-right: 10px;
+  }
+}

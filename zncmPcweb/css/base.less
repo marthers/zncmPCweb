@@ -1,0 +1,701 @@
+@the-border: 1px;
+@base-color: #111;
+@base-width: 10px;   
+@font-weight: bold;
+
+.bg_gradient( @point: top, @startColor: #3a8fd8, @endColor: #449ce9 ){
+    background: linear-gradient( @point,@startColor, @endColor );
+    background: -webkit-linear-gradient( @point,@startColor, @endColor );
+    background: -moz-linear-gradient( @point,@startColor, @endColor );
+    background: -ms-linear-gradient( @point,@startColor, @endColor );
+    background: -o-linear-gradient( @point,@startColor, @endColor );
+}
+
+/*css reset*/
+body, dl, dt, dd, ul, ol, h1, h2, h3, h4, h5, h6, p, form, input, textarea, blockquote, th, td{margin: 0; padding: 0;}
+body{font: 14px/1.5 arial,'Microsoft YaHei'; color: #999;}
+img{border: none; display: block;}
+i{font-style: normal;}
+ul, ol{list-style: none;}
+a,input{outline: none;}
+input, textarea{outline: none; border: none; display: block; color: #666;}
+textarea{resize: none;}
+a,a:link,a:visited,a:hover,a:active{text-decoration: none;}
+a:focus{outline: none!important;-moz-outline: none;}
+select{
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 10px;
+} 
+select::-ms-expand { display: none; }
+input::-ms-clear, input::-ms-reveal{display: none;}/* 清除ie中input的默认行为 */
+// 图标字体
+.my-placeholder { color: #aaa; }
+
+/* chrome scroll bar style*/
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+  -webkit-border-radius: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #999;
+  -webkit-border-radius: 4px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: #9f9f9f;
+  -webkit-border-radius: 4px;
+}
+
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1462435435_3423512.eot'); /* IE9*/
+  src: url('http://at.alicdn.com/t/font_1462435435_3423512.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://at.alicdn.com/t/font_1462435435_3423512.woff') format('woff'), /* chrome、firefox */
+  url('http://at.alicdn.com/t/font_1462435435_3423512.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('http://at.alicdn.com/t/font_1462435435_3423512.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+                                      
+.iconfont{
+    font-family:"iconfont";
+    font-size:35px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+//公共样式
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix{
+    *zoom: 1;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.pofix{
+    position: fixed;
+}
+.fs12{
+    font-size: 12px;
+}
+.fs13{
+    font-size: 13px;
+}
+.fs14{
+    font-size: 14px;
+}
+.fs15{
+    font-size: 15px;
+}
+.fs16{
+    font-size: 18px;
+}
+//自定义变量
+
+//  头部导航 start
+header{
+    width: 100%; 
+    top: 0; 
+    z-index: 100; 
+    background-color: @base-color*15;
+    .top{
+        height: 80px;
+         margin: 0 0 0 5.2%;
+         h1{
+            height: 80px;
+            line-height: 80px;
+            margin: 0; 
+            font-size: 22px; 
+            font-weight: @font-weight; 
+            a{
+                color: #2c7ce0;
+            }
+         }
+        .btn-group{
+            height: 80px;
+            line-height: 80px;
+            margin: 0 8% 0 0;
+            a{
+                display: block;
+                span{
+                    color: @base-color*6;
+                }
+                .touXiang{
+                    display: block; 
+                    width: 50px; 
+                    height: 80px;
+                    background: url(../img/touXiang.png) no-repeat center center; 
+                    margin-left: @base-width;
+                }
+            }
+        }
+    }
+    .navbar{
+        @color: #fff; 
+        border-radius: 0; 
+        min-height: 38px; 
+        margin-bottom: 0;
+        padding: 0 0 0 @base-width*6.2; 
+        background-color: @base-color*5;
+        .nav{
+            li{
+                color: @color;
+                a{
+                    display: block; 
+                    padding: 0 @base-width*3;
+                    span{
+                        color: @color;
+                    }
+                    .icon{
+                        display: block; 
+                        width: @base-width*2.5;
+                        margin-right: @base-width;
+                    }
+                    .icon.dataStatistics{
+                        background: url(../img/icon_statistics.png) no-repeat center center;
+                    }
+                    .icon.dataSmoothing{
+                        background: url(../img/icon_processing.png) no-repeat center center;
+                    }
+                    .icon.DataMonitoring{
+                        background: url(../img/check1.png) no-repeat center center;
+                    }
+                    .icon.dataCheck{
+                        background: url(../img/icon_check.png) no-repeat center center;
+                    }
+                    .icon.dataRelease{
+                        background: url(../img/icon_release.png) no-repeat center center;
+                    }
+                }
+            }
+            .first{
+                position: relative;
+                left: 0;
+                width: 220px;
+                text-align: center;
+            }
+            .three{
+                a{
+                    padding: 0 @base-width*4;
+                }
+            }
+        }
+    
+    }
+    :root .active>a{
+        filter:none;
+    }
+     .navbar-default .navbar-nav>li>a:hover{ 
+        background:#6f818c;
+    }
+    .navbar-default .navbar-nav>.active>a, 
+    .navbar-default .navbar-nav>.active>a:focus, 
+    .navbar-default .navbar-nav>.active>a:hover{
+        .bg_gradient();
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a8fd8', endColorstr='#449ce9',GradientType='0')"; /* IE8 */
+    }
+    .navbar-nav>li>a{
+        padding: 0; 
+        display: block;
+    }
+}
+.nav > LI{
+    float: left;
+}
+/* 左侧导航 start */
+
+.triangleDown{
+    margin: @base-width*2 0 0 @base-width*0.8; 
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent; 
+    border-right: 5px solid transparent; 
+    border-top: 10px solid #999; cursor: pointer;
+}
+.main{
+    .leftNav{
+        top: 131px;
+        width: 220px;
+        margin-left: 62px; 
+        z-index: 12; 
+        border: @the-border solid @base-color*12; 
+        border-top: none;
+        ul{
+            li{
+                .statisticalManagement,
+                .dataTransmission,
+                .authorityManagement,
+                .messageNotification,
+                .regionalBillboard,
+                .salesStockAnalysis{
+                    border-top: @the-border solid @base-color*12; 
+                    border-bottom: @the-border solid @base-color*12; 
+                    padding: 0 0 0 @base-width*3;
+                    a{
+                        display: inline-block; 
+                        height: @base-width*5;
+                        .icon{
+                            display: block; 
+                            width: @base-width*2.4; 
+                            height: @base-width*5; 
+                            margin-right: @base-width;
+                        }
+                        .tit{
+                            display: block;
+                            height: @base-width*5; 
+                            line-height: @base-width*5;  
+                            color: @base-color*6;
+                        }
+                    }
+                }
+                .statisticalManagement{
+                    a{
+                        .sMIcon{
+                            background: url(../img/statisticalManagement.png) no-repeat center center;
+                        }
+                    }
+                }
+                .dataTransmission{
+                    a{
+                        .dTIcon{
+                            background: url(../img/dataTransmission.png) no-repeat center center;
+                        }
+                    }
+                }
+                .authorityManagement{
+                    a{
+                        .aMIcon{
+                            background: url(../img/authorityManagement.png) no-repeat center center;
+                        }
+                    }
+                }
+                .messageNotification{
+                    a{
+                        .mNIcon{
+                            background: url(../img/messageNotification.png) no-repeat center center;
+                        }
+                    }
+                }
+                .regionalBillboard{
+                    a{
+                        .lCIcon{
+                            background: url(../img/local.png) no-repeat center center;
+                        }
+                    }
+                }
+                .salesStockAnalysis{
+                    a{
+                        .SSIcon{
+                            background: url(../img/analysis.png) no-repeat center center;
+                        }
+                    }
+                }
+                .sMDetails,
+                .dTDetails,
+                .aMDetails,
+                .mNDetails{
+                    a{
+                        display: block; 
+                        height: @base-width*3.6; 
+                        line-height: @base-width*3.6; 
+                        text-indent: @base-width*6.4; 
+                        color: @base-color*7;
+                    }
+                    a:hover{ 
+                        background: url(../img/navbghover.png) repeat-y;
+                    }
+                    a.active{
+                        background: url(../img/navbg.png) repeat-y; 
+                    }
+                    a.active:hover{
+                        background: url(../img/navbg.png) repeat-y; 
+                    }
+                }
+    
+            }
+        }
+    }
+    .rightCon{
+        margin-left: @base-width*26; 
+        margin-bottom: @base-width*3; 
+        padding-left: @base-width*4.7;  
+        h2{
+            height: @base-width*5; 
+            line-height: @base-width*5; 
+            color: @base-color*6; 
+            .promit{
+                display: block; 
+                position: relative; 
+                width: @base-width*1.6; 
+                height: @base-width*5; 
+                background: url(../img/help.png) no-repeat right center; 
+                margin-left: @base-width; 
+                cursor: pointer;
+                i{
+                    display: none; 
+                    position: absolute; 
+                    right: -136px; 
+                    top: @base-width; 
+                    width: @base-width*13; 
+                    height: @base-width*3; 
+                    line-height: @base-width*3;
+                    background: url(../img/pHover.png) no-repeat right center; 
+                    color: #ed7b00; 
+                    font-style: normal; 
+                    text-align: center;
+                }
+            }
+            .promit:hover i{
+                display: block;
+            }
+        }
+        & .chaJian{
+            margin-right: @base-width*5; 
+            width: 40%;
+            position: relative;
+            height: 45px;
+            i{ 
+                position: absolute;
+                bottom: 21px;
+                right: 24px;
+                top: auto;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+.container{
+    h2{
+        height: @base-width*5; 
+        line-height: @base-width*5; 
+        color: @base-color*6; 
+        .promit{
+            display: block; 
+            position: relative; 
+            width: @base-width*1.6; 
+            height: @base-width*5; 
+            background: url(../img/help.png) no-repeat right center; 
+            margin-left: @base-width; 
+            cursor: pointer;
+            i{
+                display: none; 
+                position: absolute; 
+                right: -136px; 
+                top: @base-width; 
+                width: @base-width*13; 
+                height: @base-width*3; 
+                line-height: @base-width*3;
+                background: url(../img/pHover.png) no-repeat right center; 
+                color: #ed7b00; 
+                font-style: normal; 
+                text-align: center;
+            }
+        }
+        .promit:hover i{
+            display: block;
+        }
+    }
+}
+.pop{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    transform: translate3d(-50%, -50%, 0);
+    width: 420px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    display: none;
+    .mask_tit{
+        height: 40px;
+        font: 18px/40px 'Microsoft Yahei';
+        padding: 0 14px 0 24px;
+        color: #fff!important;
+        background-color: #3593c3;
+        .close{
+            font: 22px/40px iconfont;
+            cursor: pointer;
+        }
+    }
+    .mask_cont{
+        padding: 15px 20px 25px 20px;
+        border-bottom: 1px solid #ccc;
+        color: #333;
+        box-sizing: border-box;
+        hgroup{
+            margin-bottom: 22px;
+        }
+        hgroup:last-child{
+            margin-bottom: 0;
+        }
+        h3{
+            font: 16px/30px 'Microsoft Yahei';
+        }
+        h4{
+            font: 14px/24px 'Microsoft Yahei'
+        }
+    }
+    footer{
+        height: 44px;
+        .ok{
+            width: 70px;
+            height: 30px;
+            text-align: center;
+            font: 16px/30px 'Microsoft Yahei';
+            margin: 7px 35px 0 0;
+            color: #fff;
+            background-color: #3593c3;
+            cursor: pointer;
+        }
+    }
+}
+.shade{
+    background-color: rgba(102,102,102,.2); 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    z-index: 99; 
+    display: none;
+}
+.dropdown-menu {
+    z-index: 98!important;
+    overflow: hidden;
+}
+.mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.mask img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    transform: translate3d(-50%, -50%, 0);
+    width: 48px;
+    height: 48px;
+}
+.main{
+    margin-top: 132px;
+}
+
+.htmin{
+    height: 50px;  
+    line-height: 50px;
+}
+// 公共部分适配不同分辨率
+
+@media screen and (max-width: 1600px){
+    header .top .btn-group a .touXiang {
+        background-size: 90%;
+    }
+    .main .leftNav ul li .statisticalManagement a,
+    .main .leftNav ul li .dataTransmission a, 
+    .main .leftNav ul li .authorityManagement a, 
+    .main .leftNav ul li .messageNotification a,
+    .main .leftNav ul li .regionalBillboard a,
+    .main .leftNav ul li .salesStockAnalysis a{
+        height: 40px;
+    }
+    .main .leftNav ul li .statisticalManagement a .tit, 
+    .main .leftNav ul li .dataTransmission a .tit, 
+    .main .leftNav ul li .authorityManagement a .tit, 
+    .main .leftNav ul li .messageNotification a .tit,
+    .main .leftNav ul li .regionalBillboard a .tit,
+    .main .leftNav ul li .salesStockAnalysis a .tit{
+        height: 40px; 
+        line-height: 40px;
+    }
+    .main .leftNav ul li .sMDetails a, 
+    .main .leftNav ul li .dTDetails a, 
+    .main .leftNav ul li .aMDetails a, 
+    .main .leftNav ul li .mNDetails a{
+        height: 34px;
+        line-height: 34px;
+    }
+    .main .leftNav ul li .statisticalManagement a .sMIcon{
+        height: 36px; 
+        background-size: 70%;
+    }
+    .main .leftNav ul li .dataTransmission a .dTIcon{
+        height: 36px; 
+        background-size: 70%;
+    }
+    .main .leftNav ul li .authorityManagement a .aMIcon{
+        height: 36px; 
+        background-size: 70%;
+    }
+    .main .leftNav ul li .messageNotification a .mNIcon{
+        height: 36px; 
+        background-size: 65%;
+    }
+    .main .leftNav ul li .regionalBillboard a .lCIcon{
+        height: 36px; 
+        background-size: 65%;
+    }
+    .main .leftNav ul li .salesStockAnalysis a .SSIcon{
+        height: 36px; 
+        background-size: 70%;
+    }
+    .triangleDown {
+        margin: 16px 0 0 8px;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 8px solid #999;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    header .top .btn-group {
+        margin: 0 4% 0 0;
+    }
+    header .top .btn-group a .touXiang{
+        background-size: 80%;
+    }
+}
+
+@media screen and (max-width: 1380px){
+    header .top{
+        height: 50px;
+        h1{
+            font-size: 20px;
+            height: 50px;  
+            line-height: 50px;
+        }
+        .btn-group{
+            height: 50px;  
+            line-height: 50px;
+            
+        }
+    }
+    .htmin{
+        height: 44px;  
+        line-height: 44px;
+    }
+    .main{
+        margin-top: 102px;
+        .leftNav{
+            top: 95px; 
+        }
+    }
+    header .top .btn-group a .touXiang{
+        height: 50px;
+        background-size: 70%;
+    }
+    header .navbar{
+        padding: 0 0 0 62px;
+    }
+    .main .leftNav{
+        width: 173px; 
+        margin-left: 46px;
+    }
+    .main .leftNav ul li .statisticalManagement a,
+    .main .leftNav ul li .dataTransmission a, 
+    .main .leftNav ul li .authorityManagement a, 
+    .main .leftNav ul li .messageNotification a,
+    .main .leftNav ul li .regionalBillboard a,
+    .main .leftNav ul li .salesStockAnalysis a{
+        height: 36px;
+    }
+    .main .leftNav ul li .statisticalManagement a .tit, 
+    .main .leftNav ul li .dataTransmission a .tit, 
+    .main .leftNav ul li .authorityManagement a .tit, 
+    .main .leftNav ul li .messageNotification a .tit
+    .main .leftNav ul li .regionalBillboard a .tit
+    .main .leftNav ul li .salesStockAnalysis a .tit{
+        height: 36px; 
+        line-height: 36px;
+    }
+    .main .leftNav ul li .sMDetails a, 
+    .main .leftNav ul li .dTDetails a, 
+    .main .leftNav ul li .aMDetails a, 
+    .main .leftNav ul li .mNDetails a{
+        height: 28px;
+        line-height: 28px;
+    }
+    .main .leftNav ul li .statisticalManagement, 
+    .main .leftNav ul li .dataTransmission, 
+    .main .leftNav ul li .authorityManagement, 
+    .main .leftNav ul li .messageNotification,
+    .main .leftNav ul li .regionalBillboard,
+    .main .leftNav ul li .salesStockAnalysis{
+        padding: 0 0 0 10px;   
+    } 
+    .main .leftNav ul li .sMDetails a, 
+    .main .leftNav ul li .dTDetails a, 
+    .main .leftNav ul li .aMDetails a, 
+    .main .leftNav ul li .mNDetails a{
+        text-indent: 44px;
+    }  
+    .triangleDown {
+        margin: 13px 0 0 8px;
+    }
+    .main .rightCon { 
+        margin-left: 220px;
+        padding-left: 25px;
+        margin-bottom: 20px;
+    }
+    .navbar-nav{
+        li,
+        span{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) { 
+    body{
+        font: 12px/1.5 arial,'Microsoft YaHei';
+    }
+    .fs16{
+        font-size: 14px;
+    }
+    .fs14{
+        font-size: 12px;
+    }
+    header .top h1 {
+        font-size: 18px;
+    }
+    header .top .btn-group {
+        margin: 0 4% 0 0;
+    }
+    header .top .btn-group a .touXiang{
+        background-size: 70%;
+    }
+    header .navbar{
+        padding: 0 0 0 50px;
+    }
+    .main .leftNav{
+        width: 163px; 
+        margin-left: 20px;
+    }
+    .main .rightCon{
+        margin-left: 183px; padding-left: 20px;
+    }
+}

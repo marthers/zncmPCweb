@@ -1,0 +1,350 @@
+/*css reset*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+fieldset,
+input,
+textarea,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14px/1.5 arial, Microsoft YaHei;
+  color: #666;
+}
+img {
+  border: none;
+  display: block;
+}
+ul,
+ol {
+  list-style: none;
+}
+input,
+textarea {
+  text-indent: 5px;
+  outline: none;
+  border: none;
+  display: block;
+  color: #666;
+}
+textarea {
+  resize: none;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right!important;
+}
+.ff_total {
+  display: inline-block;
+  margin-top: 5px;
+  font: 16px iconfont;
+}
+.navbar {
+  background-color: #eee;
+  margin-bottom: 0;
+}
+.navbar .line {
+  display: inline-block;
+  line-height: 80px;
+  height: 32px;
+  width: 1px;
+  background: #666;
+  margin: 25px 15px 0 12px;
+}
+h1 {
+  font-size: 16px;
+  height: 80px;
+  line-height: 80px;
+}
+.nav > LI {
+  float: left;
+}
+.navbar-nav > li > a {
+  padding: 0;
+  height: 80px;
+  line-height: 80px;
+  color: #666;
+}
+.main {
+  margin-bottom: 50px;
+}
+p {
+  height: 80px;
+  line-height: 80px;
+}
+.modification {
+  border: 1px solid #cccccc;
+}
+.modification .safetyTips {
+  color: #38a3d5;
+  font-size: 18px;
+  margin: 50px 0 30px;
+}
+.modification .safetyTips:before {
+  content: '\e605';
+  font: 32px iconfont;
+  color: #38a3d5;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.modification .emailVerification {
+  margin-bottom: 30px;
+}
+.modification .emailName {
+  color: #38a3d5;
+  margin-right: 30px;
+}
+.modification .emailName:before {
+  content: '\e606';
+  font: 32px iconfont;
+  color: #38a3d5;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.modification .old {
+  width: 100px;
+  height: 28px;
+  border: 1px solid #cccccc;
+  margin-top: 3px;
+}
+.modification .prompt {
+  display: none;
+  font-size: 12px;
+  color: #38a3d5;
+  margin: 7px 0 0 20px;
+}
+.modification .typeVer,
+.modification .typeVerNew {
+  margin-bottom: 30px;
+}
+.modification .typeVer dt,
+.modification .typeVerNew dt {
+  font-weight: normal;
+  line-height: 30px;
+}
+.modification .typeVer .ff_icon:after,
+.modification .typeVerNew .ff_icon:after {
+  content: '\e602';
+  color: #38d589;
+  display: inline-block;
+  margin-top: 5px;
+  font: 16px iconfont;
+}
+.modification .typeVer .ff_icon2:after,
+.modification .typeVerNew .ff_icon2:after {
+  content: '\e604';
+  color: #e92020;
+  display: inline-block;
+  margin-top: 5px;
+  font: 16px iconfont;
+}
+.modification .typeVer input,
+.modification .typeVerNew input {
+  width: 90px;
+  height: 30px;
+  border: 1px solid #cccccc;
+  margin-right: 30px;
+}
+.modification .typeVer .wrongP,
+.modification .typeVerNew .wrongP {
+  color: #ed1313;
+}
+.modification .newEmail {
+  margin-bottom: 30px;
+}
+.modification .newEmail dt {
+  font-weight: normal;
+  line-height: 30px;
+}
+.modification .newEmail input {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #cccccc;
+  margin-right: 30px;
+}
+.modification .newEmail .new {
+  width: 100px;
+  height: 28px;
+  margin-right: 10px;
+}
+.modification .ok {
+  width: 80px;
+  height: 28px;
+  border: 1px solid #cccccc;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.modification .ok.active {
+  background: linear-gradient(top, #75ccf5, #469ed9);
+  background: -webkit-linear-gradient(top, #75ccf5, #469ed9);
+  background: -moz-linear-gradient(top, #75ccf5, #469ed9);
+  background: -ms-linear-gradient(top, #75ccf5, #469ed9);
+  background: -o-linear-gradient(top, #75ccf5, #469ed9);
+  color: #fff;
+  border: 1px solid #ffffff;
+}
+.modCon {
+  padding-left: 150px;
+}
+.success {
+  position: relative;
+  display: none;
+}
+.success p {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  margin-left: -80px;
+  font-size: 20px;
+}
+.success p:before {
+  display: block;
+  content: "\e602";
+  color: #38d589;
+  font: 60px iconfont;
+  text-align: center;
+}
+.footer .navbar {
+  background-color: #f2f2f2;
+  height: 60px;
+  margin-bottom: 0;
+}
+.footer .container {
+  position: relative;
+}
+.navbar .col-md-8 {
+  position: absolute;
+  width: 430px;
+  height: 42px;
+  left: 50%;
+  top: 0;
+  margin: 10px 0 0 -215px;
+  font-size: 12px;
+  float: none;
+  color: #999;
+  padding: 0;
+}
+.col-md-8 a,
+.col-md-8 span {
+  color: #999;
+  padding-right: 15px;
+  font-size: 12px;
+}
+.Copyright {
+  margin: 6px auto 0;
+}
+@media (max-width: 1600px) {
+  .navbar-nav > li > a {
+    line-height: 60px\9;
+  }
+}
+@media (max-width: 1380px) {
+  body {
+    font-size: 12px;
+  }
+  .navbar .line {
+    line-height: 60px;
+    height: 24px;
+    margin: 18px 15px 0 12px;
+  }
+  h1 {
+    font-size: 14px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .navbar-nav > li > a {
+    height: 60px;
+    line-height: 60px;
+    line-height: 34px\9;
+  }
+  .main {
+    margin-top: 0px;
+  }
+  .modification .safetyTips {
+    font-size: 16px;
+    margin: 40px 0 25px;
+  }
+  .modification .safetyTips:before {
+    font: 28px iconfont;
+  }
+  .modification .emailVerification {
+    margin-bottom: 25px;
+  }
+  .modification .emailName:before {
+    font: 28px iconfont;
+  }
+  .modification .old {
+    width: 80px;
+    height: 25px;
+  }
+  .modification .prompt {
+    margin: 7px 0 0 15px;
+  }
+  .modification .typeVer,
+  .modification .typeVerNew {
+    margin-bottom: 20px;
+  }
+  .modification .typeVer dt,
+  .modification .typeVerNew dt {
+    line-height: 25px;
+  }
+  .modification .typeVer input,
+  .modification .typeVerNew input {
+    width: 90px;
+    height: 26px;
+  }
+  .modification .newEmail {
+    margin-bottom: 20px;
+  }
+  .modification .newEmail dt {
+    line-height: 26px;
+  }
+  .modification .newEmail input {
+    height: 26px;
+  }
+  .modification .newEmail .new {
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+  }
+  .modification .ok {
+    width: 70px;
+    height: 26px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .footer .navbar {
+    height: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 930px;
+  }
+}

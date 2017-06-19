@@ -1,0 +1,148 @@
+/*css reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, form, fieldset, input, textarea, blockquote, th, td{margin: 0; padding: 0;}
+body{font: 14px/1.5 arial,'Microsoft YaHei'; color: #666;}
+img{border: none; display: block;}
+ul, ol{list-style: none;}
+input, textarea{outline: none; border: none; display: block; color: #666;}
+textarea{resize: none;}
+a,a:link,a:visited,a:hover,a:active{text-decoration: none;}
+a:focus{outline: none!important;-moz-outline: none;}
+select{
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} 
+select::-ms-expand { display: none; }
+input::-ms-clear, input::-ms-reveal{display: none;}/* 清除ie中input的默认行为 */
+
+/* 清除浮动 */
+.clearfix:after{content: ""; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix{display: inline-table;}
+*html .clearfix{height: 1%;}
+.clearfix{display: block;}
+* + html .clearfix{min-height: 1%;}
+/*公共样式*/
+.fl{float: left;}
+.fr{float: right;}
+.pofix{position: fixed;}
+// less 公共样式
+.border(@bw: 1px, @style: solid, @color: #ccc ){
+	border: @bw @style @color;
+}
+.border-bottom(@bw: 1px, @style: solid, @color: #ccc ){
+	border-bottom: @bw @style @color;
+}
+.border-left(@bw: 1px, @style: solid, @color: #ccc ){
+	border-left: @bw @style @color;
+}
+.border-right(@bw: 1px, @style: solid, @color: #ccc ){
+	border-right: @bw @style @color;
+}
+.border-top(@bw: 1px, @style: solid, @color: #ccc ){
+	border-top: @bw @style @color;
+}
+// 层叠 bootstrap.min.css 样式
+.container{
+	width: 1000px;
+}
+/*导航 start*/
+.navbar{
+	height: 100px; 
+	border: none; 
+	border-radius: 0; 
+	margin: 0;
+}
+@color: #2699c4;
+h1{
+	a{
+	    display: block;
+		height: 100px;
+    	line-height: 100px;
+		font-size: 21px;
+		color: @color;
+	}
+	a:link{color: @color;}
+	a:visited{color: @color;}
+	a:hover{color: @color;}
+
+}
+.navbar-right{
+	width: 458px\9;
+}
+.nav>li>a { 
+	height: 100px;
+    line-height: 100px; 
+    padding: 0 5px; 
+    margin: 0 20px; 
+    font-size: 16px;
+}
+.navbar-nav>li>a{
+	width: 74px;
+    text-align: center;
+	padding-top: 0; 
+	padding-bottom: 0; 
+	color: #666; 
+	box-sizing: border-box;
+}
+.nav .active > a{
+	background-color: transparent; 
+	.border-bottom(3px,solid,#2699c4); 
+	color: @color;
+}
+.navbar-nav>li>a:link{
+	background-color: transparent;
+}
+.navbar-nav>li>a:hover{
+	color: #2699c4;
+	background-color: transparent; 
+	.border-bottom(3px,solid,#2699c4); 
+}
+/*导航 end*/
+/* 尾部 start */
+footer{
+	background-color: #f8f8f8;
+	padding-top: 50px;
+	ul{
+		width: 80%;
+		li{
+			width: 25%;
+			.txt{
+				font-size: 14px;
+				color: #444;
+			}
+		}
+	}
+	.erWeiMa{
+		width: 20%;
+		height: 210px;
+		a{
+			display: block;
+			width: 120px;
+			height: 120px;
+			background: url(../img/erWeiMa.png) no-repeat right top;
+		}
+	}
+	p{
+	    width: 100%;
+		padding: 50px 0 40px; 
+		text-align: center;
+		color: #bbbbbb;
+	}
+}
+.detailed{
+	a{
+		display: block;
+		margin-top: 30px;
+		font-size: 12px;
+		color: #666;
+	}
+	a:hover{
+		color: #007bed;
+	}
+}
+/* 尾部 end */
+
+
+
+

@@ -1,0 +1,96 @@
+.clear_fix {
+  content: '';
+  display: block;
+  clear: both;
+}
+.trend_wrap {
+  padding: 30px 114px 0 0;
+  border-top: 1px solid #ccc;
+}
+.trend_total {
+  position: relative;
+  width: 4%;
+  display: inline-block !important;
+}
+.trend_tit {
+  width: 100%;
+  padding: 3px 0;
+}
+.trend_tit .point_ico {
+  height: 30px;
+  position: relative;
+  width: 4%;
+  display: inline-block !important;
+}
+.trend_tit .point_ico > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
+  background: url(../img/point.png) no-repeat;
+}
+.trend_tit .tit_cont {
+  display: inline-block;
+  width: 95%;
+  height: 30px;
+  font: bold 14px/30px 'Microsoft Yahei';
+  vertical-align: 9px;
+  padding-left: 20px;
+  color: #888;
+  background-color: #f5f5f5;
+}
+.trend_detail {
+  width: 100%;
+}
+.trend_detail .detail_line {
+  position: relative;
+  width: 4%;
+  display: inline-block !important;
+  height: 113px;
+}
+.trend_detail .detail_line > i {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: url(../img/line_h.png) repeat-y;
+}
+.trend_detail .detail_line:first-child {
+  height: 153px;
+}
+.trend_detail .detail_cont {
+  display: inline-block;
+  width: 95%;
+  padding: 6px 0 27px 0;
+  vertical-align: 43px;
+}
+.trend_detail .detail_cont > p {
+  padding: 13px 0 11px 20px;
+  background-color: #f5f5f5;
+}
+.trend_detail .detail_cont > p > span {
+  display: block;
+  font: 12px/28px 'Microsoft Yahei';
+  color: #777;
+}
+.product_trend {
+  background: url(../img/product_trend.png) no-repeat;
+}
+.pop .close {
+  top: 31px;
+}
+.pop .ok {
+  bottom: 33px;
+}
+.round {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0px 5px;
+  vertical-align: middle;
+  background: url(../img/round.png) no-repeat;
+}

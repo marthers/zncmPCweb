@@ -1,0 +1,869 @@
+@import url(base.css);
+
+/* css reset file */
+body{color: #666;}
+body,dl,dd,h1,h2,h3,p{margin: 0;}
+ul,ol{margin: 0;padding: 0;list-style: none;}
+img{border: none; display: block;}
+input,textarea{padding: none; border: none; margin: 0; outline: none; resize: none;}
+input::-ms-clear,input::-ms-reveal{display: none;}        /* 清除ie中input的默认行为 */
+input,button{
+	outline: none!important;
+}
+a{text-decoration: none; color: #666;}
+a:focus{outline: none!important; -moz-outline: none;}
+i,em{font-style: normal;}
+strong,b{font-weight: normal;}
+table{border-collapse: inherit;border-spacing: 0;}
+th,td{padding: 0;}
+*{box-sizing: border-box;}
+
+.btn-xs{
+    display: inline-block;
+    padding: 1px 8px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.dataRelease{
+	.td_icon{
+		.btn-release{
+		    color: #fff;
+		    background-color: #3ba3e5;
+		    border-color: #3ba3e5;
+		    &:hover{
+				background-color: lighten(#3ba3e5, 10%);
+		    }
+		    &:active{
+		    	background-color: darken(#3ba3e5, 10%);
+		    }
+		}
+		.btn-disable{
+			color: #666;
+			background-color: #ccc;
+			cursor: default;
+		}
+	}
+}
+
+
+/* base var */
+@color: #666;
+@base_color: #49c2f9;
+@bd: 1px solid #ccc;
+@iconfont: 16px iconfont;
+.down_icon{					/* 自定义字体--下拉按钮公用样式； */
+	content: '\e614';
+	font: @iconfont;
+	margin-left: 2px;
+}
+
+/* 主体内容部分 */
+.container{
+	position: relative;
+	width: auto;
+	margin: 131px 62px 0 300px;
+}
+.top_nav{
+	position: relative;
+	line-height: 45px;
+	ul{
+		position: absolute;
+    	bottom: -1px;
+	}
+	ul>li{
+		a{
+		    display: block;
+		    width: 100px;
+		    height: 45px;
+		    line-height: 45px;
+		    border: 1px solid #cccccc;
+		    background-color: #eeeeee;
+		    color: #666666;
+		    text-align: center;
+		    font-size: 16px;
+		}
+		a:hover{
+			border-top: 3px solid #3bafe5;
+		    background-color: #ffffff;
+		}
+	}
+	ul>li.first{
+		a{
+			border-right: none;
+		}
+	}
+	ul>li.active{
+		a{
+			border-top: 3px solid #3bafe5;
+		    background-color: #ffffff;
+		    cursor: default;
+		}
+	}
+	.allDetailsearch{
+		position: relative;
+		bottom: 10px;
+		margin-right: 45px;
+		input{
+			display: inline-block;
+			width: 380px;
+			height: 40px;
+			line-height: 40px;
+			padding-left: 20px;
+			border: @bd;
+			&:focus{
+				border: 1px solid #fff;
+				border: 1px solid #ccc\9;
+				line-height: 38px\9;
+				box-shadow: 0 0 3px rgba(0, 0, 0, .8);
+			}
+		}
+		i{
+			position: absolute;
+			top: 0;
+			right: 15px;
+			font-size: 22px;
+			padding: 0 5px;
+			cursor: pointer;
+		}
+	}
+	.timeDetails{
+		position: relative;
+   	 	bottom: 10px;
+		border: none;
+		margin-right: 25px;
+		a{
+			height: 40px;
+    		line-height: 40px;
+			padding-right: 20px;
+	   		color: #2290d6;
+		}
+		a.break{
+		    width: 20px;
+		    background: url(../img/break.png) no-repeat center center;
+		}
+		a.active {
+		    color: #666;
+		}
+	}
+}
+.tit_sort{
+	@diff: 15px;
+	width: calc(~"100% -" @diff);
+	padding: 20px 0;
+	border-top: 1px solid #ccc;
+	.tit_list>li,
+	.tit_check>span,
+	.tit_check>a{
+		height: 36px;
+		line-height: 36px;
+		border: @bd;
+		margin-right: 20px;
+		cursor: pointer;
+	}
+	.tit_check>a.check{
+		height: 30px;
+		line-height: 28px!important;
+		font: 14px 'Microsoft Yahei';
+		padding: 0 20px;
+		margin-right: 20px;
+		border: @bd;
+		color: #555;
+		background-color: #eee;
+		&:hover{
+			border-color: lighten(#3ba3e5, 5%);
+			background-color: lighten(#3ba3e5, 5%);
+		}
+		&:active{
+			border-color: darken(#3ba3e5, 5%);
+			background-color: darken(#3ba3e5, 5%);
+		}
+	}
+	.tit_check>a.check:active{
+		color: #fff;
+	}
+	.tit_list>li:first-child{
+		margin-left: 20px;
+	}
+	.tit_list>li.active,.tit_check span.active{
+		border: 1px solid @base_color;
+		color: #fff;
+		background-color: @base_color;
+	}
+	.tit_list>li.active>a{
+		color: #fff;
+		cursor: default;
+	}
+	.tit_list>li{
+		cursor: pointer;
+		i.down_btn{
+			font: 16px iconfont;
+		}
+		a{
+			display: inline-block;
+			width: 100%;
+			padding: 0 20px;
+		}
+	}
+	.tit_check>a{
+		i.export_icon:after{
+			content: '\e615';
+			font: @iconfont;
+			line-height: 34px;
+			margin-right: 5px;
+		}
+		&.fr{
+			border: none;
+		}
+		&.fr:hover{
+			color: @base_color;
+			i.export_icon:after{
+				color: @base_color;
+			}
+		}
+	}
+}
+.data_tit{
+	width: 100%;
+	thead th,
+	tbody td{
+		height: 50px;
+		font-weight: normal;
+		border: @bd;
+		border-top: none;
+		border-left: none;
+		text-align: center;
+		input{
+			margin-top: 4px;
+		}
+	}
+	thead th.clearfix{
+		div.th_check{
+			position: relative;
+			width: 210px;
+			max-width: 210px;
+			font-size: 16px;
+			margin: 0 auto;
+			color: #555;
+			form{
+				position: relative;
+				padding: 0 25px;
+				cursor: pointer;
+				transition: .5s;
+			}
+			.check_sort{
+				-webkit-box-shadow: 0 -1px 2px rgba(0, 0, 0, .5);	/* 点击下拉时添加 */
+				box-shadow: 0 -1px 2px rgba(0, 0, 0, .5);	/* 点击下拉时添加 */
+			}
+			form>i.down_btn:after{
+				position: absolute;
+				top: 2px;
+				left: 40px;
+				.down_icon;
+			}
+			&>span{
+				padding-left: 42px;
+				&:hover{
+					color: @base_color;
+				}
+			}
+		}
+	}
+	thead th{
+		font-size: 16px;
+		color: #555;
+	}
+}
+.data_tb{
+	tbody tr:hover{
+		background-color: #f5f5f5;
+	}
+	tbody tr.active{
+		background-color: #f5f5f5;
+	}
+	.td_icon{
+		padding: 0;
+		a{
+			display: block;
+			line-height: 50px;
+		}
+	}
+	tbody td{
+		div{
+			position: relative;
+			input{
+				position: absolute;
+				left: 25px;
+			}
+			span{
+				display: block;
+				max-width: 167px;
+				font-size: 14px;
+				text-align: center;
+				margin-left: 45px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+		}
+		a.opreat_check:after{
+			content: '\e616';
+			font: bold 24px iconfont;
+		}
+		a.opreat_icon:after{
+			content: '\e621';
+			font: 20px iconfont;
+			color: #888;
+			cursor: default;
+		}
+		a.opreat_icon{
+			cursor: default;
+		}
+		a.opreat:hover{
+			color: @base_color;
+		}
+	}
+}
+.checkInventory .data_tb,
+.checkSales .data_tb{
+	tbody td{
+		div{
+			position: relative;
+			span{
+				display: block;
+				max-width: 167px;
+				font-size: 14px;
+				text-align: center;
+				margin-left: 26px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+		}
+	}
+}
+.dataRelease{
+	.td_icon{
+		a{
+			display: inline-block;
+			width: 50px;
+			height: 26px;
+			line-height: 24px;
+			font-size: 12px;
+			border: 1px solid #ccc;
+			color: #555;
+			background-color: #eee;
+		}
+	}
+}
+
+/* 分页部分 */
+.page_box{
+	width: 100%;
+	height: 70px;
+    border: none;
+}
+.pagination{
+    font-size: 12px;
+    float: right;
+    a{
+	    text-decoration: none;
+	    color: #666;
+	    border: 1px solid #dedede;
+	    background-color: #fff;
+	}
+	&>a,&>span{
+	    display: block;
+	    float: left;
+	    margin-right: 5px;
+	    margin-bottom: 5px;
+	    padding: .3em .7em;
+	}
+	&>a:hover{
+	    border: 1px solid #43b4e8;
+	}
+	.total{
+	    font-size: 13px;
+	    line-height: 10px;
+	    margin-top: 4px;
+	    color: #666;
+	}
+	.current{
+	    color: #fff;
+	    border: 1px solid #43b4e8;
+	    background: none repeat scroll 0 0 #43b4e8;
+	}
+	& .current.prev,& .current.next{
+	    color: #999;
+	    border-color: #999;
+	    background: none repeat scroll 0 0 #fff;
+	}
+}
+
+
+// 测试表格
+@ff_ms: "Microsoft Yahei";
+@bgc_ff: #fff;
+@bdc_db: #dbdbdb;
+
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+.form_data {
+  width: 100%;
+  background-color: @bgc_ff;
+}
+table {
+  width: 100%;
+  min-width: 100%;
+  font-size: 12px;
+  
+  border-top: 1px solid  #dbdbdb;
+  border-left: 1px solid  #dbdbdb;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* -------- user-style -------- */
+.data_tb {
+  max-height: 515px;
+}
+.data_tit,
+.data_tb {
+  overflow-y: scroll;
+}
+tr {
+  border-bottom: 1px solid @bdc_db;
+}
+th,
+td {
+  text-align: center;
+  padding: 16px 8px;
+  border-top: 1px solid  #dbdbdb;
+  border-right: 1px solid  #dbdbdb;
+  word-break: break-all;
+  span {
+    display: block;
+    font-size: 14px;
+    .text-overflow;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+	.data_tit{
+		thead th.clearfix{
+			div.th_check{
+				&>span{
+					padding-left: 34px;
+				}
+			}
+		}
+	}
+	.data_tit,
+	.data_tb{
+		col:first-child{
+			width: 250px;
+			min-width: 250px;
+		}
+		col:nth-child(3),
+		col:nth-child(4){
+			width: 270px;
+			min-width: 270px;
+		}
+	}
+}
+@media screen and (max-width: 1660px){
+	.container{
+		margin-left: 290px;
+	}
+	.tit_sort{
+		padding: 15px 0;
+	}
+	.data_tit{
+		thead th.clearfix{
+			div.th_check{
+				&>span{
+					padding-left: 24px;
+				}
+			}
+		}
+	}
+	.data_tit,
+	.data_tb{
+		max-height: 345px;
+		col:first-child{
+			width: 180px;
+			min-width: 180px;
+		}
+		col:nth-child(2){
+			width: 300px;
+			min-width: 300px;
+		}
+		col:nth-child(3),
+		col:nth-child(4){
+			width: 130px;
+			min-width: 130px;
+		}
+		col:nth-child(5){
+			width: 200px;
+			min-width: 200px;
+		}
+	}
+	.checkInventory .data_tb,
+	.checkSales .data_tb{
+		tbody td{
+			div{
+				position: relative;
+				span{
+					display: block;
+					max-width: 167px;
+					font-size: 14px;
+					text-align: center;
+					margin-left: 18px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+} 
+@media screen and (max-width: 1440px){
+	.container{
+		margin-left: 295px;
+	}
+	.data_tit{
+		thead th.clearfix{
+			div.th_check{
+				&>span{
+					padding-left: 15px;
+				}
+			}
+		}
+	}
+	.data_tit,
+	.data_tb{
+		col:first-child{
+			width: 180px;
+			min-width: 180px;
+		}
+		col:nth-child(2){
+			width: 300px;
+			min-width: 300px;
+		}
+		col:nth-child(3),
+		col:nth-child(4){
+			width: 130px;
+			min-width: 130px;
+		}
+	}
+	.checkInventory .data_tb,
+	.checkSales .data_tb{
+		tbody td{
+			div{
+				position: relative;
+				span{
+					display: block;
+					max-width: 167px;
+					font-size: 14px;
+					text-align: center;
+					margin-left: 10px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+} 
+@media screen and (max-width: 1386px){
+	.container{
+		margin: 100px 46px 0 232px;
+		>h2{
+			position: relative;
+			z-index: 9;
+			width: 100px;
+			height: 44px;
+			line-height: 44px;
+			span{
+				font-size: 16px;
+			}
+			.promit {
+				height: 44px;
+				font-size: 12px;
+				margin-left: 5px;
+				background-size: 90%;
+			}
+		}
+	}
+	.top_nav{
+		margin-top: -35px;
+		padding-bottom: 10px;
+		.allDetailsearch{
+			bottom: 0;
+			line-height: 34px;
+			input{
+				height: 34px;
+				line-height: 34px;
+			}
+		}
+		.timeDetails{
+			bottom: 0;
+			a.break{
+				background-size: 80%;
+			}
+			a{
+				height: 34px;
+				font-size: 16px;
+				line-height: 34px;
+				padding-right: 10px;
+			}
+		}
+	}
+	.form_data{
+		.data_tit,
+		.data_tb{
+			th,
+			td{
+				height: 38px;
+				padding: 6px 8px;
+			}
+			.td_icon{
+				padding: 0;
+			}
+			.opreat_icon,
+			.opreat{
+				height: 37px;
+				line-height: 37px;
+			}
+		}
+	}
+	.tit_sort{
+		padding: 10px 0;
+		.tit_list{
+			font-size: 12px;
+		}
+	}
+	.data_tit{
+		thead th{
+			font-size: 14px;
+		}
+		thead th.clearfix{
+			div.th_check{
+				&>span{
+					padding-left: 12px;
+				}
+			}
+		}
+	}
+	.data_tit,
+	.data_tb{
+		col:first-child{
+			width: 180px;
+			min-width: 180px;
+		}
+		col:nth-child(2){
+			width: 300px;
+			min-width: 300px;
+		}
+		col:nth-child(3),
+		col:nth-child(4){
+			width: 130px;
+			min-width: 130px;
+		}
+	}
+	.data_tb{
+		max-height: 312px;
+	}
+	tbody{
+		td{
+			a.opreat_icon:after{
+				font: 18px iconfont;
+			}
+			a.opreat_check:after{
+				font: bold 22px iconfont!important;
+			}
+		}
+	}
+    .main .leftNav{
+        width: 173px; 
+        margin-left: 46px;
+    }
+    .data_tit,
+	.data_tb{
+		col:first-child{
+			width: 180px;
+			min-width: 180px;
+		}
+		col:nth-child(2){
+			width: 220px;
+			min-width: 220px;
+		}
+		col:nth-child(3),
+		col:nth-child(4){
+			width: 100px;
+			min-width: 100px;
+		}
+		col:nth-child(5){
+			width: 120px;
+			min-width: 120px;
+		}
+	}
+	.checkInventory .data_tb,
+	.checkSales .data_tb{
+		tbody td{
+			div{
+				position: relative;
+				span{
+					display: block;
+					max-width: 167px;
+					font-size: 14px;
+					text-align: center;
+					margin-left: 5px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+} 
+@media screen and (max-width: 1290px){
+	.container{
+		margin-left: 190px;
+		margin-right: 20px;
+	}
+	.top_nav{
+		padding-bottom: 10px;
+		.allDetailsearch{
+			input{
+				width: 220px;
+			}
+		}
+		.timeDetails{
+			a{
+				padding-right: 10px;
+			}
+		}
+	}
+	.data_show{
+		margin-top: 28px;
+	}
+	.tit_sort{
+		.tit_list>li{
+			a{
+				padding: 0 10px;
+			}
+		}
+	}
+	.data_tit{
+		thead th.clearfix{
+			div.th_check{
+				&>span{
+					padding-left: 12px;
+				}
+			}
+		}
+	}
+    .main .leftNav{
+        width: 163px; 
+        margin-left: 20px;
+    }
+} 
+@media screen and (max-width: 1064px){
+	.header h1{
+		width: 955px;
+	}
+	.container{
+		margin-left: 190px;
+	}
+	.tit_sort{
+		.tit_list>li{
+			margin-right: 8px;
+			a{
+				padding: 0 4px;
+			}
+		}
+		.tit_list>li:first-child{
+			margin-left: 10px;
+		}
+		.tit_check{
+			a.check{
+				padding: 0 10px;
+				margin-right: 10px;
+			}
+			a:nth-of-type(2){
+				margin-right: 10px;
+			}
+		}
+		.tit_down{
+			width: 100px;
+		}
+	}
+	.data_tit{
+		thead th.clearfix{
+			div.th_check{
+				&>span{
+					padding-left: 6px;
+				}
+			}
+		}
+	}
+	.data_tit,
+	.data_tb{
+		col:first-child{
+			width: 150px;
+			min-width: 150px;
+		}
+		col:nth-child(2){
+			width: 150px;
+			min-width: 150px;
+		}
+		col:nth-child(3){
+			width: 70px;
+			min-width: 70px;
+		}
+	}
+	.checkInventory .data_tb,
+	.checkSales .data_tb{
+		tbody td{
+			div{
+				position: relative;
+				span{
+					display: block;
+					max-width: 167px;
+					font-size: 14px;
+					text-align: center;
+					margin-left: 28px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+}
+

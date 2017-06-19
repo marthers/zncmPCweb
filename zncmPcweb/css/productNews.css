@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1457049391_1606007.eot');
+  src: url('http://at.alicdn.com/t/font_1457049391_1606007.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('http://at.alicdn.com/t/font_1457049391_1606007.woff') format('woff'), /* chrome、firefox */ url('http://at.alicdn.com/t/font_1457049391_1606007.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('http://at.alicdn.com/t/font_1457049391_1606007.svg#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.navbar {
+  border-bottom: 1px solid #f5f5f5;
+}
+/*奥示数据客户端更新 start*/
+.container {
+  position: relative;
+}
+.update {
+  padding-bottom: 50px;
+}
+.updateIcon {
+  position: relative;
+  left: 40%;
+  top: 0;
+  display: block;
+  margin: 30px 0 0 -30px;
+  width: 60px;
+  height: 62px;
+  background: url(../img/update.png) no-repeat;
+}
+.tit {
+  margin-left: 40%;
+}
+.tit .line {
+  width: 2px;
+  height: 135px;
+  background: #3aa6ce;
+}
+.tit .text {
+  padding-left: 50px;
+  padding-top: 50px;
+  font-size: 22px;
+}
+.year {
+  position: relative;
+}
+.year .theme {
+  text-align: right;
+  margin: 0px 0 0 240px;
+  font-size: 18px;
+}
+.year .theme .titYear {
+  width: 100px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.year .theme .titYear:after {
+  padding-left: 5px;
+  font: 18px iconfont;
+  color: #666;
+}
+.year .theme .titYear.icon1:after {
+  content: "\e601";
+}
+.year .theme .titYear.icon2:after {
+  content: "\e602";
+  width: 23px;
+  display: inline-block;
+  text-indent: -7px;
+}
+.year .theme .blueArrow {
+  display: block;
+  width: 16px;
+  margin: 5px 0;
+  height: 16px;
+  background: url(../img/blueArrow.png) no-repeat;
+}
+.year .theme .line {
+  display: block;
+  width: 2px;
+  margin: 0 0 0 7px;
+  height: 20px;
+  background: #3aa6ce;
+}
+.year .theme .prompt {
+  margin-left: 41px;
+}
+.year li .leftBox .date {
+  width: 97px;
+  height: 28px;
+  background: url(../img/blueArrow.png) no-repeat right center;
+  margin-left: 300px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.year li .leftBox .version {
+  width: 134px;
+  height: 135px;
+  margin-left: 256px;
+  border-right: 2px solid #3aa6ce;
+  padding-top: 10px;
+}
+.year li .rightBox .content {
+  font-size: 16px;
+  padding-left: 42px;
+  height: 28px;
+}
+.year li .rightBox .download {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 5px 0 0 42px;
+  background: url(../img/dload.png) no-repeat;
+}
+.year li .rightBox .download:after {
+  content: ' 下载';
+  font-size: 14px;
+  color: #999;
+  width: 54px;
+  display: block;
+  padding-left: 25px;
+  line-height: 18px;
+}
+.year li .rightBox .download:hover {
+  background-image: url(../img/dloadHover.png);
+}
+.year li .rightBox .download:hover:after {
+  color: #3aa6ce;
+}
+/*奥示数据客户端更新 end*/
+.back {
+  display: none;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 100px;
+  height: 100px;
+  color: #999;
+  font-size: 40px;
+  cursor: pointer;
+}
+.back:hover {
+  color: #3aa6ce;
+}

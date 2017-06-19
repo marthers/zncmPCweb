@@ -1,0 +1,243 @@
+.ft {
+  font: 12px/28px 'Microsoft Yahei';
+}
+.bd {
+  border: 1px solid #ccc;
+}
+.ta {
+  text-align: center;
+}
+.main .rightCon .tit {
+  height: 71px;
+  padding: 18px 0 0 40px;
+  border: 1px solid #ccc;
+  margin-bottom: 0;
+}
+.tit .btn_filter {
+  display: inline-block;
+  width: 160px;
+  height: 34px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font: 14px/34px 'Microsoft Yahei';
+  margin-right: 50px;
+  color: #666;
+}
+.tit .active2 {
+  border: none;
+  color: #fff;
+  background-color: #49c2f9;
+}
+input[type='checkbox'] {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: 1px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.round_total {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: text-top;
+}
+.w_round {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: text-top;
+  background: none;
+}
+.red_round {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: text-top;
+  background: url(../img/round.png) no-repeat;
+}
+.main .rightCon .tableDisplay table tbody tr.tr_opreate:hover {
+  background-color: #fff;
+}
+.main .rightCon .tableDisplay table tbody tr .td_opreate {
+  height: 82px;
+  text-align: left;
+}
+.btn_opreate {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  font: 12px/28px 'Microsoft Yahei';
+  border: 1px solid #ccc;
+  text-align: center;
+  height: 25px\9;
+  line-height: 23px\9;
+}
+.btn_opreate:hover {
+  background-color: #f5f5f5;
+}
+span.del {
+  margin-right: 50px;
+  margin-right: 25px\9;
+}
+td > .page_list {
+  font-size: 0;
+  display: inline-block;
+}
+td > .page_list > li {
+  display: inline-block;
+}
+.w78 {
+  display: inline-block;
+  width: 78px;
+  height: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+  font: 12px/28px 'Microsoft Yahei';
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.w78:hover {
+  background-color: #f5f5f5;
+}
+.page_menu {
+  font-size: 0;
+  text-align: right;
+  height: 82px;
+}
+.page_menu .page_last {
+  margin-right: 50px;
+}
+.page_list > li {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+  font: 12px/28px 'Microsoft Yahei';
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.page_list > li.active {
+  color: #666;
+  background-color: #f5f5f5;
+}
+.page_list > li.ellipsis {
+  border: none;
+}
+/* 分页部分 */
+.pageTo {
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+  width: 53%;
+  padding: 0 30px 0 12px;
+}
+.page_box {
+  width: 100%;
+  height: 70px;
+  border: 1px solid #cccccc;
+  border-top: none;
+  margin-bottom: 30px;
+}
+.pagination {
+  font-size: 12px;
+  float: right;
+}
+.pagination a {
+  text-decoration: none;
+  color: #666;
+  border: 1px solid #dedede;
+  background-color: #fff;
+}
+.pagination > a,
+.pagination > span {
+  display: block;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: .3em .7em;
+}
+.pagination > a:hover {
+  border: 1px solid #43b4e8;
+}
+.pagination .total {
+  font-size: 13px;
+  line-height: 10px;
+  margin-top: 4px;
+  color: #666;
+}
+.pagination .current {
+  color: #fff;
+  border: 1px solid #43b4e8;
+  background: none repeat scroll 0 0 #43b4e8;
+}
+.pagination .current.prev,
+.pagination .current.next {
+  color: #999;
+  border-color: #999;
+  background: none repeat scroll 0 0 #fff;
+}
+.main .rightCon .tableDisplay table {
+  border-right: 1px solid #ccc;
+  border-collapse: inherit;
+}
+.main .rightCon .tableDisplay table thead tr td {
+  border-right: none;
+}
+.main .rightCon .tableDisplay table tbody tr td {
+  border-right: none;
+}
+table .td_one {
+  width: 7%;
+}
+table .td_two {
+  width: 40%;
+}
+table .td_three {
+  width: 15%;
+}
+table .td_four {
+  width: 15%;
+}
+table > thead > tr > td {
+  font: 16px 'Microsoft Yahei';
+  border-right: none;
+  color: #666;
+}
+.system_News {
+  background: url(../img/systemNews.png) no-repeat;
+}
+@media screen and (max-width: 1440px) {
+  .w78 {
+    width: 64px;
+    margin-right: 1px;
+  }
+  .page_list {
+    font-size: 0;
+  }
+  .page_list > li {
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .w78 {
+    width: 45px;
+    width: 42px\9;
+    height: 25px\9;
+    margin-right: 1px;
+    margin-right: 0\9;
+    line-height: 23px\9;
+  }
+  .page_list {
+    font-size: 0;
+  }
+  .page_list > li {
+    width: 20px;
+    width: 25px\9;
+    height: 25px\9;
+    margin-right: 3px;
+    margin-right: 1px\9;
+    line-height: 23px\9;
+  }
+}

@@ -1,0 +1,545 @@
+/* css reset file */
+body {
+  font: 14px/1.5 'Microsoft Yahei';
+  color: #666;
+  background-color: #f8f8f8;
+}
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  border: none;
+  display: block;
+}
+input,
+textarea {
+  padding: none;
+  border: none;
+  margin: 0;
+  outline: none;
+  resize: none;
+}
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+/* 清除ie中input的默认行为 */
+a {
+  text-decoration: none;
+  color: #666;
+}
+a:focus {
+  outline: none!important;
+  -moz-outline: none;
+}
+i,
+em {
+  font-style: normal;
+}
+strong,
+b {
+  font-weight: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td {
+  padding: 0;
+}
+select {
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+/* 清除ie中input的默认行为 */
+* {
+  box-sizing: border-box;
+}
+.my-placeholder {
+  color: #aaa;
+}
+/* base var */
+.down_icon {
+  /* 自定义字体--下拉按钮公用样式； */
+  content: '\e614';
+  font: 16px iconfont;
+  margin-left: 2px;
+}
+/* public style */
+@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1458714939_7107701.eot');
+  src: url('http://at.alicdn.com/t/font_1458714939_7107701.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('http://at.alicdn.com/t/font_1458714939_7107701.woff') format('woff'), /* chrome、firefox */ url('http://at.alicdn.com/t/font_1458714939_7107701.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('http://at.alicdn.com/t/font_1458714939_7107701.svg#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont";
+  font-size: 35px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/* 头部部分 */
+header {
+  width: 100%;
+  background-color: #3d3c3c;
+}
+header h1 {
+  width: 1200px;
+  font-size: 16px;
+  line-height: 60px;
+  margin: 0 auto;
+  color: #fff;
+}
+header h1 span {
+  padding: 14px 6px;
+  border-bottom: 3px solid #49c2f9;
+}
+/* 头部搜索部分 */
+.top_nav {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 95px;
+}
+.top_nav span {
+  font-size: 16px;
+  line-height: 95px;
+}
+.top_nav .search {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+.top_nav .search input {
+  width: 450px;
+  height: 40px;
+  padding-left: 20px;
+  border: 1px solid #cccccc;
+}
+.top_nav .search input:focus {
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+.top_nav .search i {
+  position: absolute;
+  top: 38px;
+  right: 32%;
+  padding: 5px;
+  font: 16px iconfont;
+  cursor: pointer;
+}
+/* 主体部分 */
+.container {
+  width: 1200px;
+  border: 1px solid #cccccc;
+  margin: 0 auto;
+  margin-bottom: 75px;
+  background-color: #fff;
+}
+.txt_left {
+  width: 258px;
+  padding: 73px 0 0 18px;
+}
+.txt_left .book_bg {
+  width: 213px;
+  height: 250px;
+  padding: 24px 10px;
+  border: 1px solid #cccccc;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.txt_left .left_detail {
+  width: 213px;
+  padding: 1px 0 13px 10px;
+  border: 1px solid #cccccc;
+  margin-top: 20px;
+}
+.txt_left .left_detail h3.detail_tit {
+  font-size: 14px;
+  line-height: 36px;
+}
+.txt_left .left_detail span.detail_data {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+}
+.txt_cont {
+  width: 696px;
+  margin-bottom: 40px;
+}
+.txt_cont h1 {
+  text-align: center;
+  margin: 35px 0 20px 0;
+  color: #444;
+}
+.txt_cont h2 {
+  font-weight: normal;
+}
+.txt_cont h2 i.bg_line {
+  display: inline-block;
+  height: 52px;
+  background: url("../img/h_line.png");
+}
+.txt_cont .tit_left {
+  font: 20px 'Microsoft Yahei';
+  line-height: 52px;
+  color: #444;
+}
+.txt_cont .tit_left .tit_icon:after {
+  content: '\e618';
+  font: 22px iconfont;
+  line-height: 52px;
+  margin-right: 5px;
+  color: #2da4da;
+}
+.txt_cont .tit_edit {
+  font-size: 12px;
+  line-height: 52px;
+  color: #888;
+}
+.txt_cont .tit_edit:hover a {
+  color: #005ce7;
+}
+.txt_cont .tit_edit .edit_icon:before {
+  content: '\e619';
+  font: 16px iconfont;
+  line-height: 52px;
+  margin-right: 3px;
+}
+.txt_cont .cont_txt {
+  margin-bottom: 16px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.txt_cont .more,
+.txt_cont i {
+  color: #005ce7;
+}
+.txt_cont i {
+  font: 14px iconfont;
+}
+.txt_right {
+  position: relative;
+  width: 244px;
+  padding: 82px 0 0 36px;
+}
+.txt_right .annotation {
+  width: 180px;
+  height: 70px;
+  padding: 10px;
+  border: 1px dotted #ccc;
+  background-size: 65% 45%;
+  overflow-y: hidden;
+}
+.txt_right .bgImg {
+  background: url("../img/annotation.png") no-repeat center;
+}
+.txt_right .btn {
+  display: none;
+  position: absolute;
+  top: 260px;
+  padding: 0px 8px;
+  font: 12px 'Microsoft Yahei';
+  line-height: 18px;
+  color: #fff;
+  background-color: #2da4da;
+  cursor: pointer;
+}
+.txt_right .cancel {
+  right: 86px;
+}
+.txt_right .confirm {
+  right: 38px;
+}
+.txt_right .sticky {
+  display: none;
+  width: 180px;
+  max-height: 502px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  overflow-y: auto;
+}
+.txt_right .sticky p {
+  font: 12px/18px 'Microsoft Yahei';
+  text-indent: 2em;
+}
+.txt_right .sticky p.sticky_cont {
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #ccc;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.txt_right .sticky p.sticky_cont span {
+  display: block;
+}
+.txt_right .sticky p.sticky_txt {
+  text-indent: .5em;
+  padding-top: 0px;
+}
+.txt_right .anchor {
+  padding: 120px 20px 0;
+}
+.txt_right .anchor dd {
+  font: 12px iconfont;
+}
+.txt_right .anchor i {
+  font: 12px iconfont;
+  margin-right: 8px;
+  color: #ccc;
+}
+.txt_right .anchor dd > span {
+  display: block;
+}
+.txt_right .anchor span:before {
+  content: '\e61e';
+  display: block;
+  font: 12px iconfont;
+}
+.txt_right .anchor span i:after {
+  content: '\e61c';
+  font: 12px iconfont;
+}
+.txt_right .anchor span.active i:after {
+  content: '\e61d';
+  font: 12px iconfont;
+  margin-right: 0;
+  color: #2da4da;
+}
+.txt_right .anchor a:hover {
+  color: #2da4da;
+}
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(168, 168, 168, 0.5);
+}
+.mask_txt {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 400px;
+  height: 365px;
+  background-color: #fff;
+}
+.mask_txt .mask_tit {
+  text-align: center;
+  font-weight: normal;
+  line-height: 60px;
+}
+.mask_dl {
+  text-align: center;
+  margin-top: 10px;
+}
+.mask_dl .cont_detail {
+  vertical-align: top;
+}
+.mask_dl dt {
+  display: inline-block;
+}
+.mask_dl dd {
+  display: inline-block;
+  width: 300px;
+  height: 21px;
+}
+.mask_dl dd input {
+  width: 100%;
+  height: 28px;
+  border: 1px solid #cccccc;
+}
+.mask_dl dd textarea {
+  width: 100%;
+  height: 160px;
+  border: 1px solid #cccccc;
+}
+.mask_dl .dd_cont {
+  height: 160px;
+}
+.mask_btn {
+  text-align: right;
+  padding-right: 35px;
+  margin-top: 10px;
+}
+.mask_btn .btn {
+  padding: 3px 8px;
+  color: #fff;
+  background-color: #49c2f9;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  header h1 {
+    width: 950px;
+  }
+  .top_nav .search {
+    width: 100%;
+  }
+  .container {
+    width: 950px;
+  }
+  .txt_left {
+    width: 204px;
+    padding: 58px 0 0 8px;
+  }
+  .txt_left .book_bg {
+    width: 168px;
+    height: 198px;
+    padding: 19px 8px;
+    border: 1px solid #cccccc;
+    background: url("../img/pic_book.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .txt_left .left_detail {
+    width: 168px;
+    padding: 1px 0 10px 8px;
+    border: 1px solid #cccccc;
+    margin-top: 12px;
+  }
+  .txt_left .left_detail h3.detail_tit {
+    font-size: 12px;
+    line-height: 31px;
+  }
+  .txt_left .left_detail span.detail_data {
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .txt_cont {
+    width: 551px;
+    margin-bottom: 40px;
+  }
+  .txt_cont h1 {
+    margin: 27px 0 16px 0;
+  }
+  .txt_cont h2 {
+    height: 41px;
+  }
+  .txt_cont h2 i.bg_line {
+    height: 41px;
+    background: url("../img/h_line.png") 0 -5px;
+  }
+  .txt_cont .tit_left {
+    font: 16px 'Microsoft Yahei';
+    line-height: 41px;
+  }
+  .txt_cont .tit_left .tit_icon:after {
+    content: '\e618';
+    font: 18px iconfont;
+    line-height: 41px;
+    margin-right: 3px;
+  }
+  .txt_cont .tit_edit {
+    font-size: 12px;
+    line-height: 41px;
+  }
+  .txt_cont .tit_edit .edit_icon:before {
+    content: '\e619';
+    font: 12px iconfont;
+    line-height: 41px;
+    margin-right: 2px;
+  }
+  .txt_cont .cont_txt {
+    margin-bottom: 12px;
+  }
+  .txt_cont i {
+    font: 12px iconfont;
+  }
+  .txt_right {
+    position: relative;
+    width: 193px;
+    padding: 65px 0 0 28px;
+  }
+  .txt_right .annotation {
+    width: 142px;
+    height: 55px;
+    border: 1px dotted #ccc;
+    background-size: 65% 45%;
+    overflow-y: hidden;
+  }
+  .txt_right .bgImg {
+    background: url("../img/annotation.png") no-repeat center;
+  }
+  .txt_right .btn {
+    display: none;
+    position: absolute;
+    top: 270px;
+    padding: 2px 6px;
+    font: 12px 'Microsoft Yahei';
+    line-height: 14px;
+    color: #fff;
+    background-color: #2da4da;
+    cursor: pointer;
+  }
+  .txt_right .cancel {
+    right: 70px;
+  }
+  .txt_right .confirm {
+    right: 30px;
+  }
+  .txt_right .sticky {
+    width: 154px;
+    height: 167px;
+    margin: 8px 0 0 -12px;
+    background: url("../img/Sticky.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .txt_right .sticky h3 {
+    font-size: 12px;
+    padding: 28px 0 0 54px;
+  }
+  .txt_right .sticky p {
+    font-size: 12px;
+    padding: 8px 12px 0 0;
+  }
+  .txt_right .sticky p.sticky_cont {
+    padding: 10px 5px 0 25px;
+  }
+  .txt_right .anchor {
+    padding: 158px 16px 0;
+  }
+}

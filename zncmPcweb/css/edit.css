@@ -1,0 +1,1097 @@
+.wrap {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+
+/* 头部 start */
+
+.editHeader {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    width: 100%;
+    height: 70px;
+    background: url(../img/eHBg.png) repeat-x;
+}
+
+.eHIn {
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    color: #fff;
+    background: url(../img/headerBg.png) no-repeat left center;
+    box-sizing: border-box;
+}
+
+
+/* 头部 end */
+
+.editBody {
+    margin-bottom: 100px;
+}
+
+
+/* 左侧导航 start */
+
+.eBL {
+    z-index: 2;
+    top: 70px;
+    left: 24px;
+    width: 145px;
+    margin: 30px 0 0 -10px;
+}
+
+.eBL a {
+    display: block;
+}
+
+.eBL a .icon {
+    width: 18px;
+    height: 20px;
+    background: url(../img/eBLIcon.png) no-repeat left center;
+}
+
+.current a .icon,
+.eBL a:hover .icon {
+    background: url(../img/eBLIconHover.png) no-repeat left center;
+}
+
+.eBL a .txt {
+    height: 20px;
+    line-height: 20px;
+    margin: 0 0 0 5px;
+    font-size: 14px;
+}
+
+.current a .txt,
+.eBL a:hover .txt {
+    font-weight: bold;
+}
+
+.eBL .wrong .txt {
+    color: #f70808;
+}
+
+.line {
+    display: block;
+    width: 2px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    background-color: #ccc;
+}
+
+
+/* 左侧导航 end */
+
+
+/* 右侧主体 start */
+
+.eBR {
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
+    margin: 90px 0 20px 160px;
+}
+
+.eBR h2 {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    background-color: #bcdfef;
+}
+
+h2 .wrongPrompt {
+    width: 20px;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background: url(../img/wrongBg.png) no-repeat right center;
+}
+
+h2 .helpPrompt {
+    width: 18px;
+    height: 40px;
+    margin-left: 10px;
+    background: url(../img/helpIcon.png) no-repeat center center;
+}
+
+
+/* 正则判断的错误部分提示 start */
+
+.Identification .wrongPrompt {
+    display: none;
+}
+
+.bookName .wrongPrompt {
+    display: none;
+}
+
+.series .wrongPrompt {
+    display: none;
+}
+
+.author .wrongPrompt {
+    display: none;
+}
+
+.edition .wrongPrompt {
+    display: none;
+}
+
+.describe .wrongPrompt {
+    display: none;
+}
+
+.category .wrongPrompt {
+    display: none;
+}
+
+.resource .wrongPrompt {
+    display: none;
+}
+
+.introduction .wrongPrompt {
+    display: none;
+}
+
+.Chapter .wrongPrompt {
+    display: none;
+}
+
+.contentSummary .wrongPrompt {
+    display: none;
+}
+
+.readerObject .wrongPrompt {
+    display: none;
+}
+
+
+/* 正则判断的错误部分提示 end */
+
+input,
+textarea {
+    text-indent: 5px;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.IdentificationCon {
+    margin: 15px 10px 0;
+}
+
+.IdentificationCon li {
+    /*height: 30px;*/
+    line-height: 30px;
+}
+
+
+/*.IdentificationCon .txt
+{
+    width: 13%;
+
+    text-align: right;
+}*/
+
+.IdentificationCon .userValue {
+    width: 20%;
+}
+
+.IdentificationCon .wid {
+    width: 30%;
+}
+
+
+/*.IdentificationCon .changeName
+{
+    width: 21.5%;
+}*/
+
+
+/*.IdentificationCon input
+{
+    width: 95%;
+    height: 28px;
+}*/
+
+.IdentificationCon select {
+    width: 95%;
+    height: 28px;
+    padding-left: 5px;
+}
+
+.bookNameCon {
+    margin: 10px 10px 0;
+}
+
+.poRelative {
+    position: relative;
+}
+
+.poRelative input {
+    height: 30px;
+    padding-left: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(169, 169, 169);
+    font: 13px/30px 宋体;
+    border-image: initial;
+}
+
+
+/*.poRelative input[type="text"]
+{
+    width: 89.28571%;
+    padding-right: 28.06122%;
+}*/
+
+.poRelative .sel_txt {
+    position: absolute;
+    z-index: 2;
+    top: 9%;
+    right: -50%;
+    width: 55px;
+    height: 30px;
+    margin-right: 16px;
+    font: bold 14px/28px arial;
+    /* padding-left: 5px; */
+    color: #168eb1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.poRelative .sel_txt i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 30px;
+    text-align: center;
+    font: bold 12px/30px "宋体";
+    color: #b8b8b8;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    cursor: pointer;
+}
+
+.poRelative .sel_list {
+    position: absolute;
+    z-index: 5;
+    /* bottom: -53px; */
+    right: -50.28571%;
+    display: none;
+    width: 33.95918%;
+    border: 1px solid #a9a9a9;
+    border-top: none;
+    background-color: #fff;
+}
+
+.poRelative .sel_list>li {
+    float: left;
+    width: 100%;
+    height: 26px;
+    padding-left: 5px;
+    margin: 0;
+    font: bold 14px/24px arial;
+    color: #168eb1;
+    cursor: default;
+}
+
+.poRelative .prompt {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 20px;
+    font: 12px/20px "宋体";
+    color: #f70808;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/*.bookNameCon textarea,
+.bookNameCon input
+{
+    height: 300px;
+}*/
+
+.dutyEditor span {
+    height: 34px;
+    line-height: 34px;
+}
+
+.bookNameCon span {
+    text-align: right;
+}
+
+.dutyEditor input {
+    height: 32px;
+}
+
+
+/*.bookNameCon .txt
+{
+    width: 12%;
+}*/
+
+
+/*.bookNameCon .userValue
+{
+    width: 38%;
+}*/
+
+.bookNameCon li span {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+}
+
+
+/*.bookNameCon li textarea
+{
+    height: 60px;
+}*/
+
+.seriesCon {
+    margin: 10px 10px 0;
+}
+
+.seriesCon span {
+    display: block;
+    height: 60px;
+    text-align: right;
+    line-height: 60px;
+}
+
+.seriesConTit span {
+    height: 34px;
+    line-height: 34px;
+}
+
+.seriesConTit input {
+    width: 95%;
+    height: 34px;
+    line-height: 34px;
+}
+
+.seriesConTit .sCTL,
+.seriesConTit .sCTR {
+    position: relative;
+    width: 39%;
+}
+
+.seriesCon li textarea {
+    width: 95%;
+    height: 60px;
+}
+
+.seriesCon .seriesConTit .txt {
+    width: 31%;
+}
+
+.seriesCon .seriesConTit .userValue {
+    width: 69%;
+}
+
+
+/*.seriesCon .txt
+{
+    width: 12%;
+}*/
+
+
+/*.seriesCon .userValue
+{
+    width: 38%;
+}*/
+
+.authorCon {
+    margin: 10px 10px 0;
+}
+
+.authorCon span {
+    display: block;
+    height: 60px;
+    text-align: right;
+    line-height: 60px;
+}
+
+.authorCon textarea {
+    width: 95%;
+    height: 60px;
+}
+
+
+/*.authorCon .txt
+{
+    width: 10%;
+}*/
+
+.authorCon .userValue {
+    width: 40%;
+}
+
+.seriesAuthor {
+    margin: 0 0 0 32px;
+}
+
+.editionCon {
+    margin: 10px 10px 0;
+}
+
+.editionCon li span {
+    display: block;
+    text-align: right;
+}
+
+.editionConTit li {
+    line-height: 30px;
+}
+
+
+/*.editionConTit .txt
+{
+    width: 10%;
+}*/
+
+.editionConTit .userValue {
+    width: 23%;
+}
+
+.editionConTit input {
+    width: 95%;
+    height: 28px;
+}
+
+
+/*.editionConBig .txt
+{
+    width: 10%;
+}*/
+
+
+/*.editionConBig .userValue
+{
+    width: 40%;
+}*/
+
+.editionConBig li span {
+    height: 30px;
+    line-height: 30px;
+}
+
+.editionConBig li .errortxt {
+    height: 20px;
+    line-height: 20px;
+}
+
+.editionConBig li input {
+    width: 95%;
+    height: 28px;
+}
+
+.bookmaker {
+    margin: 0 0 0 13px;
+}
+
+.originalBookmaker {
+    margin: 0 0 0 43px;
+}
+
+.describeCon {
+    margin: 10px 10px 0;
+}
+
+.describeCon li {
+    position: relative;
+}
+
+
+/*.describeCon .txt
+{
+    width: 8%;
+}*/
+
+
+/*.describeCon .userValue
+{
+    width: 17%;
+}*/
+
+.describeCon li .unit {
+    position: absolute;
+    top: 0;
+    right: 8%;
+    width: auto;
+}
+
+.describeCon .product {
+    margin: 0 0 0 30px;
+}
+
+.describeCon .noMar {
+    margin-right: 0;
+}
+
+
+/*.describeCon li select
+{
+    width: 95%;
+    height: 30px;
+
+    color: #666;
+    border-color: #ccc;
+}*/
+
+.describeCon li .selectBox {
+    position: absolute;
+    z-index: 2;
+    top: 32px;
+    right: 18px;
+    display: none;
+    width: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.selectBox a {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #fff;
+}
+
+.selectBox a:hover {
+    color: #fff;
+    background: #1e90ff;
+}
+
+.describeCon li:hover .selectBox {
+    display: block;
+}
+
+.describeCon span {
+    display: block;
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+}
+
+
+/*.describeCon input
+{
+    line-height: 30px;
+
+    width: 95%;
+    height: 30px;
+}*/
+
+.heightVal {
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+
+.heightVal input {
+    width: 95px;
+    border: none;
+}
+
+.heightVal a {
+    display: block;
+    width: 23px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.heightVal .dropDownBtn {
+    background: url(../img/dropDown.png) no-repeat center center;
+}
+
+.dropBoxIn {
+    position: relative;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+.dropBoxIn a {
+    display: block;
+    width: 126px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.dropBoxIn .dropDownBtn {
+    display: block;
+    width: 20px;
+    background: url(../img/dropDown.png) no-repeat center center;
+}
+
+.dropBoxBody {
+    position: absolute;
+    top: 32px;
+    display: none;
+}
+
+.describeCon .dropBoxBody li {
+    width: 145px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin: 0;
+}
+
+.dropBoxIn:hover .dropBoxBody {
+    display: block;
+}
+
+.categoryCon {
+    margin: 10px 10px 0;
+}
+
+
+/*.categoryCon .txt
+{
+    width: 10%;
+}*/
+
+.categoryCon .userValue {
+    width: 40%;
+}
+
+.categoryCon span {
+    display: block;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+}
+
+.categoryCon input {
+    width: 95%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.resourceCon {
+    margin: 10px 10px 0;
+}
+
+
+/*.resourceCon .txt
+{
+    width: 10%;
+}*/
+
+.resourceCon .userValue {
+    width: 40%;
+}
+
+.resourceCon span {
+    display: block;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+}
+
+.resourceCon input {
+    width: 95%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.sameStyleCon {
+    position: relative;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+/*.sameStyleCon .txt
+{
+    width: 10%;
+}*/
+
+.sameStyleCon .userValue {
+    width: 90%;
+}
+
+.sameStyleCon span {
+    flex: 0 0 168px;
+    height: 120px;
+    text-align: right;
+    line-height: 120px;
+}
+
+.sameStyleCon textarea {
+    width: 98%;
+    height: 120px;
+}
+
+.introductionCon .txt {
+    flex: 0 0 170px;
+    text-align: center;
+    line-height: 20px;
+    padding-top: 38px;
+    box-sizing: border-box;
+}
+
+
+/* 错误提示边框 */
+
+.wrongBor {
+    border-color: #f15b5b;
+}
+
+
+/* 右侧主体 end */
+
+
+/* 固定底部提交功能  start */
+
+.editFooter {
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../img/eFBg.png) repeat-x left center;
+}
+
+.eFIn .bookIcon {
+    width: 100px;
+    height: 82px;
+    margin: 0 0 0 60px;
+    background: url(../img/book.png) no-repeat left center;
+}
+
+.eFIn input {
+    border: none;
+    cursor: pointer;
+}
+
+.eFIn .submitBtn,
+.eFIn .resetBtn {
+    width: 150px;
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    font-size: 14px;
+    color: #fff;
+    background: url(../img/inputBtn.png) repeat-x;
+}
+
+.eFIn .submitBtn:hover,
+.eFIn .resetBtn:hover {
+    background-image: url(../img/inputHover.png);
+}
+
+
+/*.eFIn .submitBtn {
+  margin-left: 300px;
+}*/
+
+.eFIn .resetBtn {
+    margin-left: 100px;
+}
+
+.backTop {
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+    width: 37px;
+    height: 37px;
+}
+
+.errortips {
+    display: none;
+    padding: 5px 0;
+}
+
+.inputtips {
+    display: none;
+}
+
+.dutyEditor .errortips {
+    top: 32px;
+}
+
+.bookNameCon ul li .errortips {
+    top: 62px;
+}
+
+.sCTR .errortips {
+    top: 34px;
+}
+
+.authorCon .errortips {
+    top: 60px;
+}
+
+.sameStyleCon .errortips {
+    top: 122px;
+}
+
+.describeCon .errortxt {
+    text-align: left;
+}
+
+.bookNameCon ul li .errortxt {
+    height: 18px;
+    line-height: 18px;
+}
+
+span.errortxt {
+    display: block;
+    width: 100%!important;
+    height: auto !important;
+    text-align: left;
+    line-height: 18px;
+    margin: 0;
+    color: red;
+}
+
+.describeCon span.errortxt {
+    display: block;
+    width: 100%!important;
+    color: red;
+}
+
+.editionCon .noPad span.errortxt {
+    width: 250px;
+}
+
+.seriesConTit span.errortxt {
+    width: 220px;
+}
+
+
+/* 固定底部提交功能  end */
+
+
+/*提示信息框 start*/
+
+.promptBox {
+    position: absolute;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    display: none;
+    min-height: 25px;
+    padding: 3px 5px 1px 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(176, 213, 235, 1);
+}
+
+.promptBox .promptCon {
+    font-size: 12px;
+    color: #999;
+}
+
+.promptBox .feedArrow {
+    position: absolute;
+    z-index: 5;
+    bottom: -15px;
+    left: 10px;
+    width: 20px;
+    height: 17px;
+    background: url(../img/t.png) no-repeat;
+}
+
+
+/*提示信息框 end*/
+
+
+/*帮助提示框 start*/
+
+
+/*箭头向下的帮助提示框 start*/
+
+.helpPromptBox {
+    position: absolute;
+    display: none;
+    width: 700px;
+    min-height: 20px;
+    padding: 5px;
+    padding: 5px 0 20px 5px;
+    background-color: rgba(54, 56, 56, .8);
+}
+
+.helpPromptBox .helppromptCon {
+    max-height: 460px;
+    font-size: 12px;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.helpPromptBox .feedArrow {
+    position: absolute;
+    z-index: 5;
+    bottom: -11px;
+    left: 10px;
+    width: 10px;
+    height: 11px;
+}
+
+.arrowI,
+.arrowBg {
+    position: absolute;
+    line-height: 0;
+    border-width: 10px 7px 0 7px;
+    border-style: solid dashed dashed dashed;
+    border-color: rgba(54, 56, 56, .8) transparent transparent transparent;
+    font-size: 0;
+}
+
+.arrowBg {
+    left: 1px;
+    border-top-color: transparent;
+}
+
+
+/*箭头向下的帮助提示框 end*/
+
+
+/*箭头向上的帮助提示框 start*/
+
+.arrowTopBox .feedArrow {
+    position: absolute;
+    z-index: 5;
+    top: -10px;
+    left: 10px;
+    width: 10px;
+    height: 11px;
+}
+
+.arrowTopBox .arrowI,
+.arrowTopBox .arrowBg {
+    position: absolute;
+    line-height: 0;
+    border-width: 0 7px 10px 7px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent rgba(54, 56, 56, .8) transparent;
+    font-size: 0;
+}
+
+.arrowTopBox .arrowBg {
+    left: 1px;
+    border-bottom-color: transparent;
+}
+
+
+/*箭头向上的帮助提示框 end*/
+
+
+/*箭头向左的帮助提示框 start*/
+
+.arrowLeftBox .feedArrow {
+    position: absolute;
+    z-index: 5;
+    top: 10px;
+    left: -10px;
+    width: 10px;
+    height: 11px;
+}
+
+.arrowLeftBox .arrowI,
+.arrowLeftBox .arrowBg {
+    position: absolute;
+    line-height: 0;
+    border-width: 7px 10px 7px 0;
+    border-style: dashed solid dashed dashed;
+    border-color: transparent rgba(54, 56, 56, .8) transparent transparent;
+    font-size: 0;
+}
+
+.arrowLeftBox .arrowBg {
+    left: 1px;
+    border-right-color: transparent;
+}
+
+
+/*箭头向左的帮助提示框 end*/
+
+
+/*帮助提示框 end*/
+
+
+/*正在执行提示 遮罩*/
+
+.fullbg {
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54, 56, 56, .6);
+}
+
+.subDataDiv {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54, 56, 56, .6);
+}
+
+.fullbgT {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    display: none;
+    margin: -10px 0 0 -40px;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+/*正在执行提示 遮罩 end*/
+
+
+/*提交数据提示*/
+
+.subDataImg {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    width: 462px;
+    height: 326px;
+    margin: -163px 0 0 -231px;
+    background: url(../img/submit.png) no-repeat;
+}
+
+.subDataImgSucess {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    width: 462px;
+    height: 326px;
+    margin: -163px 0 0 -231px;
+    background: url(../img/success.png) no-repeat;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*提交数据提示 end*/

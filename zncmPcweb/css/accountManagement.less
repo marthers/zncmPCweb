@@ -1,0 +1,608 @@
+
+table{
+	border-collapse: inherit;
+}
+.border(@bw: 1px, @style: solid, @color: #ccc ){
+	border: @bw @style @color;
+}
+.border-bottom(@bw: 1px, @style: solid, @color: #ccc ){
+	border-bottom: @bw @style @color;
+}
+.border-left(@bw: 1px, @style: solid, @color: #ccc ){
+	border-left: @bw @style @color;
+}
+.border-right(@bw: 1px, @style: solid, @color: #ccc ){
+	border-right: @bw @style @color;
+}
+.border-top(@bw: 1px, @style: solid, @color: #ccc ){
+	border-top: @bw @style @color;
+}
+.bg_gradient( @origin: left, @start: #e9e9e9, @end: #dbdbdb ){
+        background: linear-gradient( @origin,@start, @end );
+        background: -webkit-linear-gradient( @origin,@start, @end );
+        background: -moz-linear-gradient( @origin,@start, @end );
+        background: -ms-linear-gradient( @origin,@start, @end );
+        background: -o-linear-gradient( @origin,@start, @end );
+}
+
+@base-color: #111;  
+@font-weight: bold;
+@blue: #3ba3e5;
+@red: #ed1313;
+@green: #5cb85c;
+// 图标字体大小
+.iconfont{
+	font-size: 24px;
+	padding: 0;
+}
+body{
+	position: relative;
+}
+// 主体内容
+.main .rightCon {
+    margin-right: 3%;
+    h2{
+    	.border-bottom;
+    }
+}
+// 个人信息
+.personalInformation{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	& a{
+		display: block;
+    	margin-left: 15px;
+	}
+	dd{
+		margin-left: 55px;
+		padding-top: 30px;
+		color: #666;
+		p{
+			margin-bottom: 15px;
+		}
+	}
+}
+// vip等级
+.vip{
+	margin-bottom: 30px;
+	& a{
+		display: block;
+		width: 72px;
+		height: 30px;
+		color: #b8b8b8;
+		text-align: center;
+	}
+	.v1{position: relative;
+		a{
+			font-size: 28px;
+			color: #e9ba13;
+		}
+		.explanation{
+			position: absolute;
+			left: 0px;
+			top: 50px;
+			dl{
+				color: #ed7b00;
+			}
+		}        
+	}
+	.v1:hover{
+		.Vip1{
+			display: block;
+		}
+	}
+	.v2{position: relative;
+		a{
+			font-size: 45px;
+	    	margin-top: -11px;
+	    }
+		.explanation{
+			position: absolute;
+			left: 0px;
+			top: 50px;
+		}
+	}
+	.v2:hover{
+		.Vip2{
+			display: block;
+		}
+	}
+	.v2Color{
+		a{
+			color: #f89e00;
+		} 
+		& dl{
+			color: #ed7b00;
+		}
+		.Vip2{
+			.border(1px,solid,#ed7b00);
+			.one{
+				color: #ed7b00;
+			}
+		}
+	}
+	.v3{position: relative;
+		a{
+			font-size: 33px;
+			margin-top: -2px;
+		}
+		.explanation{
+			position: absolute;
+			left: 0px;
+			top: 50px;		
+		}
+	}
+	.v3:hover{
+		.Vip3{
+			display: block;
+		}
+	}	
+	.v3Color{
+		a{
+			color: #f27200;
+		}
+		& dl{
+			color: #ed7b00;
+		}
+		.Vip3{
+			.border(1px,solid,#ed7b00);
+			.one{
+				color: #ed7b00;
+			}
+		}
+	}
+	
+	span{
+		margin-top: 20px;
+		display: block;
+		width: 200px;
+		height: 4px;
+		.bg_gradient;
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#dbdbdb',GradientType='1')"; /* IE8 */
+	}
+	.line23{
+		.bg_gradient(left,#dbdbdb,#bcbcbc);	
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#bcbcbc',GradientType='1')"; /* IE8 */
+	}
+	.upgradeV2{
+        .bg_gradient(left,#f5e99c,#fab95a); 
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5e99c', endColorstr='#fab95a',GradientType='1')"; /* IE8 */    
+	}
+	.upgradeV3{
+        .bg_gradient(left,#faae4a,#ff7900);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#faae4a', endColorstr='#ff7900',GradientType='1')"; /* IE8 */
+	}
+}
+// 带三角的盒子
+.explanation{
+	display: none;
+	position: relative;
+	width: 200px;
+	padding: 5px;
+	.border;
+	background-color: #fff;
+	z-index: 1;
+	.sj{
+		position: absolute;
+		left: 30px;
+		font: 20px SimSun;
+	}
+	.one{
+		top:-11px;
+		color: #ccc;
+	}
+	.two{
+		top:-10px;
+		color: #fff;
+	}
+}
+.Vip1{
+	.border(1px,solid,#ed7b00);
+	.one{
+		color: #ed7b00;
+	}
+}
+// 隐藏的盒子，用来占位置
+.addBox{
+	width: 100%;
+	height: 55px;
+	.border-left;
+	.border-right;
+	.border-bottom;
+	display: none;
+	overflow: hidden;
+	ul{
+		li{
+			height: 55px;
+		}
+		li:last-of-type{
+			margin-left: 42%;
+			line-height: 55px;
+		}
+		& input{
+			display: inline-block;
+			height: 28px;
+			line-height: 28px;
+			.border;
+			margin-top: 14px;
+			margin-left: 34px;
+			text-indent: 5px;
+		}
+		& span{
+			color: @red;
+		}
+		& .success{
+			color: #666;
+			display: block;
+			margin-left: 10px;
+		}
+		& .successIcon{
+			font-size: 20px;
+			color:@green;
+		}
+		a.cancel.btn,a.determine.btn{
+		    height: 28px;
+		    border-radius: 4px;				
+		    padding: 3px 18px;
+		    margin-top: -3px;
+		    background-color: #eee;
+		    color: #666;
+		    .border;
+		    position:relative;
+    		behavior:url(pie.htc);
+		}
+		a.determine.btn{
+			margin-left: 50px;
+			margin-right: 20px;
+		}
+		a.cancel.btn{
+			margin-right: 30px;
+		}
+		a.cancel:hover,a.cancel.active,a.determine.active{
+			.bg_gradient(top,#93b9e5,#66a3d2);
+			.border(1px,solid,#89d5f2);
+			color: #fff;
+		}
+	}
+}
+// 用户管理统计表格
+.tableDisplay{
+	position: relative; padding-bottom: 80px;
+    dl{.border; height: 60px;
+        dt{
+            span{display: block; line-height: 60px; font-weight: normal; color: @base-color*6;}
+            .lineBg{width: 4px; height: 18px; background-color: #38a3d5; margin: 21px 13px 12px 20px;}
+        }
+        dd{
+            a{display: block; margin-right: 40px;
+                span{
+	                	display: block;
+				height: 60px;
+				line-height: 60px;
+				color:#3ba3e5;
+					}
+                .iconfont{
+                	font-size: 20px;
+    				margin-right: 10px;
+                }
+            }
+      }
+        dd.menu{margin-left: 20px;
+            .btn-group{height: 57px; width: 40px; margin-right: 80px;
+                a.dropdown-toggle{display: block; margin-right: 80px; height: 16px; line-height: 16px; width: 40px; 
+                .border; text-align: center; background-color: @base-color*15; margin-top: 5px;
+                    span{display: inline-block;height: 16px; line-height: 16px; color: @base-color*9;}
+                    span.caret{height: 0; line-height: 0;}
+                }
+                .dropdown-menu{
+                    li{
+                        a{width: 220px; text-align: center; margin-right: 0; color: @base-color*9;}
+                    }
+                }
+            }
+        }
+    }
+    table{width: 100%; .border-left; 
+        thead{
+            tr{height: 50px;
+                td{.border-bottom; .border-right; text-align: center;
+                }
+                .userAccount{width: 25%;}
+                .userEmail{width: 25%;}
+                .user{width: 15%;}
+                .modifyPermissions{width: 35%;}                
+            }
+        }
+        tbody{
+            tr{height: 50px;
+                td{.border-bottom; .border-right; text-align: center;
+        			a{
+        				padding: 0 3%;
+    					display: inline-block;
+    					box-sizing: border-box;
+    					color: #999;
+        			}
+        			a:hover{
+        				color: #2a7ce0;
+        			}
+        			a:last-of-type:hover{
+        				color: #999;
+        			}                
+        		}
+                .userAccount{width: 25%;}
+                .userEmail{width: 25%;}
+                .user{width: 15%;}
+                .modifyPermissions{width: 35%;}                
+            }
+            tr:hover{background-color: #f5f5f5;}
+        }
+    }
+    .page{width: 400px; height: 50px; position: absolute; right: 50px; bottom: 0;}
+}
+// 弹出框
+.accountManagementPop{
+	background-image: url(../img/accountManagement.png);
+	height: 260px;
+    margin-top: -130px;
+}
+.mask_txt{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 9999;
+	transform: translate3d(-50%, -50%, 0);
+	width: 420px;
+	background-color: #fff;
+	display: none;
+	h3{
+		height: 40px;
+		font: 18px/40px 'Microsoft Yahei';
+		padding: 0 14px 0 24px;
+		color: #fff;
+		background-color: #3593c3;
+		i{
+			font: 22px/40px iconfont;
+			cursor: pointer;
+		}
+	}
+	.mask_cont{
+		height: 110px;
+		padding: 15px;
+		border-bottom: 1px solid #ccc;
+		color: #333;
+		box-sizing: border-box;
+		p{
+			height: 100%;
+			text-indent: 2em;
+			box-sizing: border-box;
+		}
+	}
+	footer{
+		height: 44px;
+		i{
+			width: 70px;
+			height: 30px;
+			text-align: center;
+			font: 16px/30px 'Microsoft Yahei';
+			margin: 7px 35px 0 0;
+			color: #fff;
+			background-color: #3593c3;
+			cursor: pointer;
+		}
+	}
+}
+// 删除提示框
+.deletePop{
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: -120px 0 0 -220px;
+	width: 440px;
+	height: 240px;
+	background: url(../img/deletePop.png) no-repeat center center;
+	z-index: 100;
+	.yes,.no{
+		width: 80px;
+	    height: 34px;
+	    display: block;
+	    position: absolute;
+	}
+	.yes{
+	    left: 89px;
+	    bottom: 56px;	
+	}
+	.no{
+	    left: 259px;
+	    bottom: 56px;	
+	}
+}
+// 修改和查看操作框
+.modifyPop,.viewPop{
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: -200px 0 0 -175px;
+	width: 350px;
+	height: 406px;
+	box-shadow: 0px 0px 2px 0 fade(#999,60);
+	background-color: #fff;	
+	z-index: 100;
+	.border(1px, solid, #bbb);		
+}
+.modifyPop,.viewPop{
+	h4{
+		height: 50px;
+		line-height: 50px;
+		background-color: #3593c3;
+		color: #fff;
+		padding-left: 38px;
+		.border(1px, solid, #3593c3);			
+	}
+	& span{
+		color: #3593c3;
+		display: inline-block;
+		height: 40px;
+		line-height: 40px;
+	}
+	& .tit{
+		width: 180px;
+	}
+	& a.icon1:link,& a.icon1:visited,& a.icon1:hover,& a.icon1:active{
+		color: #3593c3;
+	}
+	& a.icon1:after{
+		content: "\e60c";
+		font: 24px iconfont;
+	}
+	& a.icon2:after{
+		content: "\e60d";
+		font: 24px iconfont;
+	}
+	.ok,.yes{
+		position: absolute;
+		width: 80px;
+		height: 34px;
+		line-height: 34px;
+		text-align: center;
+		color: #fff;
+		background-color: #48A3D0; 
+		right: 35px;
+		bottom: 20px;
+	}
+	.closeBtn{
+		position: absolute;
+	    right: 15px;
+	    top: 5px;
+	    color: #fff;
+	}
+	& .wu{
+		span{
+			color: #999;	
+		}
+		a{
+			color: #999;
+		}
+	}
+	ul{
+		padding: 20px 35px;
+	}
+}
+// 适配不同分辨率
+@media screen and (max-width: 1380px){
+	.personalInformation a img{
+		width: 100px;
+		height: 100px;
+	}    
+    .personalInformation dd {
+	    padding-top: 20px;
+	}
+	.personalInformation dd p {
+	    margin-bottom: 10px;
+	}
+	.personalInformation {
+	    padding-bottom: 10px;
+	}
+	.vip {
+	    margin-bottom: 19px;
+	}
+	.vip .v1 a {
+	    font-size: 24px;
+	    padding-top: 4px;
+	}
+	.vip .v2 a {
+	    font-size: 40px;
+	    margin-top: -7px;
+	}
+	.vip .v3 a {
+	    font-size: 29px;
+	    margin-top: 0px;
+	}
+	.vip span {
+	    width: 150px;
+	    height: 3px;
+	}
+	.deletePop {
+		background-size: 80%;
+	}
+	.deletePop .yes {
+	    left: 108px;
+	    bottom: 65px;
+	}
+	.deletePop .no {
+	    left: 246px;
+	    bottom: 65px;
+	}
+	// 修改和查看框变小
+	.modifyPop,.viewPop{
+		margin: -175px 0 0 -150px;
+	    width: 300px;
+	    height: 330px;	
+	}
+	.modifyPop,.viewPop{
+		h4{
+			height: 40px;
+			line-height: 40px;
+			padding-left: 30px;
+			font-size: 16px;		
+		}
+		& span{
+			height: 35px;
+			line-height: 35px;
+			font-size: 12px;
+		}
+		& .tit{
+			width: 160px;
+		}
+		& a.icon1:after{
+			content: "\e60c";
+			font: 20px iconfont;
+		}
+		& a.icon2:after{
+			content: "\e60d";
+			font: 20px iconfont;
+		}
+		.ok,.yes{
+			position: absolute;
+			width: 70px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			right: 25px;
+			bottom: 20px;
+		}
+		.closeBtn{
+			position: absolute;
+		    right: 15px;
+		    top: 0px;
+		    color: #fff;
+		}
+		ul{
+			padding: 10px 25px;
+		}
+	}
+	.personalInformation dd {
+	    margin-left: 35px;
+	}
+	.main .rightCon {
+	    margin-right: 2%;
+	}
+}
+
+@media screen and (max-width: 1054px){
+	.addBox{
+		ul{
+			a.cancel.btn,a.determine.btn{			
+			    padding: 3px 18px;
+			}
+			a.determine.btn{
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			a.cancel.btn{
+				margin-right: 10px;
+			}
+		}
+	}
+}

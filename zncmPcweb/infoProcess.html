@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<title>中南数据中心</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>	
+		<link rel="stylesheet" href="css/base.css"/>
+		<link rel="stylesheet" href="css/infoProcess.css">
+		<link rel="stylesheet" href="css/daterangepicker.css">
+		<!--[if IE 8]>
+			<script type="text/javascript" src="js/html5shiv.js"></script>
+			<script type="text/javascript" src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header class="pofix">
+			<div class="top clearfix">
+				<h1 class="fl"><a href="javascript:;">中南数据中心</a></h1>
+				<div class="btn-group fr">
+				  <a href="javascript:;"  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <span class="fl fs16">123456789</span>
+				    <span class="fl touXiang"></span>
+				  </a>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">个人账号</a></li>
+				    <li><a href="#">退出</a></li>
+				  </ul>
+				</div>			
+			</div>
+			<div class="navbar navbar-default">
+			    <ul class="nav navbar-nav">
+			        <li class="first fs16 htmin">中南数据中心</li>
+			        <li class="fs16 htmin">
+			        	<a href="UserCenterIndex.html" class="clearfix">
+			        		<span class="fl icon dataStatistics htmin"></span>
+			        		<span class="fl fs16 htmin">数据统计中心</span>
+			        	</a>
+			        </li>
+			        <li class="active three htmin">
+			        	<a href="allDetail.html" class="clearfix">
+			        		<span class="fl icon dataSmoothing htmin"></span>
+			        		<span class="fl fs16 htmin">数据加工</span>
+			        	</a>
+			        </li>
+			        <li class="three htmin">
+			        	<a href="dataCheck.html" class="clearfix">
+			        		<span class="fl icon dataCheck htmin"></span>
+			        		<span class="fl fs16 htmin">数据审核</span>
+			        	</a>
+			        </li>
+			        <li class="three htmin">
+			        	<a href="dataRelease.html" class="clearfix">
+			        		<span class="fl icon dataRelease htmin"></span>
+			        		<span class="fl fs16 htmin">数据发布</span>
+			        	</a>
+			        </li>
+			    </ul>
+			</div>
+		</header>
+		<!-- 新增左侧导航 -->
+		<div class="main">
+			<div class="pofix leftNav" >
+				<ul>
+					<li>
+						<div class="regionalBillboard" clshow="1">
+							<a href="javascript:;" class="clearfix">
+								<span class="fl icon lCIcon"></span>
+								<span class="fl tit fs16">地域排行榜</span>
+								<span class="fl triangleDown"></span>
+							</a>
+						</div>
+						<div class="sMDetails">
+	                        <a href="infoProcess.html?p=regionalBillboard&s=infoProcess" class="corBlue infoProcess active">销售库存分析</a>
+						</div>
+					</li>
+					<li>
+						<div class="salesStockAnalysis" clshow="1">
+							<a href="javascript:;" class="corBlue clearfix">
+								<span class="fl icon SSIcon"></span>
+								<span class="fl tit fs16">数据分析</span>
+								<span class="fl triangleDown"></span>
+							</a>
+						</div>
+						<div class="sMDetails">
+	                        <a href="allDetail.html?p=salesStockAnalysis&s=allDetail" class="corBlue allDetail">书目展示</a>
+                        	<a href="inventoryData.html?p=salesStockAnalysis&s=inventoryData" class="corBlue inventoryData">销售展示</a>
+                        	<a href="stockShow.html?p=salesStockAnalysis&s=stockShow" class="corBlue stockShow">库存展示</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<section class="container">
+			<div class="pop">
+				<h2 class="mask_tit clearfix">
+					<span class="fl">详细说明：</span>
+					<i class="close fr">&#xe60e;</i>
+				</h2>
+				<div class="mask_cont">
+					<hgroup>
+						<h3>销售库存展示：</h3>
+						<h4>1.地图展示全国各地区的销售库存数据；</h4>
+						<h4>2.横向柱状图显示各地区的销售和库存对比</h4>
+						<h4>3.排行榜显示单品书目和出版社的周、月、年销量.</h4>
+					</hgroup>
+				</div>
+				<footer class="mask_foot clearfix">
+					<i class="ok fr">确定</i>
+				</footer>
+			</div>
+			<h2 class="clearfix">
+				<span class="fl fs16">书目展示</span>
+				<span class="promit fl fs12">
+					<i>点击查看详细说明</i>
+				</span>
+			</h2>
+			<div class="chart" >
+				<nav class="top_nav clearfix">
+					<form class="fl" action="" method="get" accept-charset="utf-8">
+						<input class="search" type="search" name="search" value="" placeholder="输入图书名">
+						<a class="search_link" href="javascript:;"></a>
+						<p class="nav_sort clearfix">
+							<a class="active fl" href="javascript:;" class="fl" title="图书名">书目</a>
+							<a href="javascript:;" class="fl" title="出版社名">出版社</a>
+						</p>
+					</form>
+					<div class="time clearfix fr">
+				    	<div class="timeDetails clearfix fr">
+				    		<a href="javascript:;" class="fl fs16">今天 </a>
+				    		<a href="javascript:;" class="fl fs16">昨天</a>
+				    		<a href="javascript:;" class="fl fs16">7天</a>
+				    		<a href="javascript:;" class="fl fs16">14天</a>
+				    		<a href="javascript:;" class="fl active fs16">30天</a>
+				    		<a href="javascript:;" class="break fl"></a>
+				    	</div>
+					</div>
+				</nav>
+				<div class="backTo clearfix">
+					<a class="fl" href="javascript:;" title="">黑龙江省黑龙江省</a>
+					<span class="fl">-></span>
+					<a class="fl" href="javascript:;" title="">黑龙江省黑龙江省黑龙江省黑龙江省</a>
+				</div>
+				<div class="chart_cont">
+					<div id="chart1" style="width: 60%; height: 100%;"></div>
+					<div id="chart2" style="width: 38%; height: 100%;"></div>
+				</div>
+			</div>
+			<div class="data_show">
+				<nav>
+					<ul class="list_one">
+						<li class="clearfix">
+							<a class="fl active" href="javascript:;" title="书目">书目</a>
+							<a class="fl" href="javascript:;" title="出版社">出版社</a>
+						</li>
+						<li class="clearfix">
+							<a class="fl active" href="javascript:;" title="时间">时间</a>
+							<a class="fl" href="javascript:;" title="地区">地区</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="data_detail clearfix">
+					<section>
+						<div class="data_filter">
+							<div class="week active">
+								<span>周</span><i class="down_btn"></i>
+								<ul>
+									<li>周</li>
+									<li>月</li>
+									<li>年</li>
+								</ul>
+							</div>
+							<div class="area">
+								<span>北京</span><i class="down_btn"></i>
+								<ul>
+									<li class="clearfix">
+										<dl class="fl">
+											<dt>A-M</dt>
+											<dd>安徽</dd>
+											<dd>澳门</dd>
+											<dd>北京</dd>
+											<dd>重庆</dd>
+											<dd>福建</dd>
+											<dd>广东</dd>
+											<dd>甘肃</dd>
+											<dd>广西</dd>
+											<dd>贵州</dd>
+											<dd>河北</dd>
+											<dd>黑龙江</dd>
+											<dd>河南</dd>
+											<dd>湖南</dd>
+											<dd>湖北</dd>
+											<dd>海南</dd>
+											<dd>吉林</dd>
+											<dd>江苏</dd>
+											<dd>江西</dd>
+											<dd>辽宁</dd>
+										</dl>
+										<dl class="fl">
+											<dt>N-Z</dt>
+											<dd>内蒙古</dd>
+											<dd>青海</dd>
+											<dd>上海</dd>
+											<dd>四川</dd>
+											<dd>山东</dd>
+											<dd>山西</dd>
+											<dd>陕西</dd>
+											<dd>天津</dd>
+											<dd>台湾</dd>
+											<dd>香港</dd>
+											<dd>新疆</dd>
+											<dd>云南</dd>
+											<dd>浙江</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="data_filter">
+							<div class="week active">
+								<span>周</span><i class="down_btn"></i>
+								<ul>
+									<li>周</li>
+									<li>月</li>
+									<li>年</li>
+								</ul>
+							</div>
+							<div class="area">
+								<span>北京</span><i class="down_btn"></i>
+								<ul>
+									<li class="clearfix">
+										<dl class="fl">
+											<dt>A-M</dt>
+											<dd>安徽</dd>
+											<dd>澳门</dd>
+											<dd>北京</dd>
+											<dd>重庆</dd>
+											<dd>福建</dd>
+											<dd>广东</dd>
+											<dd>甘肃</dd>
+											<dd>广西</dd>
+											<dd>贵州</dd>
+											<dd>河北</dd>
+											<dd>黑龙江</dd>
+											<dd>河南</dd>
+											<dd>湖南</dd>
+											<dd>湖北</dd>
+											<dd>海南</dd>
+											<dd>吉林</dd>
+											<dd>江苏</dd>
+											<dd>江西</dd>
+											<dd>辽宁</dd>
+										</dl>
+										<dl class="fl">
+											<dt>N-Z</dt>
+											<dd>内蒙古</dd>
+											<dd>青海</dd>
+											<dd>上海</dd>
+											<dd>四川</dd>
+											<dd>山东</dd>
+											<dd>山西</dd>
+											<dd>陕西</dd>
+											<dd>天津</dd>
+											<dd>台湾</dd>
+											<dd>香港</dd>
+											<dd>新疆</dd>
+											<dd>云南</dd>
+											<dd>浙江</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="data_filter">
+							<div class="week active">
+								<span>周</span><i class="down_btn"></i>
+								<ul>
+									<li>周</li>
+									<li>月</li>
+									<li>年</li>
+								</ul>
+							</div>
+							<div class="area">
+								<span>北京</span><i class="down_btn"></i>
+								<ul>
+									<li class="clearfix">
+										<dl class="fl">
+											<dt>A-M</dt>
+											<dd>安徽</dd>
+											<dd>澳门</dd>
+											<dd>北京</dd>
+											<dd>重庆</dd>
+											<dd>福建</dd>
+											<dd>广东</dd>
+											<dd>甘肃</dd>
+											<dd>广西</dd>
+											<dd>贵州</dd>
+											<dd>河北</dd>
+											<dd>黑龙江</dd>
+											<dd>河南</dd>
+											<dd>湖南</dd>
+											<dd>湖北</dd>
+											<dd>海南</dd>
+											<dd>吉林</dd>
+											<dd>江苏</dd>
+											<dd>江西</dd>
+											<dd>辽宁</dd>
+										</dl>
+										<dl class="fl">
+											<dt>N-Z</dt>
+											<dd>内蒙古</dd>
+											<dd>青海</dd>
+											<dd>上海</dd>
+											<dd>四川</dd>
+											<dd>山东</dd>
+											<dd>山西</dd>
+											<dd>陕西</dd>
+											<dd>天津</dd>
+											<dd>台湾</dd>
+											<dd>香港</dd>
+											<dd>新疆</dd>
+											<dd>云南</dd>
+											<dd>浙江</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="data_tit">
+							<a href="javascript:;" title="">
+								<span>排名</span>
+								<span>书目</span>
+								<span>销量</span>
+							</a>
+						</div>
+						<div class="data_tit">
+							<a href="javascript:;" title="">
+								<span>排名</span>
+								<span>书目</span>
+								<span>销量</span>
+							</a>
+						</div>
+						<div class="data_tit">
+							<a href="javascript:;" title="">
+								<span>排名</span>
+								<span>书目</span>
+								<span>销量</span>
+							</a>
+						</div>
+					</section>
+					<div class="list_box fl">		<!-- 新建div包裹层 -->
+						<ul class="data_list fl">
+							<li class="data_num" data-num="0">
+								<a href="javascript:;" title="">
+									<span class="pinkBg"><i>1</i></span>
+									<span class="book_name">二手时间</span>
+									<span>454856</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="1">
+								<a href="javascript:;" title="">
+									<span class="pinkBg"><i>2</i></span>
+									<span class="book_name">自深深处</span>
+									<span>54645</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="2">
+								<a href="javascript:;" title="">
+									<span class="pinkBg"><i>3</i></span>
+									<span class="book_name">极简宇宙史</span>
+									<span>4798748</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="3">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>4</i></span>
+									<span class="book_name">北欧，冰与火之地的寻真之旅</span>
+									<span>45545</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="4">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>5</i></span>
+									<span class="book_name">眼前</span>
+									<span>3456</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="5">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>6</i></span>
+									<span class="book_name">认同感：用故事包装事实的艺术</span>
+									<span>45676876</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="6">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>7</i></span>
+									<span class="book_name">蒋经国传</span>
+									<span>34567</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="7">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>8</i></span>
+									<span class="book_name">再度觉醒</span>
+									<span>489435</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="8">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>9</i></span>
+									<span class="book_name">当你的才华撑不起你的梦想时</span>
+									<span>645426</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="9">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>10</i></span>
+									<span class="book_name">有鹿来</span>
+									<span>5424546</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="data_list fl">
+							<li class="data_num" data-num="0">
+								<a href="javascript:;" title="">
+									<span class="pinkBg"><i>1</i></span>
+									<span class="book_name">极简宇宙史</span>
+									<span>454856</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="1">
+								<a href="javascript:;" title="">
+									<span class="pinkBg"><i>2</i></span>
+									<span class="book_name">眼前</span>
+									<span>54645</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="2">
+								<a href="javascript:;" title="">
+									<span class="pinkBg"><i>3</i></span>
+									<span class="book_name">认同感：用故事包装事实的艺术</span>
+									<span>4798748</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="3">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>4</i></span>
+									<span class="book_name">北欧，冰与火之地的寻真之旅</span>
+									<span>45545</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="4">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>5</i></span>
+									<span class="book_name">自深深处</span>
+									<span>3456</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="5">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>6</i></span>
+									<span class="book_name">当你的才华撑不起你的梦想时</span>
+									<span>45676876</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="6">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>7</i></span>
+									<span class="book_name">蒋经国传</span>
+									<span>34567</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="7">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>8</i></span>
+									<span class="book_name">再度觉醒</span>
+									<span>489435</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="8">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>9</i></span>
+									<span class="book_name">有鹿来</span>
+									<span>645426</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="9">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>10</i></span>
+									<span class="book_name">二手时间</span>
+									<span>5424546</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="data_list fl">
+							<!-- <li class="data_num" data-num="0">
+								<a href="javascript:;" title="">
+									<span class="pinkBg"><i>1</i></span>
+									<span class="book_name">自深深处</span>
+									<span>454856</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="1">
+								<a href="javascript:;" title="">
+									<span class="pinkBg"><i>2</i></span>
+									<span class="book_name">极简宇宙史</span>
+									<span>54645</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="2">
+								<a href="javascript:;" title="">
+									<span class="pinkBg"><i>3</i></span>
+									<span class="book_name">二手时间</span>
+									<span>4798748</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="3">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>4</i></span>
+									<span class="book_name">北欧，冰与火之地的寻真之旅</span>
+									<span>45545</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="4">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>5</i></span>
+									<span class="book_name">认同感：用故事包装事实的艺术</span>
+									<span>3456</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="5">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>6</i></span>
+									<span class="book_name">眼前</span>
+									<span>45676876</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="6">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>7</i></span>
+									<span class="book_name">当你的才华撑不起你的梦想时</span>
+									<span>34567</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="7">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>8</i></span>
+									<span class="book_name">再度觉醒</span>
+									<span>489435</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="8">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>9</i></span>
+									<span class="book_name">蒋经国传</span>
+									<span>645426</span>
+								</a>
+							</li>
+							<li class="data_num" data-num="9">
+								<a href="javascript:;" title="">
+									<span class="grayBg"><i>10</i></span>
+									<span class="book_name">有鹿来</span>
+									<span>5424546</span>
+								</a>
+							</li> -->
+						</ul>
+					</div>
+					<div class="mask_bd"></div>
+					<div class="mask_bd"></div>
+					<div class="mask_bd"></div>
+				</div>
+			</div>
+		</section>
+		<div class="shade"></div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/infoProcess.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.placeholder.min.js"></script>
+		<script type="text/javascript" src="js/moment.min.js"></script>
+		<script type="text/javascript" src="js/daterangepicker.js"></script>
+		<script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+		<script>
+			var myChart1 = echarts.init(document.getElementById('chart1'));
+			var myChart2 = echarts.init(document.getElementById('chart2'),'macarons');
+
+	        var option1 = {
+			    tooltip : {
+			        trigger: 'item',
+			        formatter: '{b}'
+			    },
+			    series : [
+			        {
+			            name: '中国',
+			            type: 'map',
+			            mapType: 'china',
+			            mapLocation: {
+			            	x: 'center',
+			            	y: 'center'
+			            },
+			            selectedMode : 'multiple',
+			            itemStyle:{
+			                normal:{label:{show:true}},
+			                emphasis:{label:{show:true}}
+			            },
+			            data:[
+			                {name:'广东',selected:true}
+			            ]
+			        }
+			    ]
+			};
+
+	        var option2 = {
+			   tooltip: {
+			       trigger: "axis",
+			       axisPointer: {
+			           type: "shadow"
+			       }
+			   },
+			   legend: {
+			   		x: 'center',
+			   		y: 20,
+			       data: ["库存销售数据", "数目上传数据"]
+			   },
+			   calculable: true,
+			   toolbox: {
+			       show: true,
+			       feature: {
+			           mark: {
+			               show: false
+			           },
+			           dataView: {
+			               show: false,
+			               readOnly: true
+			           },
+			           magicType: {
+			               show: false,
+			               type: ["line", "bar", "stack", "tiled"]
+			           },
+			           restore: {
+			               show: false
+			           },
+			           saveAsImage: {
+			               show: true
+			           }
+			       },
+			       x: 'right',
+			       y: 20,
+			       orient: "vertical"
+			   },
+			   xAxis: [
+			       {
+			           type: "value",
+			           splitLine: {
+			               show: false
+			           },
+			           axisLine: {
+			               show: false
+			           },
+			           splitArea: {
+			                show: false
+			            }
+			       }
+			   ],
+			   yAxis: [
+			       {
+			           type: "category",
+			           data: ["北京", "上海", "广州", "湖南", "贵州", "湖北", "西双版纳傣族自治州", "河北", "河南", '内蒙', '沈阳', '大连'],
+			           splitLine: {
+			               show: false
+			           },
+			           axisLine: {
+			               show: false
+			           },
+			           axisTick: {
+			               show: false
+			           },
+			           position: "bottom",
+			           axisLabel: {
+			               show: true,
+			               rotate: 45,
+			               textStyle: {
+			                   color: "rgb(102, 102, 102)",
+			                   fontSize: 14
+			               }
+			           }
+			       }
+			   ],
+			   series: [
+			       {
+			           name: "库存销售数据",
+			           type: "bar",
+			           stack: '总量',
+			           data: [320, 332, 123, 214, 213, 321, 214, 156, 246, 231, 182, 162],
+			           barWidth: 10,
+			           barGap: "25%",
+			           barCategoryGap: "35%"
+			       },
+			       {
+			           name: "数目上传数据",
+			           type: "bar",
+			           stack: "总量",
+			           data: [120, 132, 433, 126, 131, 213, 213, 146, 163, 321, 214, 321],
+			           barWidth: 10,
+			           barGap: "25%",
+			           barCategoryGap: "35%"
+			       }			   
+			    ],
+			    /*新增柱状图位置调整*/
+			    grid: {
+			        x: 60,
+			        y: 65,
+			        x2: 30,
+			        y2: 75
+			    },
+			   	animation: true,
+			   	color: ["rgb(79, 117, 213)", "rgb(48, 190, 135)"]
+			};
+
+
+	        // 使用刚指定的配置项和数据显示图表。
+	        myChart1.setOption(option1);
+	        myChart2.setOption(option2);
+		</script>
+	</body>
+</html>

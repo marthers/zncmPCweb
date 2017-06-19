@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<title>中南数据中心</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="css/individualAccount.css"/>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/password.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!--[if IE 8]>
+		<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header class="pofix">
+		<div class="top clearfix">
+			<h1 class="fl"><a href="javascript:;">中南数据中心</a></h1>
+			<div class="btn-group fr">
+			  <a href="javascript:;"  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    <span class="fl fs16">123456789 </span>
+			    <span class="fl touXiang"></span>
+			  </a>
+			  <ul class="dropdown-menu">
+			    <li><a href="#">个人账号</a></li>
+			    <li><a href="#">退出</a></li>
+			  </ul>
+			</div>			
+		</div>
+		<div class="navbar navbar-default">
+		    <ul class="nav navbar-nav">
+		        <li class="first fs16 htmin">中南数据中心</li>
+		        <li class="active fs16 htmin">
+		        	<a href="UserCenterIndex.html" class="clearfix">
+		        		<span class="fl icon dataStatistics htmin"></span>
+		        		<span class="fl fs16 htmin">数据统计中心</span>
+		        	</a>
+		        </li>
+		        <li class="three htmin">
+		        	<a href="allDetail.html" class="clearfix">
+		        		<span class="fl icon dataSmoothing htmin"></span>
+		        		<span class="fl fs16 htmin">数据加工</span>
+		        	</a>
+		        </li>
+		        <li class="three htmin">
+		        	<a href="dataCheck.html" class="clearfix">
+		        		<span class="fl icon dataCheck htmin"></span>
+		        		<span class="fl fs16 htmin">数据审核</span>
+		        	</a>
+		        </li>
+		        <li class="three htmin">
+		        	<a href="dataRelease.html" class="clearfix">
+		        		<span class="fl icon dataRelease htmin"></span>
+		        		<span class="fl fs16 htmin">数据发布</span>
+		        	</a>
+		        </li>
+		    </ul>
+		</div>
+	</header>
+	<div class="main">
+		<div class="pop">
+			<h2 class="mask_tit clearfix">
+				<span class="fl">详细说明：</span>
+				<i class="close fr">&#xe60e;</i>
+			</h2>
+			<div class="mask_cont">
+				<hgroup>
+					<h3>个人账户：</h3>
+					<h4>1.显示用户登录帐号、密码，帐号注册时间；</h4>
+					<h4>2.支持用户修改密码操作；</h4>
+					<h4>3.显示用户帐号安全等级；</h4>
+					<h4>4.支持第三方帐号绑定.</h4>
+				</hgroup>
+			</div>
+			<footer class="mask_foot clearfix">
+				<i class="ok fr">确定</i>
+			</footer>
+		</div>
+		<div class="pofix leftNav" >
+			<ul>
+				<li>
+					<div class="statisticalManagement" clshow="1">
+						<a href="javascript:;" class="clearfix">
+							<span class="fl icon sMIcon"></span>
+							<span class="fl tit fs16">统计管理</span>
+							<span class="fl triangleDown"></span>
+						</a>
+					</div>
+					<div class="sMDetails">
+                        <a href="UserCenterIndex.html?p=statisticalManagement&s=UserCenterIndex" class="corBlue UserCenterIndex">数据统计管理</a>
+					</div>
+				</li>
+				<!-- <li>
+					<div class="dataTransmission" clshow="1">
+						<a href="javascript:;" class="corBlue clearfix">
+							<span class="fl icon dTIcon"></span>
+							<span class="fl tit fs16">数据传输</span>
+							<span class="fl triangleDown"></span>
+						</a>
+					</div>
+					<div class="dTDetails ">
+				                        <a href="dataUpload.html?p=dataTransmission&s=dataUpload" class="corBlue dataUpload">书目上传并解析</a>
+				                        <a href="dataTransformation.html?p=dataTransmission&s=dataTransformation" class="corBlue dataTransformation">书目转换并下载</a>
+				                        <a href="dataUploadFTP.html?p=dataTransmission&s=dataUploadFTP" class="corBlue dataUploadFTP">书目上传到FTP</a>
+				                        <a href="dataSaleDownload.html?p=dataTransmission&s=dataSaleDownload" class="corBlue dataSaleDownload">销售库存下载</a>
+				                        <a href="dataBookDownload.html?p=dataTransmission&s=dataBookDownload" class="corBlue dataBookDownload">书目下载</a>
+				                        <a href="dataSaleUpload.html?p=dataTransmission&s=dataSaleUpload" class="corBlue dataSaleUpload">销售库存上传</a>
+					</div>
+				</li> -->
+				<li>
+					<div class="authorityManagement" clshow="1">
+						<a href="javascript:;" class="corBlue clearfix">
+							<span class="fl icon aMIcon"></span>
+							<span class="fl tit fs16">权限管理</span>
+							<span class="fl triangleDown"></span>
+						</a>
+					</div>
+					<div class="aMDetails">
+                        <a href="individualAccount.html?p=authorityManagement&s=individualAccount" class="corBlue individualAccount active">个人账户</a>
+                        <a href="accountManagement.html?p=authorityManagement&s=accountManagement" class="corBlue accountManagement">账号管理体系</a>
+                        <a href="operatingStatistics.html?p=authorityManagement&s=operatingStatistics" class="corBlue operatingStatistics">用户操作统计</a>
+					</div>
+				</li>
+				<li>
+					<div class="messageNotification" clshow="1">
+						<a href="javascript:;" class="corBlue clearfix">
+							<span class="fl icon mNIcon"></span>
+							<span class="fl tit fs16">消息通知</span>
+							<span class="fl triangleDown"></span>
+						</a>
+					</div>
+					<div class="mNDetails">
+                        <a href="dataNotice.html?p=dataNotice&s=messageNotification" class="corBlue dataNotice">数据传输通知</a>
+                        <a href="systemNews.html?p=systemNews&s=messageNotification" class="corBlue systemNews">系统消息</a>
+                        <a href="productTrend.html?p=productTrend&s=messageNotification" class="corBlue productTrend">产品动态</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="rightCon">
+			<h2 class="clearfix">
+				<span class="fl fs16">个人账户</span>
+				<span class="promit fl fs12">
+					<i>点击查看详细说明</i>
+				</span>
+			</h2>
+			<div class="iACon clearfix">
+				<div class="fl myself">
+					<a href="javascript:;" title="点击添加照片"></a>
+				</div>
+				<div class="fl myselfInfor">
+					<dl class="clearfix">
+						<dt class="fl">登录账号：</dt>
+						<dd class="fl">2317195590@qq.com</dd>
+					</dl>
+					<dl class="clearfix">
+						<dt class="fl">账号密码：</dt>
+						<dd class="fl">******************</dd>
+						<dd class="fl modifyPassword">
+							<a href="javascript:;" class="mPBtn">修改密码</a>
+						</dd>
+					</dl>
+					<dl class="clearfix">
+						<dt class="fl">注册时间：</dt>
+						<dd class="fl">2015-12-12</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- 修改密码版块 -->
+			<div class="hideBox">
+				<ul class="clearfix">
+					<li class="fl">
+						<h4 class="clearfix">
+						<span class="fl">修改密码(邮箱验证)</span>
+						<span class="fl prompt">请尽快到邮箱查看验证码，5分钟内有效</span>
+						</h4>
+						<div class="passwordIn clearfix">
+							<span class="fl">绑定邮箱：</span>
+							<span class="fl">23171************</span>
+							<input class="Obtain fl btn timer" id="timer" value="点击获取邮箱验证码">
+							<dl class="clearfix fl">
+								<dt class="fl">输入邮箱验证码：</dt>
+								<dd class="fl"><input id="txt" type="text"></dd>
+								<dd class="wrongPrompt">
+									<!-- 验证码不正确 -->
+								</dd>
+							</dl>
+							<a href="javascript:;" class="fl next btn">下一步</a>
+							<a href="javascript:;" class="fl cancel btn">取消</a>
+						</div>
+					</li>
+					<li class="fl">
+						<h4 class="clearfix">
+						<span class="fl">修改密码(邮箱验证)</span>
+						</h4>
+						<div class="fillInPassword clearfix">
+							<dl class="clearfix fl typePassword">
+								<dt class="fl">请输入新密码：</dt>
+								<dd class="fl"><input type="password" placeholder="请输入8-20位字符和数字的组合"></dd>
+								<dd class="wrongPrompt">
+									<!-- 请输入8-20位字符和数字的组合 -->
+								</dd>
+							</dl>
+							<dl class="clearfix fl confirm">
+								<dt class="fl">确认密码：</dt>
+								<dd class="fl"><input type="password" placeholder="请再次输入新密码"></dd>
+								<dd class="wrongPrompt">
+									<!-- 请输入8-20位字符和数字的组合 -->
+								</dd>
+							</dl>
+							<a href="javascript:;" class="fl determine btn">确定</a>
+							<a href="javascript:;" class="fl cancel btn">取消</a>
+						</div>
+					</li>
+					<li class="fl">
+						<p class="clearfix">
+							<span class="ok successIcon iconfont fl">&#xe602;</span>
+							<span class="success fs16 fl">密码修改成功！</span>
+						</p>
+					</li>					
+				</ul>
+			</div>
+			<!-- 安全等级 -->
+			<dl class="clearfix securityLevel first">
+				<dt class="fl">您的账号安全等级： </dt>
+				<dd class="fl clearfix">
+					<div class="progress fl">
+					   <div class="progress-bar" role="progressbar" 
+					      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+					      <span class="sr-only progressValue">70%</span>
+					   </div>
+					</div>
+					<span class="fl grade"></span>
+				</dd>
+			</dl>
+			<!-- 邮箱绑定 -->
+			<dl class="clearfix mailboxBinding">
+				<dt class="fl">邮箱绑定</dt>
+				<dd class="fl clearfix">
+					为了保证您的账号安全，请您绑定常用邮箱，未来添加或修改邮箱也将通过该邮箱
+				</dd>
+				<dd class="setUp fr">
+					<i class="iconfont fl ok">&#xe603;</i>
+					<span class="fl ok txt">已设置</span>
+					<span class="fl ok line">|</span>
+					<a href="bindingModification.html" class="fl txt">修改</a>
+				</dd>
+			</dl>
+			<!-- 微信绑定 -->
+			<dl class="clearfix weixinBinding">
+				<dt class="fl">微信绑定</dt>
+				<dd class="fl">
+					为了保证您的账号安全，请您绑定您的微信账号，您将会体验到更多产品服务。
+				</dd>
+				<dd class="setUp fr">
+					<i class="iconfont fl no">&#xe603;</i>
+					<span class="fl no txt">未设置</span>
+					<span class="fl no line">|</span>
+					<a href="javascript:;" class="fl txt">设置</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<!-- 模态窗口 -->
+	<div class="shade">
+	</div>
+</body>
+</html>

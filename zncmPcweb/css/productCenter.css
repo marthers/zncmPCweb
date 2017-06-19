@@ -1,0 +1,465 @@
+/*banner start*/
+.banner {
+  width: 100%;
+  height: 250px;
+  background: url(../img/banner-bg.png) no-repeat center;
+}
+.banner h2 {
+  margin-top: 65px;
+  font-size: 24px;
+  color: #fff;
+}
+.banner p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #fff;
+}
+/*banner end*/
+/*核心优势 start*/
+.coreStrengths {
+  padding: 50px 0 40px;
+  background-color: #f6f6f6;
+}
+.coreStrengths h2 {
+  font-size: 22px;
+}
+.coreStrengths li {
+  width: 25%;
+}
+.coreStrengths dt {
+  width: 70px;
+  height: 70px;
+  margin: 70px auto 30px;
+}
+.coreStrengths .icon01 {
+  background: url(../img/products.png) no-repeat 0 0;
+}
+.coreStrengths .icon02 {
+  background: url(../img/products.png) no-repeat -70px 0;
+}
+.coreStrengths .icon03 {
+  background: url(../img/products.png) no-repeat -140px 0;
+}
+.coreStrengths .icon04 {
+  background: url(../img/products.png) no-repeat -210px 0;
+}
+.coreStrengths dd {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+.coreStrengths .tit {
+  font-size: 15px;
+  line-height: 30px;
+  color: #555;
+}
+/*核心优势 end*/
+/*系统架构 start*/
+.systemArchiture h2 {
+  font-size: 22px;
+  padding: 50px 0 38px;
+}
+.systemArchiture h3 {
+  margin: 30px 0 70px;
+}
+.systemArchiture .dashedBox {
+  height: 400px;
+  margin-bottom: 50px;
+}
+.systemArchiture .extractData {
+  width: 220px;
+  border: 1px dashed #eee;
+}
+.systemArchiture .extractData .EDDetailed {
+  padding: 0 12px;
+}
+.systemArchiture .OpenAPI {
+  width: 140px;
+  border: 1px dashed #eee;
+}
+.systemArchiture .CMDC {
+  width: 120px;
+  border: 1px dashed #eee;
+}
+.systemArchiture .dataManagement {
+  width: 110px;
+  border: 1px dashed #eee;
+}
+.systemArchiture .decisionAnalysis {
+  width: 116px;
+  border: 1px dashed #eee;
+}
+.systemArchiture .flowArrow {
+  width: 32px;
+  margin: 170px 14px 0;
+  height: 19px;
+  background: url(../img/products.png) no-repeat -280px -70px;
+}
+.systemArchiture h3 {
+  color: #3aa6ce;
+  font-size: 14px;
+  text-align: center;
+}
+.systemArchiture .ERP,
+.systemArchiture .publishingSystem {
+  width: 46px;
+  height: 44px;
+  background: url(../img/products.png) no-repeat -280px 0;
+  line-height: 50px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+.systemArchiture .publishingSystem {
+  line-height: 16px;
+  padding: 10px 11px;
+  margin-top: 25px;
+  font-size: 12px;
+}
+.systemArchiture .extract:before {
+  content: '抽取';
+  position: relative;
+  top: -15px;
+  margin-left: 7px;
+}
+.systemArchiture .extract {
+  width: 43px;
+  height: 32px;
+  margin: 20px 15px 0;
+  color: #3aa6ce;
+  font-size: 12px;
+  background: url(../img/products.png) no-repeat -210px -70px;
+}
+.systemArchiture .extract2 {
+  margin: 44px 15px 0;
+}
+.systemArchiture .stock,
+.systemArchiture .sale,
+.systemArchiture .xls,
+.systemArchiture .iso,
+.systemArchiture .xml {
+  width: 34px;
+  height: 34px;
+  margin: 0 5px 5px 0;
+  font-size: 12px;
+  text-align: center;
+  line-height: 34px;
+  background: #3eb2dd;
+  color: #fff;
+}
+.systemArchiture .stock,
+.systemArchiture .iso {
+  margin: 0 0 5px 0;
+}
+.systemArchiture p {
+  font-size: 12px;
+  margin-bottom: 25px;
+  clear: both;
+}
+.systemArchiture h4 {
+  font-size: 12px;
+  color: #3aa6ce;
+  margin-bottom: 15px;
+}
+.systemArchiture .xls {
+  background: #279159;
+}
+.systemArchiture .iso {
+  background: #c15b5e;
+}
+.systemArchiture .xml {
+  background: #106cb1;
+}
+.systemArchiture .bd {
+  width: 74px;
+}
+.systemArchiture .OAPIDetailed .uploadIcon,
+.systemArchiture .OAPIDetailed .downloadIcon,
+.systemArchiture .OAPIDetailed .conversionIcon {
+  display: block;
+  width: 53px;
+  margin: 0 auto;
+  height: 34px;
+  background-image: url(../img/products.png);
+}
+.systemArchiture .OAPIDetailed .uploadIcon {
+  background-position: -420px 0;
+}
+.systemArchiture .OAPIDetailed .uploadIcon:after,
+.systemArchiture .OAPIDetailed .downloadIcon:after,
+.systemArchiture .OAPIDetailed .conversionIcon:after {
+  content: '上传';
+  text-align: center;
+  position: relative;
+  top: 37px;
+  margin-left: 14px;
+  font-size: 12px;
+}
+.systemArchiture .OAPIDetailed .downloadIcon {
+  background-position: -490px 0;
+}
+.systemArchiture .OAPIDetailed .downloadIcon:after {
+  content: '下载';
+}
+.systemArchiture .OAPIDetailed .conversionIcon {
+  background-position: 0 -70px;
+}
+.systemArchiture .OAPIDetailed .conversionIcon:after {
+  content: '转换';
+}
+.systemArchiture .OAPIDetailed .download,
+.systemArchiture .OAPIDetailed .conversion {
+  margin-top: 40px;
+}
+.systemArchiture .CMDCDetailed .auditIcon,
+.systemArchiture .CMDCDetailed .cleaningIcon,
+.systemArchiture .CMDCDetailed .processingIcon {
+  width: 64px;
+  margin: 0 auto 40px;
+  height: 40px;
+  background: url(../img/products.png) no-repeat -140px -70px;
+  line-height: 54px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+.systemArchiture .DMDetailed .storageIcon {
+  display: block;
+  width: 53px;
+  margin: 0 auto;
+  height: 34px;
+  background: url(../img/products.png) no-repeat -350px 0;
+}
+.systemArchiture .DMDetailed .storageIcon:after,
+.systemArchiture .DMDetailed .issueIcon:after {
+  content: '数据储存管理';
+  font-size: 12px;
+  position: relative;
+  top: 40px;
+  margin-left: -34px;
+  left: 50%;
+}
+.systemArchiture .DMDetailed .issueIcon {
+  display: block;
+  width: 44px;
+  margin: 72px auto 0;
+  height: 44px;
+  background: url(../img/products.png) no-repeat -70px -70px;
+}
+.systemArchiture .DMDetailed .issueIcon:after {
+  content: '数据发布';
+  top: 50px;
+  margin-left: -25px;
+}
+.systemArchiture .DADetailed {
+  padding-top: 40px;
+}
+.systemArchiture .DADetailed .DAIcon {
+  display: block;
+  width: 38px;
+  margin: 0 auto;
+  height: 36px;
+  background: url(../img/products.png) no-repeat -350px -70px;
+}
+.systemArchiture .DADetailed .DAIcon:after {
+  content: '销售库存数据分析等';
+  position: relative;
+  top: 50px;
+  font-size: 12px;
+  left: -35px;
+  width: 116px;
+  display: inline-block;
+}
+/*系统架构 end*/
+/*功能全解 start*/
+.functionSolution {
+  background: #f6f6f6;
+}
+.functionSolution h2 {
+  font-size: 22px;
+  padding: 50px 0 60px;
+}
+.functionSolution li {
+  width: 25%;
+}
+.functionSolution a {
+  display: block;
+  width: 110px;
+  margin: 0 auto;
+  height: 110px;
+  border: 1px dashed #888;
+  border-radius: 50%;
+  behavior: url(pie.htc);
+  position: relative;
+}
+.functionSolution .icon {
+  display: block;
+  margin: 28px auto;
+  background: url(../img/products.png) no-repeat;
+}
+.functionSolution .icon01 {
+  width: 56px;
+  height: 46px;
+  background-position: -420px -70px;
+}
+.functionSolution .icon02 {
+  width: 44px;
+  height: 46px;
+  background-position: 0 -120px;
+}
+.functionSolution .icon03 {
+  width: 39px;
+  margin: 33px auto;
+  height: 42px;
+  background-position: -140px -120px;
+}
+.functionSolution .icon04 {
+  width: 46px;
+  height: 44px;
+  background-position: -280px -120px;
+}
+@keyframes smallbig {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.functionSolution a:hover {
+  border: 1px solid #3aa6ce;
+  animation: smallbig .5s;
+}
+.functionSolution a:hover .icon01 {
+  background-position: -489px -70px;
+}
+.functionSolution a:hover .icon02 {
+  background-position: -70px -120px;
+}
+.functionSolution a:hover .icon03 {
+  background-position: -210px -120px;
+}
+.functionSolution a:hover .icon04 {
+  background-position: -350px -120px;
+}
+.functionSolution dt {
+  padding: 20px 0 25px;
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  font-weight: normal;
+}
+.functionSolution dd {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+/*功能全解 end*/
+/*环境配置 start*/
+.environment {
+  padding-bottom: 50px;
+}
+.environment h2 {
+  font-size: 22px;
+  padding: 50px 0 20px;
+}
+.environment p,
+.environment h3 {
+  font-size: 16px;
+  color: #666;
+}
+.environment h3 {
+  padding: 40px 0 25px;
+}
+.environment table tr {
+  border: 1px solid #ccc;
+  border-top: none;
+  font-size: 12px;
+}
+.environment table .tit {
+  height: 40px;
+  border-color: #4fb9e0;
+  background: #4fb9e0;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+.environment .software td {
+  text-align: center;
+}
+.environment .software tr:nth-child(2) {
+  height: 90px;
+}
+.environment .software tr:nth-child(3),
+.environment .software tr:nth-child(5) {
+  height: 45px;
+}
+.environment .software tr:nth-child(4),
+.environment .software tr:nth-child(6),
+.environment .software tr:nth-child(7) {
+  height: 70px;
+}
+.environment .software tr td:nth-child(4) {
+  text-align: left;
+  padding-left: 60px;
+}
+.environment .software .tit td:nth-child(4) {
+  text-align: center;
+  padding-left: 0;
+}
+.environment .software .number {
+  width: 90px;
+}
+.environment .software .softwareBrand {
+  width: 180px;
+}
+.environment .software .version {
+  width: 400px;
+}
+.environment .software .use {
+  width: 300px;
+}
+.environment .hardware tr:nth-child(2) {
+  height: 130px;
+}
+.environment .hardware tr:nth-child(3),
+.environment .hardware tr:nth-child(5) {
+  height: 74px;
+}
+.environment .hardware tr:nth-child(4) {
+  height: 85px;
+}
+.environment .hardware td {
+  text-align: left;
+}
+.environment .hardware .tit td {
+  text-align: center;
+}
+.environment .hardware .number {
+  width: 70px;
+  text-align: center;
+}
+.environment .hardware .deviceName {
+  width: 100px;
+  text-align: center;
+}
+.environment .hardware .testEnvironment,
+.environment .hardware .actualOperating {
+  width: 270px;
+  padding-left: 50px;
+}
+.environment .hardware .tit .testEnvironment,
+.environment .hardware .tit .actualOperating,
+.environment .hardware .tit .use {
+  padding-left: 0;
+}
+.environment .hardware .use {
+  width: 260px;
+  padding-left: 60px;
+}
+/*环境配置 end*/

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>中南数据中心</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+    <!-- 新加 -->
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/edit.css">
+    <link rel="stylesheet" type="text/css" href="css/secondEdit.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/secondEdit.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <!-- 新加 -->
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <!-- 新加 -->
+    <script type="text/javascript" src="js/systemNews.js"></script>
+    <!--[if IE 8]>
+            <script type="text/javascript" src="js/html5shiv.js"></script>
+            <script type="text/javascript" src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <header class="pofix">
+        <div class="top clearfix">
+            <h1 class="fl"><a href="javascript:;">中南数据中心</a></h1>
+            <div class="btn-group fr">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="fl fs16">123456789 </span>
+                    <span class="fl touXiang"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">个人账号</a></li>
+                    <li><a href="#">退出</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li class="first fs16 htmin">中南数据中心</li>
+                <li class="fs16 htmin">
+                    <a href="UserCenterIndex.html" class="clearfix">
+                        <span class="fl icon dataStatistics htmin"></span>
+                        <span class="fl fs16 htmin">数据统计中心</span>
+                    </a>
+                </li>
+                <li class="active three htmin">
+                    <a href="allDetail.html" class="clearfix">
+                        <span class="fl icon dataSmoothing htmin"></span>
+                        <span class="fl fs16 htmin">数据加工</span>
+                    </a>
+                </li>
+                <li class="three htmin">
+                    <a href="dataCheck.html" class="clearfix">
+                        <span class="fl icon dataCheck htmin"></span>
+                        <span class="fl fs16 htmin">数据审核</span>
+                    </a>
+                </li>
+                <li class="three htmin">
+                    <a href="dataRelease.html" class="clearfix">
+                        <span class="fl icon dataRelease htmin"></span>
+                        <span class="fl fs16 htmin">数据发布</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="main">
+        <!-- 表格主体内容 -->
+        <div class="editBody wrap clearfix">
+            <div class="eBL fl pofix">
+                <ul id="titList">
+                    <li class="current">
+                        <a href="#Identification" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">1.标识项字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#bookName" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">2.书名项字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#series" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">3.丛书项字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#author" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">4.作者项字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#edition" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">5.版本项字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#describe" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">6.描述项字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#category" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">7.分类项字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#resource" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">8.资源项字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#introduction" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">9.作者介绍字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#Chapter" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">10.章节目录字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#contentSummary" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">11.内容提要字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#readerObject" class="clearfix">
+                            <span class="icon fl"></span>
+                            <span class="txt fl">12.读者对象字段</span>
+                            <span class="fl"></span>
+                            <!-- 添加"wrong",表示此项有错误，即红点右上角显示，以下均是 -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="eBR fl">
+                <div class="con">
+                    <div class="rightCon">
+                        <h2 class="clearfix bookSum">
+                            <span class="fl fs16">书目数据加工</span>
+                            <span class="promit fl fs12">
+                                    <i>点击查看详细说明</i>
+                                </span>
+                            <nav class="nav_right">
+                                <a href="javascript:;">批次列表页</a>>
+                                <a href="javascript:;">书目列表页</a>>
+                                <a class="active" href="javascript:;">书目加工页</a>
+                            </nav>
+                        </h2>
+                    </div>
+                    <div class="content">
+                        <h2 class="Identification" id="Identification" error="0">
+                            <span class="fl">
+                                    标识项字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr">3</span>
+                        </h2>
+                        <div class="IdentificationCon">
+                            <ul class="clearfix">
+                                <li class="fl txt">
+                                    <span class="required">通告类型：</span>
+                                    <div class="Input">
+                                        <select class="ipt" pid="Identification" id="TGLX" name="TGLX">
+                                                <option value="03">添加</option>
+                                                <option value="04">更新</option>
+                                                <option value="05">删除</option>
+                                            </select>
+                                        <div lineid="line1" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                                <li class="fl txt">
+                                    <span class="required">记录号：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="Identification" id="JLH" name="JLH" />
+                                        <div lineid="line1" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                                <li class="fl txt">
+                                    <span class="required">供应商商品ID：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="Identification" id="GYSSPID" name="GYSSPID" />
+                                        <div lineid="line1" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt scale">
+                                    <span>全国统一标准书号：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="Identification" id="QGTYBZSH" name="QGTYBZSH" />
+                                        <div lineid="lineA" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt changeName">
+                                    <span class="required">ISBN（国际标准书号）：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="Identification" id="GJBZSH" name="GJBZSH" />
+                                        <div lineid="lineA" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt">
+                                    <span>版权登记号：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="Identification" id="BQDJH" name="BQDJH" />
+                                        <div lineid="lineA" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt">
+                                    <span>教材征订号：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="Identification" id="JCZDH" name="JCZDH" />
+                                        <div lineid="lineB" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="bookName" id="bookName" error="0">
+                            <span class="fl">
+                                    书名项字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+                        <div class="bookNameCon">
+                            <ul class="clearfix">
+                                <li class="clearfix">
+                                    <span class="fl txt required">责任编辑：</span>
+                                    <div class="fl userValue bkName Input">
+                                        <input class="ipt" type="text" pid="bookName" id="ZRBJ" name="ZRBJ" />
+                                        <div lineid="lineC" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                                <li class="fl txt">
+                                    <span>并列书名：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="bookName" id="BLSM" name="BLSM"></input>
+                                        <!-- 在textarea中加"wrongBor",可出现红色错误提示框 ，适用所有textarea-->
+                                        <div lineid="lineD" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                                <li class="fl txt changeTitle">
+                                    <span class="required">书名：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="bookName" id="SM" name="SM"></input>
+                                        <div lineid="lineD" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt">
+                                    <span>副书名：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="bookName" id="FSM" name="FSM"></input>
+                                        <div lineid="lineE" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt changeTitle">
+                                    <span>引进图书原题名：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="bookName" id="YJBTSYTM" name="YJBTSYTM"></input>
+                                        <div lineid="lineE" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="series" id="series" error="0">
+                            <span class="fl">
+                                    丛书项字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+                        <div class="seriesCon">
+                            <ul class="clearfix">
+                                <li class="clearfix">
+                                    <span class="fl txt">丛套书顺序号：</span>
+                                    <div class="fl userValue Input">
+                                        <input class="ipt" type="text" pid="series" id="CSSXH" name="CSSXH" />
+                                        <!-- 在input中加"wrongBor",可出现红色错误提示框 ，适用所有input-->
+                                        <div lineid="lineF" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="fl txt">丛套书题名：</span>
+                                    <div class="fl  Input">
+                                        <input class="ipt" type="text" pid="series" id="cstm" name="CSTM"></input>
+                                        <div lineid="lineG" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt changeTao">
+                                    <span>附属丛套书题名：</span>
+                                    <div class="userValue Input">
+                                        <input class="ipt" type="text" pid="series" id="FSCSM" name="FSCSM"></input>
+                                        <div lineid="lineG" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt">
+                                    <span>并列丛书题名：</span>
+                                    <div class="userValue Input">
+                                        <input class="ipt" type="text" pid="series" id="CSCJ" name="CSCJ"></input>
+                                        <div lineid="lineH" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="author" id="author" error="0">
+                            <span class="fl">
+                                    作者项字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+                        <div class="authorCon">
+                            <ul class="clearfix">
+                                <li class="fl txt">
+                                    <span>著者：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="author" id="ZYZ" name="ZYZ"></input>
+                                        <div lineid="line2" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt">
+                                    <span>编者：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="author" id="BZ" name="BZ"></input>
+                                        <div lineid="line2" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt">
+                                    <span>译者：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="author" id="YZ" name="YZ"></input>
+                                        <div lineid="line2" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt">
+                                    <span>丛套书作者：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="author" id="CSZZ" name="CSZZ"></input>
+                                        <div lineid="lineI" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="edition" id="edition" error="0">
+                            <span class="fl">
+                                    版本项字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+                        <div class="editionCon">
+                            <div class="editionConTit">
+                                <ul class="clearfix">
+                                    <li class="fl txt">
+                                        <span class="required">出版地：</span>
+                                        <div class="Input">
+                                            <input class="ipt" type="text" pid="edition" id="CBD" name="CBD" />
+                                            <div lineid="lineK" class="errortips"><span class="errortxt"></span></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="fl txt">
+                                        <span>出版时间：</span>
+                                        <div class="Input">
+                                            <input class="ipt" type="text" pid="edition" id="CBRQ" name="CBRQ" />
+                                            <div lineid="lineK" class="errortips"><span class="errortxt"></span></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="fl txt">
+                                        <span class="required">版次：</span>
+                                        <div class="Input">
+                                            <input class="ipt" type="text" pid="edition" id="BC" name="BC" />
+                                            <div lineid="lineK" class="errortips"><span class="errortxt"></span></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="fl txt">
+                                        <span class="required">最新印次：</span>
+                                        <div class="Input">
+                                            <input class="ipt" type="text" id="ZXYC" name="ZXYC" pid="edition" />
+                                            <div lineid="lineL" class="errortips"><span class="errortxt"></span></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="fl txt">
+                                        <span>原出版地：</span>
+                                        <div class="Input">
+                                            <input class="ipt" type="text" pid="edition" id="YCBD" name="YCBD" />
+                                            <div lineid="lineL" class="errortips"><span class="errortxt"></span></div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <ul class="clearfix editionConBig">
+                                <li class="fl txt">
+                                    <span class="required">出版者：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="edition" id="CBZ" name="CBZ" />
+                                        <div lineid="lineM" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+
+                                </li>
+                                <li class="fl txt">
+                                    <span>原书出版者：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="edition" id="YYYBBCBZ" name="YYYBBCBZ" />
+                                        <div lineid="lineM" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt">
+                                    <span>合作出版者：</span>
+                                    <div class="Input">
+                                        <input class="ipt" type="text" pid="edition" id="HZCBZ" name="HZCBZ" />
+                                        <div lineid="lineN" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="describe" id="describe" error="0">
+                            <span class="fl">
+                                    描述项字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+                        <div class="describeCon">
+                            <ul class="clearfix">
+                                <li class="txt fl">
+                                    <span>语种：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" pid="describe" id="ZWYZ" name="ZWYZ" />
+                                        <div lineid="lineO" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="txt fl">
+                                    <span>装帧：</span>
+                                    <div class="Input">
+                                        <select class="ipt" pid="describe" id="ZZ" name="ZZ">
+                                                <option value="BA">图书</option>
+                                                <option value="BB">精装书</option>
+                                                <option value="BC">简装书/平装书</option>
+                                                <option value="B304">线装书</option>
+                                                <option value="DG">其它</option>
+                                            </select>
+                                        <div lineid="lineO" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="txt fl" id="labSPJZ" style="display: none;">
+                                    <span>商品介质：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" pid="describe" id="SPJZ" name="SPJZ" />
+                                        <div lineid="lineO" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="txt fl">
+                                    <span>成书宽度：</span>
+                                    <div class="poRelative Input">
+                                        <input type="text" name="" value="" placeholder="0">
+                                        <div id="bookWidth_sel" class="sel_txt fl">
+                                            <span>CYN</span>
+                                            <i class="fr">></i>
+                                        </div>
+                                        <ul class="sel_list clearfix">
+                                            <li>CYN</li>
+                                            <li>MMM</li>
+                                            <li>YYY</li>
+                                            <li>CCC</li>
+                                            <li>DDD</li>
+                                            <li>TTT</li>
+                                        </ul>
+                                        <span class="prompt">数值，限长12</span>
+                                    </div>
+                                </li>
+                                <li class="txt fl">
+                                    <span>单个重量：</span>
+                                    <div class="poRelative  Input">
+                                        <input type="text" name="" value="" placeholder="0" name="DJ">
+                                        <div id="heightVal_sel" class="sel_txt fl">
+                                            <span>gr</span>
+                                            <i class="fr">></i>
+                                        </div>
+                                        <ul class="sel_list clearfix">
+                                            <li>gr</li>
+                                        </ul>
+                                        <span class="prompt">描述产品的价格，变长，最大长度12位，如产品的单价为18.99元</span>
+                                    </div>
+                                </li>
+                                <li class="txt fl">
+                                    <span class="required">定价：</span>
+                                    <div class="poRelative  Input">
+                                        <input type="text" name="" value="" placeholder="0" name="DJ">
+                                        <div id="price_sel" class="sel_txt fl">
+                                            <span>CYN</span>
+                                            <i class="fr">></i>
+                                        </div>
+                                        <ul class="sel_list clearfix">
+                                            <li>CYN</li>
+                                        </ul>
+                                        <span class="prompt">描述产品的价格，变长，最大长度12位，如产品的单价为18.99元</span>
+                                    </div>
+                                </li>
+                                <li class="txt fl">
+                                    <span>成书厚度：</span>
+                                    <div class="poRelative Input">
+                                        <input type="text" name="" value="" placeholder="0" name="DJ">
+                                        <div id="thickness_sel" class="sel_txt fl">
+                                            <span>mm</span>
+                                            <i class="fr">></i>
+                                        </div>
+                                        <ul class="sel_list clearfix">
+                                            <li>mm</li>
+                                            <li>cm</li>
+                                        </ul>
+                                        <span class="prompt">成书厚度</span>
+                                    </div>
+                                </li>
+                                <li class="txt fl">
+                                    <span>成书高度：</span>
+                                    <div class="poRelative  Input">
+                                        <input type="text" name="" value="" placeholder="0" name="DJ">
+                                        <div id="bookHeight_sel" class="sel_txt fl">
+                                            <span>mm</span>
+                                            <i class="fr">></i>
+                                        </div>
+                                        <ul class="sel_list clearfix">
+                                            <li>mm</li>
+                                            <li>cm</li>
+                                        </ul>
+                                        <span class="prompt">成书高度</span>
+                                    </div>
+                                </li>
+                                <li class="txt fl">
+                                    <span>附件数量：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" pid="describe" id="FJSL" name="FJSL" />
+                                        <div lineid="lineP" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="txt fl">
+                                    <span>图幅数：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" pid="describe" id="TFS" name="TFS" />
+                                        <div lineid="lineR" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="txt fl">
+                                    <span class="required">字数：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" pid="describe" id="ZS" name="ZS" />
+                                        <div lineid="lineR" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                    <span class="unit">千字</span>
+                                </li>
+                                <li class="txt fl">
+                                    <span>正文页数：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" pid="describe" id="ZWYS" name="ZWYS" />
+                                        <div lineid="lineR" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="txt fl">
+                                    <span>附件类型：</span>
+                                    <div class="Input">
+                                        <select class="ipt" pid="describe" id="FJLX" name="FJLX">
+                                                <option value="AC">音频CD</option>
+                                                <option value="AI">视频DVD</option>
+                                            </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="category" id="category" error="0">
+                            <span class="fl">
+                                    分类项字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+                        <div class="categoryCon">
+                            <ul class="clearfix">
+                                <li class="fl txt">
+                                    <span class="required">中图分类：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" pid="category" id="ZTFL" name="ZTFL" />
+                                        <div lineid="lineS" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt">
+                                    <span>关键词：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" pid="category" id="GJZ" name="GJZ" />
+                                        <div lineid="lineT" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+
+                                <li class="fl txt">
+                                    <span>营销分类：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" pid="category" id="YXFL" name="YXFL" />
+                                        <div lineid="lineT" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="resource" id="resource" error="0">
+                            <span class="fl">
+                                    资源项字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+                        <div class="resourceCon">
+                            <div class="file2 file clearfix">
+                                <h4 class="file_tit">封面图片上传<b>（仅限上传一张）重点推荐书目必须上传封面图片)</b></h4>
+                                <p class="file_group">
+                                    <label class="fileWrap">
+                                        选择文件
+                                            <input id="input2" type="file">
+                                    </label>
+                                    <span>未选择任何文件</span>
+                                </p>
+                                <div class="wrap">
+                                    <!--<img src="./img/banner1.jpg">-->
+
+                                </div>
+                                <div class="button">
+                                    <span id="FDupload" class="uploadBtn">上传</span>
+                                    <span id="FDdel" class="cancel">取消</span>
+                                </div>
+                                <div class="feng">
+                                    <span>封面：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" disabled="false" pid="resource" id="FM" name="FM" />
+                                        <div lineid="lineU" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="file1 file clearfix">
+                                <h4 class="file_tit">封底图片上传<b>（仅限上传一张）重点推荐书目必须上传封面图片)</b></h4>
+                                <p class="file_group">
+                                    <label class="fileWrap">
+                                            选择文件
+                                                <input id="input1"type="file">
+                                        </label>
+                                    <span>未选择任何文件</span>
+                                </p>
+                                <div class="wrap"></div>
+                                <div class="button">
+                                    <span id="FDupload2" class="uploadBtn">上传</span>
+                                    <span id="FDdel2" class="cancel">取消</span>
+                                </div>
+                                <div class="feng">
+                                    <span>封底：</span>
+                                    <div class="Input">
+                                        <input type="text" class="ipt" disabled="false" pid="resource" id="FM" name="FM" />
+                                        <div lineid="lineU" class="errortips"><span class="errortxt"></span></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                        <h2 class="introduction" id="introduction" error="0">
+                            <span class="fl">
+                                    作者介绍字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+
+                        <div class="introductionCon clearfix sameStyleCon marBottom">
+                            <span class="fl txt">作者（提供者）简介：</span>
+                            <div class="fl userValue">
+                                <textarea class="ipt" pid="introduction" id="TGZJJ" name="TGZJJ"></textarea>
+                                <div lineid="lineV" class="errortips"><span class="errortxt"></span></div>
+                            </div>
+                        </div>
+                        <h2 class="Chapter" id="Chapter" error="0">
+                            <span class="fl">
+                                    章节目录字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+                        <div class="ChapterCon clearfix sameStyleCon marBottom">
+                            <span class="fl txt">目录信息：</span>
+                            <div class="fl userValue">
+                                <textarea class="ipt" pid="Chapter" id="MLXX" name="MLXX"></textarea>
+                                <div lineid="lineW" class="errortips"><span class="errortxt"></span></div>
+                            </div>
+                        </div>
+                        <h2 class="contentSummary" id="contentSummary" error="0">
+                            <span class="fl">
+                                    内容提要字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+                        <div class="contentSummaryCon clearfix sameStyleCon marBottom">
+                            <span class="fl txt required">内容提要 ：</span>
+                            <div class="fl userValue">
+                                <textarea class="ipt" pid="contentSummary" id="NRTY" name="NRTY"></textarea>
+                                <div lineid="lineX" class="errortips"><span class="errortxt"></span></div>
+                            </div>
+                        </div>
+                        <h2 class="readerObject" id="readerObject" error="0">
+                            <span class="fl">
+                                    读者对象字段
+                                </span>
+                            <a href="javascript:;" class="helpPrompt fl"></a>
+                            <span class="wrongPrompt fr"></span>
+                        </h2>
+                        <div class="readerObjectCon clearfix sameStyleCon marBottom">
+                            <span class="fl txt required">读者范围：</span>
+                            <div class="fl userValue ">
+                                <textarea class="ipt" pid="readerObject" id="DZFW" name="DZFW"></textarea>
+                                <div lineid="lineY" class="errortips"><span class="errortxt"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 表格底部内容 -->
+    <div class="editFooter pofix">
+        <div class="eFIn wrap">
+            <div class="bookIcon fl"></div>
+            <div class="bookButton">
+                <a href="javascript:;" class="submitBtn fl">完成</a>
+                <a href="javascript:;" class="resetBtn fl">还原</a>
+            </div>
+        </div>
+    </div>
+    <div class="pop">
+        <h2 class="mask_tit clearfix">
+            <span class="fl">详细说明：</span>
+            <i class="close fr"></i>
+        </h2>
+        <div class="mask_cont">
+            <hgroup>
+                <h3>书目展示：</h3>
+                <h4>1.显示书目的ISBN、品名、出版时间、来源、审核状态、传输结果；</h4>
+                <h4>2.显示书目上传的成功、失败总数量和空缺字段统计；</h4>
+                <h4>3.支持导出CSV格式数据；</h4>
+                <h4>4.支持二次编辑.</h4>
+            </hgroup>
+        </div>
+        <footer class="mask_foot clearfix">
+            <i class="ok fr">确定</i>
+        </footer>
+    </div>
+    <div class="shade">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="renderer" content="webkit">
+		<title>中南数据中心</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/daterangepicker.css"/><!-- 新加 -->	
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/edit.css">
+		<link rel="stylesheet" type="text/css" href="css/dataSmoothing.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/secondEdit.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/moment.min.js"></script><!-- 新加 -->  
+        <script type="text/javascript" src="js/daterangepicker.js"></script><!-- 新加 -->         
+        <script type="text/javascript" src="js/systemNews.js"></script>
+        <!--[if IE 8]>
+            <script type="text/javascript" src="js/html5shiv.js"></script>
+            <script type="text/javascript" src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
+        <![endif]-->
+	</head>
+	<body>
+		<header class="pofix">
+			<div class="top clearfix">
+				<h1 class="fl"><a href="javascript:;">中南数据中心</a></h1>
+				<div class="btn-group fr">
+				  <a href="javascript:;"  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <span class="fl fs16">123456789 </span>
+				    <span class="fl touXiang"></span>
+				  </a>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">个人账号</a></li>
+				    <li><a href="#">退出</a></li>
+				  </ul>
+				</div>			
+			</div>
+			<div class="navbar navbar-default">
+			    <ul class="nav navbar-nav">
+                    <li class="first fs16 htmin">中南数据中心</li>
+                    <li class="fs16 htmin">
+                        <a href="index.html" class="clearfix">
+                            <span class="fl icon dataStatistics htmin"></span>
+                            <span class="fl fs16 htmin">数据统计中心</span>
+                        </a>
+                    </li>
+                    <li class="active three htmin">
+                        <a href="allDetail.html" class="clearfix">
+                            <span class="fl icon dataSmoothing htmin"></span>
+                            <span class="fl fs16 htmin">数据加工</span>
+                        </a>
+                    </li>
+                    <li class="three htmin">
+                        <a href="dataCheck.html" class="clearfix">
+                            <span class="fl icon dataCheck htmin"></span>
+                            <span class="fl fs16 htmin">数据审核</span>
+                        </a>
+                    </li>
+                    <li class="three htmin">
+                        <a href="dataRelease.html" class="clearfix">
+                            <span class="fl icon dataRelease htmin"></span>
+                            <span class="fl fs16 htmin">数据发布</span>
+                        </a>
+                    </li>
+                </ul>
+			</div>
+		</header>
+		<section class="container clearfix">
+            <aside id="side" class="aside fl">
+                <nav>
+                    <ul>
+                        <li class="active">
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span> 
+                                <span class="field_txt fl">1、常用项字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">2、必填项字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">3、标识项字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <!-- 输入有误，li添加wrong类名高亮显示 -->
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">4、书目项字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">5、丛书项字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">6、作者项字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">7、版本项字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">8、描述项字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">9、分类项字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">10、资源项字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">11、作者介绍字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">12、章节目录字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">13、内容提要字段</span>
+                            </a>
+                            <div class="vertical_line"></div>
+                        </li>
+                        <li>
+                            <a class="field clearfix" href="javascript:;" title="">
+                                <span class="circle fl"></span>
+                                <span class="field_txt fl">14、读者对象字段</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div id="content" class="content fl">
+                <section class="common mod" id="item1">
+                    <h3 class="mod_tit">
+                        <span>常用项字段</span>
+                        <!-- 当有字段填写错误时，右上角显示的错误数量，默认隐藏 -->
+                        <mark>1</mark>
+                    </h3>
+                    <div class="common_cont cont clearfix">
+                        <div class="new_qr w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">新条形码：</span>
+                            </div>
+                        </div>
+                        <div class="entryUser w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" disabled name="" value="超级系统管理员">
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">录入人员：</span>
+                            </div>
+                        </div>
+                        <div class="goodsId w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" disabled name="" value="007">
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">商品ID：</span>
+                            </div>
+                        </div>
+                        <div class="statu w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">状态：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <input class="fl" type="text" disabled name="" value="录入">
+                                <span class="prompt">值为数字</span>
+                            </div>
+                        </div>
+                        <div class="qr w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">条形码：</span>
+                            </div>
+                        </div>
+                        <div class="goodsNo w25 red fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">商品编号：</span>
+                            </div>
+                        </div>
+                        <div class="goodsName w50 red fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">商品名称：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                        </div>
+                        <div class="cnBook w25 red fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">中图分类：</span>
+                            </div>
+                        </div>
+                        <div class="saleSort w15 red fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">营销分类：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                        </div>
+                        <div class="setBookName w35 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">套装书名：</span>
+                            </div>
+                        </div>
+                        <div class="pub_place w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">出版地：</span>
+                            </div>
+                        </div>
+                        <div class="press w30 red fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">出版社：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                        </div>
+                        <div class="price w20 red fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">定价：</span>
+                            </div>
+                            <div class="unit_sel fl">
+                                <input type="text" name="" value="" placeholder="0">
+                                <div id="price_sel" class="sel_txt fl">
+                                    <span>CYN</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <ul class="sel_list clearfix">
+                                    <li>CYN</li>
+                                </ul>
+                                <span class="prompt">数值，限长12</span>
+                            </div>
+                        </div>
+                        <div class="binding w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">装帧：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="binding_sel" class="sel_txt fl">
+                                    <span>01平装</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <div id="sideBar2">
+                                    <ul class="sel_list clearfix" style="display: none;">
+                                        <li>请选择</li>
+                                        <li>01平装</li>
+                                        <li>02精装</li>
+                                        <li>03软精装</li>
+                                        <li>04特精装</li>
+                                        <li>05简精装</li>
+                                        <li>06压膜装</li>
+                                        <li>07假精装</li>
+                                        <li>08盒装</li>
+                                        <li>09套装</li>
+                                        <li>10线装</li>
+                                        <li>11函套装</li>
+                                        <li>12活页装</li>
+                                        <li>13塑面装</li>
+                                        <li>14豪华本</li>
+                                        <li>15其它</li>
+                                        <li>test</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="format w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">开本：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="farmat_sel" class="sel_txt fl">
+                                    <span>开本为空</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <div id="sideBar1">
+                                    <ul class="sel_list clearfix" style="display: none;">
+                                        <li>请选择</li>
+                                        <li>32</li>
+                                        <li>大32</li>
+                                        <li>16</li>
+                                        <li>大16</li>
+                                        <li>8</li>
+                                        <li>24</li>
+                                        <li>双全</li>
+                                        <li>大全</li>
+                                        <li>对</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>64</li>
+                                        <li>128</li>
+                                        <li>横8</li>
+                                        <li>横16</li>
+                                        <li>长32</li>
+                                        <li>48</li>
+                                        <li>10</li>
+                                        <li>120</li>
+                                        <li>12</li>
+                                        <li>18</li>
+                                        <li>20</li>
+                                        <li>36</li>
+                                        <li>40</li>
+                                        <li>44</li>
+                                        <li>大8</li>
+                                        <li>小24</li>
+                                        <li>大24</li>
+                                        <li>60</li>
+                                        <li>大64</li>
+                                        <li>70</li>
+                                        <li>72</li>
+                                        <li>30</li>
+                                        <li>56</li>
+                                        <li>6</li>
+                                        <li>25</li>
+                                        <li>27</li>
+                                        <li>50</li>
+                                        <li>46</li>
+                                        <li>42</li>
+                                        <li>40</li>
+                                        <li>23</li>
+                                        <li>22</li>
+                                        <li>方21</li>
+                                        <li>20</li>
+                                        <li>15</li>
+                                        <li>100</li>
+                                        <li>90</li>
+                                        <li>84</li>
+                                        <li>34</li>
+                                        <li>29</li>
+                                        <li>28</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="author w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">作者：</span>
+                            </div>
+                        </div>
+                        <div class="translator w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">译者：</span>
+                            </div>
+                        </div>
+                        <div class="cityzenship w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">国籍：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="cityzenship_sel" class="sel_txt fl">
+                                    <span>01中国</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <div id="sideBar3">
+                                    <ul class="sel_list clearfix" style="display: none;">
+                                        <li>01中国</li>
+                                        <li>01中国</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="language w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">语种：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="language_sel" class="sel_txt fl">
+                                    <span>中文</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <div id="sideBar4">
+                                    <ul class="sel_list clearfix" style="display: none;">
+                                        <li>中文</li>
+                                        <li>英语</li>
+                                        <li>德语</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="key w75 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">关键字：</span>
+                            </div>
+                        </div>
+                        <div class="barcode w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">贴条码标志：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="barcode_sel" class="sel_txt fl">
+                                    <span>否</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <ul class="sel_list clearfix" style="display: none;">
+                                    <li>否</li>
+                                    <li>是</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="version red w50 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">版别：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="version_sel" class="sel_txt fl">
+                                    <span>///</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <div id="sideBar5">
+                                    <ul class="sel_list clearfix" style="display: none;">
+                                        <li>测试表格</li>
+                                        <li>测试</li>
+                                        <li>测试</li>
+                                        <li>测试</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="purchaseTime w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">出版年月：</span>
+                            </div>
+                        </div>
+                        <div class="printTime w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">印刷时间：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="printTime_sel" class="sel_txt fl">
+                                    <span>2017-04-01</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <div id="sideBar6">
+                                    <ul class="sel_list clearfix" style="display: none;">
+                                        <li>2017-04-01</li>
+                                        <li>2017-04-02</li>
+                                        <li>2017-04-02</li>
+                                        <li>2017-04-02</li>
+                                        <li>2017-04-02</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edition red w20 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">版次：</span>
+                            </div>
+                        </div>
+                        <div class="indiaTimes red w20 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">印次：</span>
+                            </div>
+                        </div>
+                        <div class="printSheet w20 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">印张：</span>
+                            </div>
+                        </div>
+                        <div class="handSeal w20 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">首印数：</span>
+                            </div>
+                        </div>
+                        <div class="wordCount w20 red fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">字数：</span>
+                            </div>
+                            <div class="unit_sel fl">
+                                <input type="text" name="" value="" placeholder="0">
+                                <div id="wordCount_sel" class="sel_txt fl">
+                                    <span>千字</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <ul class="sel_list clearfix">
+                                    <li>千字</li>
+                                </ul>
+                                <span class="prompt">数值，限长12</span>
+                            </div>
+                        </div>
+                        <div class="editor w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">编者：</span>
+                            </div>
+                        </div>
+                        <div class="pageNum w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">版次：</span>
+                            </div>
+                        </div>
+                        <div class="goodsAttr w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">商品属性：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="goodsAttr_sel" class="sel_txt fl">
+                                    <span>常备</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <div id="sideBar7">
+                                    <ul class="sel_list clearfix" style="display: none;">
+                                        <li>常备1</li>
+                                        <li>常备2</li>
+                                        <li>常备3</li>
+                                        <li>常备4</li>
+                                        <li>常备5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spine w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">是否有书脊：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="spine_sel" class="sel_txt fl">
+                                    <span>否</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <ul class="sel_list clearfix" style="display: none;">
+                                    <li>否</li>
+                                    <li>是</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="external w25 red fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">本外版：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="external_sel" class="sel_txt fl">
+                                    <span>京</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <div id="sideBar8">
+                                    <ul class="sel_list clearfix" style="display: none;">
+                                        <li>京</li>
+                                        <li>沪</li>
+                                        <li>粤</li>
+                                        <li>深</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thickness w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">厚度：</span>
+                            </div>
+                            <div class="unit_sel fl">
+                                <input type="text" name="" value="" placeholder="0">
+                                <div id="thickness_sel" class="sel_txt fl">
+                                    <span>mm</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <ul class="sel_list clearfix">
+                                    <li>mm</li>
+                                </ul>
+                                <span class="prompt">数值，限长12</span>
+                            </div>
+                        </div>
+                        <div class="taxRate w25 red fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" disabled name="" value="13">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">税率：</span>
+                            </div>
+                        </div>
+                        <div class="weight w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">重量：</span>
+                            </div>
+                            <div class="unit_sel fl">
+                                <input type="text" name="" value="" placeholder="0">
+                                <div id="weight_sel" class="sel_txt fl">
+                                    <span>gr</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <ul class="sel_list clearfix">
+                                    <li>gr</li>
+                                </ul>
+                                <span class="prompt">数值，限长12</span>
+                            </div>
+                        </div>
+                        <div class="remarks w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">备注：</span>
+                            </div>
+                        </div>
+                        <div class="modify w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" disabled name="" value="超级系统管理员">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">修改人员：</span>
+                            </div>
+                        </div>
+                        <div class="inputTime w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" disabled name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">录入日期：</span>
+                            </div>
+                        </div>
+                        <div class="editTime w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" disabled name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">修改日期：</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="required mod" id="item2">
+                    <h3 class="mod_tit">
+                        <span>必填字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="required_cont cont clearfix">
+                        <div class="isbn red w33 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">ISBN：</span>
+                            </div>
+                        </div>
+                        <div class="noticeStyle red w33 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">通告类型：</span>
+                            </div>
+                        </div>
+                        <div class="dutyEditor red w33 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">责任编辑：</span>
+                            </div>
+                        </div>
+                        <div class="contentSummary w100 red fl">
+                            <div class="sub_tit fl">
+                                <span class="">内容提要：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea name="" placeholder="例如：无机卷"></textarea>
+                            </div>
+                        </div>
+                        <div class="reader w100 red fl">
+                            <div class="sub_tit fl">
+                                <span class="">读者范围：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea name="" placeholder="例如：无机卷"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="marked mod" id="item3">
+                    <h3 class="mod_tit">
+                        <span>标识项字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="marked_cont cont clearfix">
+                        <div class="copyright w50 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">版权登记号：</span>
+                            </div>
+                        </div>
+                        <div class="textbook w50 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">教材征订号：</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bibliography mod" id="item4">
+                    <h3 class="mod_tit">
+                        <span>书目项字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="bibliography_cont cont clearfix">
+                        <div class="deputyTitle w33 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">副书名：</span>
+                            </div>
+                        </div>
+                        <div class="subTitle w33 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">并列书名：</span>
+                            </div>
+                        </div>
+                        <div class="originTitle w34 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">引进图书原题名：</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="collection mod" id="item5">
+                    <h3 class="mod_tit">
+                        <span>丛书项字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="collection_cont cont clearfix">
+                        <div class="serialNum w33 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">从套书序列号：</span>
+                            </div>
+                        </div>
+                        <div class="subsidiaryBook w33 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">附属从套书题名：</span>
+                            </div>
+                        </div>
+                        <div class="tiedTogether w34 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">并列从套书题名：</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="author mod" id="item6">
+                    <h3 class="mod_tit">
+                        <span>作者项字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="author_cont cont clearfix">
+                        <div class="collectionAuthor w30 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">从套书作者：</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="version mod" id="item7">
+                    <h3 class="mod_tit">
+                        <span>版本项字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="version_cont cont clearfix">
+                        <div class="prints w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">印数：</span>
+                            </div>
+                        </div>
+                        <div class="originPubPlace w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">原出版地：</span>
+                            </div>
+                        </div>
+                        <div class="originAuthor w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">原书出版者：</span>
+                            </div>
+                        </div>
+                        <div class="co-publishers w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="" placeholder="例如：30000">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">合作出版者：</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="description mod" id="item8">
+                    <h3 class="mod_tit">
+                        <span>描述项字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="description_cont cont clearfix">
+                        <div class="bookHeight w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">成书高度：</span>
+                            </div>
+                            <div class="unit_sel fl">
+                                <input type="text" name="" value="" placeholder="0">
+                                <div id="bookHeight_sel" class="sel_txt fl">
+                                    <span>mm</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <ul class="sel_list clearfix">
+                                    <li>mm</li>
+                                </ul>
+                                <span class="prompt">数值，限长12</span>
+                            </div>
+                        </div>
+                        <div class="annexType w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">附件类型：</span>
+                            </div>
+                            <input type="hidden" name="hidden" value="">
+                            <div class="mark_sel fl">
+                                <div id="annexType_sel" class="sel_txt fl">
+                                    <span>请选择</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <div id="sideBar9">
+                                    <ul class="sel_list clearfix" style="display: none;">
+                                        <li>选择一</li>
+                                        <li>选择二</li>
+                                        <li>选择三</li>
+                                        <li>选择四</li>
+                                        <li>选择五</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bookWidth w25 fl">
+                            <div class="sub_tit fl">
+                                <span class="fr">成书宽度：</span>
+                            </div>
+                            <div class="unit_sel fl">
+                                <input type="text" name="" value="" placeholder="0">
+                                <div id="bookWidth_sel" class="sel_txt fl">
+                                    <span>mm</span>
+                                    <i class="fr">></i>
+                                </div>
+                                <ul class="sel_list clearfix">
+                                    <li>mm</li>
+                                    <li>cm</li>
+                                </ul>
+                                <span class="prompt">数值，限长12</span>
+                            </div>
+                        </div>
+                        <div class="framesNum w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">图幅数：</span>
+                            </div>
+                        </div>
+                        <div class="annexNum w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">附件数量：</span>
+                            </div>
+                        </div>
+                        <div class="bodyPageNum w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">正文页数：</span>
+                            </div>
+                        </div>
+                        <div class="goodsMidium w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">商品介质：</span>
+                            </div>
+                        </div>
+                        <div class="paper w25 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">用纸：</span>
+                            </div>
+                        </div>
+                        <div class="adSlogan w100 fl">
+                            <div class="sub_tit fl">
+                                <span class="">读者范围：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea name="" placeholder="例如：无机卷"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="sort mod" id="item8">
+                    <h3 class="mod_tit">
+                        <span>分类项字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="sort_cont cont clearfix">
+                        <div class="keywords w50 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">汉语词表主题词：</span>
+                            </div>
+                        </div>
+                        <div class="marketingSort w50 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">二级营销分类号：</span>
+                            </div>
+                        </div>
+                        <div class="subjectKeyWords w50 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">学科关键词：</span>
+                            </div>
+                        </div>
+                        <div class="commonKeywords w50 fl">
+                            <div class="record_inp fr">
+                                <input class="fl" type="text" name="" value="2017-04-18">
+                                <!-- 错误提醒，当校验错误时显示，默认隐藏 -->
+                                <span class="prompt">值为数字</span>
+                            </div>
+                            <div class="sub_tit fr">
+                                <span class="fr">普通关键词：</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="source mod" id="item9">
+                    <h3 class="mod_tit">
+                        <span>资源项字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="file1 file">
+                        <h4 class="file_tit">封面图片上传<b>（仅限上传一张,必须上传封面图片）</b>：</h4>
+                        <p class="file_group">
+                            <label class="fileWrap">选择文件
+                                <input type="file">
+                            </label>
+                            <!-- <span class="fileName">请上传文件</span> -->
+                        </p>
+                        <div class="wrap"></div>
+                        <p class="btn_group">
+                            <span id="FMupload" class="uploadBtn">上传</span>
+                            <span id="FMdel" class="cancel">取消</span>
+                        </p>
+                    </div>
+                    <div class="file2 file">
+                        <h4 class="file_tit">封底图片上传<b>（仅限上传一张）</b>：</h4>
+                        <p class="file_group">
+                            <label class="fileWrap">选择文件
+                                <input type="file">
+                            </label>
+                        </p>
+                        <div class="wrap"></div>
+                        <span id="FDupload" class="uploadBtn">上传</span>
+                        <span id="FDdel" class="cancel">取消</span>
+                    </div>
+                    <div class="file3 file">
+                        <h4 class="file_tit">插图图片上传<b>（仅限上传五张,支持多选）</b>：</h4>
+                        <p class="file_group">
+                            <label class="fileWrap">选择文件
+                                <input type="file" multiple>
+                            </label>
+                        </p>
+                        <div class="wrap"></div>
+                        <span id="CTupload" class="uploadBtn">上传</span>
+                        <span id="CTdel" class="cancel">取消</span>
+                    </div>
+                </section>
+                <section class="introduce mod" id="item10">
+                    <h3 class="mod_tit">
+                        <span>作者介绍字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="introduce_cont cont clearfix">
+                        <div class="aboutAuthor w100 fl">
+                            <div class="sub_tit fl">
+                                <span class="">作者(提供者)简介：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea class="fl" name="" placeholder="例如：刘光启，1932年出生于河北省冀县，现为国家文物鉴定委员会委员。人物简介说起刘光启先生，物界和与旧字画有关系的人，大都有点耳闻。有人称他为'神眼'，来称赞他的眼力。也有人称他为'刘半尺'，意思是字画打开半尺，真伪立判。 当然，这种称呼还是称赞他的眼力。 "></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="list mod" id="item11">
+                    <h3 class="mod_tit">
+                        <span>章节目录字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="list_cont cont clearfix">
+                        <div class="catalogInfo w100 fl">
+                            <div class="sub_tit fl">
+                                <span class="">目录信息：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea class="fl" name="" placeholder="总目录
+无机卷
+无机卷使用说明 
+第1章水和水蒸气1 
+第2章无机气体88 
+第3章无机酸263 
+第4章金属单质及其氧化物329 
+第5章非金属单质及其氧化物416 
+第6章氢化物和氢氧化物462 
+第7章氰化物和氰酸盐497 
+第8章氮化物和硝酸盐511 
+第9章氟化物和氟酸盐551 
+第10章氯化物和氯酸盐575 
+第11章溴化物和溴酸盐660 
+第12章碘化物和碘酸盐684 
+第13章碳化物和碳酸盐706 
+第14章硫化物和硫酸盐750 
+第15章磷化物和磷酸盐825 
+第16章金属酸盐860 
+第17章其他无机物料892 
+无机卷附录926 "></textarea>
+                            </div>
+                        </div>
+                        <div class="preface w100 fl">
+                            <div class="sub_tit fl">
+                                <span class="">前言/序言：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea class="fl" name="" placeholder="例如：虽然到现在为止，人们发现的化学元素仅为112个，但世界上的物质却有数十万种以上，每一种物质又有十几个物性，而且它们还会随温度或压强的变化而变化，故其数据量浩如烟海。"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="summary mod" id="item12">
+                    <h3 class="mod_tit">
+                        <span>内容提要字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="summary_cont cont clearfix">
+                        <div class="editorChoice w100 fl">
+                            <div class="sub_tit fl">
+                                <span class="">编辑推荐：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea class="fl" name="" placeholder="例如：《化学化工物性数据手册:无机卷(增订版)》可供化学化工科学研究、工程设计研究院所科技人员、大专院校师生使用：对轻纺、食品、医药，机械、冶金、地质、环保等领域的相关技术人员和各行各业的化验人员也有很大的实用价值。"></textarea>
+                            </div>
+                        </div>
+                        <div class="digest w100 fl">
+                            <div class="sub_tit fl">
+                                <span class="">精彩书评：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea class="fl" name="" placeholder="例如：虽然到现在为止，人们发现的化学元素仅为112个，但世界上的物质却有数十万种以上，每一种物质又有十几个物性，而且它们还会随温度或压强的变化而变化，故其数据量浩如烟海。"></textarea>
+                            </div>
+                        </div>
+                        <div class="comment w100 fl">
+                            <div class="sub_tit fl">
+                                <span class="">媒体评论：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea class="fl" name="" placeholder="例如：《化学化工物性数据手册:无机卷(增订版)》可供化学化工科学研究、工程设计研究院所科技人员、大专院校师生使用：对轻纺、食品、医药，机械、冶金、地质、环保等领域的相关技术人员和各行各业的化验人员也有很大的实用价值。     ——化学学报"></textarea>
+                            </div>
+                        </div>
+                        <div class="probation w100 fl">
+                            <div class="sub_tit fl">
+                                <span class="">在线试读：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea class="fl" name="" placeholder="例如：内容包括水和水蒸气，无机气体，无机酸，金属单质及其氧化物，非金属单质及其氧化物,氢化物和氢氧化物，氰化物和氰酸盐，氮化物和硝酸盐，氟化物和氟酸盐，氯化物和氯酸盐,溴化物和溴酸盐,碘化物和碘酸盐,碳化物和碳酸盐,硫化物和硫酸盐,磷化物和磷酸盐,金属酸盐和其他无机物料。书末附录包括门捷列夫元素周期表,化学元素的名称、符号、原子量和族别，危险物品分类和标志，危险品特性总览中风险性代号，危险品特性总览中的安全措施号和建筑规范火险分级...
+     本手册采用法定单位，以物性为主线，用数据表达了3512种无机物料的物性、危险品特性和化工产品的质量指标，内容全面、资料准确、实用性强、方便查阅。 
+     本手册可供化学化工科学研究、工程设计研究院所科技人员、大专院校师生使用；对轻纺、食品、医药，机械、冶金、地质、环保等领域的相关技术人员和各行各业的化验人员也有很大的实用价值。"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="reader mod" id="item13">
+                    <h3 class="mod_tit">
+                        <span>读者对象字段</span>
+                        <mark>1</mark>
+                    </h3>
+                    <div class="reader_cont cont clearfix">
+                        <div class="specificGroup w100 fl">
+                            <div class="sub_tit fl">
+                                <span class="">特定读者群：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea class="fl" name="" placeholder="例如：化学化工从业人员"></textarea>
+                            </div>
+                        </div>
+                        <div class="readerComments w100 fl">
+                            <div class="sub_tit fl">
+                                <span class="">读者评论：</span>
+                            </div>
+                            <div class="record_inp fl">
+                                <textarea class="fl" name="" placeholder="例如：《化学化工物性数据手册:无机卷(增订版)》可供化学化工科学研究、工程设计研究院所科技人员、大专院校师生使用：对轻纺、食品、医药，机械、冶金、地质、环保等领域的相关技术人员和各行各业的化验人员也有很大的实用价值。     ——徐则臣"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- 表格底部内容 -->
+        <footer>
+            <div class="btn_group">
+                <input type="submit" name="submit" value="完成">
+                <input type="reset" name="" value="还原">
+            </div>
+        </footer>
+		<div class="pop info_process">
+            <a href="javascript:;" class="close"></a>
+            <a href="javascript:;" class="ok"></a>
+        </div>
+		<div class="shade">
+		</div>
+	</body>
+</html>

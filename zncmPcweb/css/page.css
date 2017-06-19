@@ -1,0 +1,14 @@
+/*page
+.page{padding:20px 30px 25px 0; float:right;}
+.page a{background:#fff; color:#184d8f; border:#184d8f solid 1px; margin:0; line-height:14px; text-decoration:none; padding:3px 8px; margin:0 3px;}
+.page a:hover,.page a.selected{background:#184d8f; color:#fff; border:#184d8f solid 1px; text-decoration:none;}
+.page .textinput{width:30px; height:14px; vertical-align:middle}
+*/
+/*pagination*/
+.pagination {font-size: 12px;float:right;padding:20px 30px 25px 0;}
+.pagination a {border: 1px solid #dedede; color: #666; background-color:#fff;text-decoration: none;}
+.pagination a, .pagination span {display: block; float: left; margin-bottom: 5px; margin-right: 5px; padding: 0.3em 0.7em;}
+.pagination a:hover { border: 1px solid #184d8f; }
+.pagination .total{ font-size: 13px;color:#666;margin-top: 4px;}
+.pagination .current { background: none repeat scroll 0 0 #184d8f; border: 1px solid #184d8f; color: #FFFFFF;}
+.pagination .current.prev, .pagination .current.next { background: none repeat scroll 0 0 #FFFFFF; border-color: #999999; color: #999999;}

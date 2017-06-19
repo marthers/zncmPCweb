@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<title>中南数据中心</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/daterangepicker.css"/><!-- 新加 -->	
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/data.css"/>
+		<link rel="stylesheet" type="text/css" href="css/systemNews.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/moment.min.js"></script><!-- 新加 -->	
+		<script type="text/javascript" src="js/daterangepicker.js"></script><!-- 新加 -->	
+		<script src="js/jquery.pagination.js"></script>		
+		<script type="text/javascript" src="js/systemNews.js"></script>
+		<!--[if IE 8]>
+			<script type="text/javascript" src="js/html5shiv.js"></script>
+			<script type="text/javascript" src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header class="pofix">
+			<div class="top clearfix">
+				<h1 class="fl"><a href="javascript:;">中南数据中心</a></h1>
+				<div class="btn-group fr">
+				  <a href="javascript:;"  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <span class="fl fs16">123456789 </span>
+				    <span class="fl touXiang"></span>
+				  </a>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">个人账号</a></li>
+				    <li><a href="#">退出</a></li>
+				  </ul>
+				</div>			
+			</div>
+			<div class="navbar navbar-default">
+			    <ul class="nav navbar-nav">
+			        <li class="first fs16 htmin">中南数据中心</li>
+			        <li class="active fs16 htmin">
+			        	<a href="UserCenterIndex.html" class="clearfix">
+			        		<span class="fl icon dataStatistics htmin"></span>
+			        		<span class="fl fs16 htmin">数据统计中心</span>
+			        	</a>
+			        </li>
+			        <li class="three htmin">
+			        	<a href="allDetail.html" class="clearfix">
+			        		<span class="fl icon dataSmoothing htmin"></span>
+			        		<span class="fl fs16 htmin">数据加工</span>
+			        	</a>
+			        </li>
+			        <li class="three htmin">
+			        	<a href="dataCheck.html" class="clearfix">
+			        		<span class="fl icon dataCheck htmin"></span>
+			        		<span class="fl fs16 htmin">数据审核</span>
+			        	</a>
+			        </li>
+			        <li class="three htmin">
+			        	<a href="dataRelease.html" class="clearfix">
+			        		<span class="fl icon dataRelease htmin"></span>
+			        		<span class="fl fs16 htmin">数据发布</span>
+			        	</a>
+			        </li>
+			    </ul>
+			</div>
+		</header>
+		<div class="main">
+			<div class="pop">
+				<h2 class="mask_tit clearfix">
+					<span class="fl">详细说明：</span>
+					<i class="close fr">&#xe60e;</i>
+				</h2>
+				<div class="mask_cont">
+					<hgroup>
+						<h3>系统消息：</h3>
+						<h4>1.显示产品消息、安全消息、系统消息等.</h4>
+					</hgroup>
+				</div>
+				<footer class="mask_foot clearfix">
+					<i class="ok fr">确定</i>
+				</footer>
+			</div>
+			<div class="pofix leftNav" >
+				<ul>
+					<li>
+						<div class="statisticalManagement" clshow="1">
+							<a href="javascript:;" class="clearfix">
+								<span class="fl icon sMIcon"></span>
+								<span class="fl tit fs16">统计管理</span>
+								<span class="fl triangleDown"></span>
+							</a>
+						</div>
+						<div class="sMDetails">
+	                        <a href="UserCenterIndex.html?p=statisticalManagement&s=UserCenterIndex" class="corBlue UserCenterIndex">数据统计管理</a>
+						</div>
+					</li>
+					<!-- <li>
+						<div class="dataTransmission" clshow="1">
+							<a href="javascript:;" class="corBlue clearfix">
+								<span class="fl icon dTIcon"></span>
+								<span class="fl tit fs16">数据传输</span>
+								<span class="fl triangleDown"></span>
+							</a>
+						</div>
+						<div class="dTDetails ">
+						                        <a href="dataUpload.html?p=dataTransmission&s=dataUpload" class="corBlue dataUpload">书目上传并解析</a>
+						                        <a href="dataTransformation.html?p=dataTransmission&s=dataTransformation" class="corBlue dataTransformation">书目转换并下载</a>
+						                        <a href="dataUploadFTP.html?p=dataTransmission&s=dataUploadFTP" class="corBlue dataUploadFTP">书目上传到FTP</a>
+						                        <a href="dataSaleDownload.html?p=dataTransmission&s=dataSaleDownload" class="corBlue dataSaleDownload">销售库存下载</a>
+						                        <a href="dataBookDownload.html?p=dataTransmission&s=dataBookDownload" class="corBlue dataBookDownload">书目下载</a>
+						                        <a href="dataSaleUpload.html?p=dataTransmission&s=dataSaleUpload" class="corBlue dataSaleUpload">销售库存上传</a>
+						</div>
+					</li> -->
+					<li>
+						<div class="authorityManagement" clshow="1">
+							<a href="javascript:;" class="corBlue clearfix">
+								<span class="fl icon aMIcon"></span>
+								<span class="fl tit fs16">权限管理</span>
+								<span class="fl triangleDown"></span>
+							</a>
+						</div>
+						<div class="aMDetails">
+	                        <a href="individualAccount.html?p=authorityManagement&s=individualAccount" class="corBlue individualAccount">个人账户</a>
+	                        <a href="accountManagement.html?p=authorityManagement&s=accountManagement" class="corBlue accountManagement">账号管理体系</a>
+	                        <a href="operatingStatistics.html?p=authorityManagement&s=operatingStatistics" class="corBlue operatingStatistics">用户操作统计</a>
+						</div>
+					</li>
+					<li>
+						<div class="messageNotification" clshow="1">
+							<a href="javascript:;" class="corBlue clearfix">
+								<span class="fl icon mNIcon"></span>
+								<span class="fl tit fs16">消息通知</span>
+								<span class="fl triangleDown"></span>
+							</a>
+						</div>
+						<div class="mNDetails">
+	                        <a href="dataNotice.html?p=dataNotice&s=messageNotification" class="corBlue dataNotice">数据传输通知</a>
+	                        <a href="systemNews.html?p=systemNews&s=messageNotification" class="corBlue systemNews active">系统消息</a>
+	                        <a href="productTrend.html?p=productTrend&s=messageNotification" class="corBlue productTrend">产品动态</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="rightCon">
+				<h2 class="clearfix">
+					<span class="fl fs16">系统消息</span>
+					<span class="promit fl fs12">
+						<i>点击查看详细说明</i>
+					</span>
+				</h2>
+				<div class="tit clearfix">
+					<a class="btn_filter active2" href="javascript:;">全部消息</a>
+					<a class="btn_filter" href="javascript:;" >产品消息</a>
+					<a class="btn_filter" href="javascript:;" >安全消息</a>
+				</div> 
+				<div class="tableDisplay">
+					<table id="tb">
+						<thead>
+							<tr>
+								<td class="td_one"><input class="checkall" type="checkbox" name="checkall" value=""><span class="w_round"></span></td>
+								<td class="td_two">标题内容 </td>
+								<td class="td_three">类型</td>
+								<td class="td_four">推送时间 </td>
+							</tr> 
+						</thead>
+						<tbody id="tb_cont">
+							<tr>
+								<td class="td_one"><input type="checkbox" name="checkone" value=""><span class="red_round"></span></td>
+								<td class="td_two"><a href="javascript:;" title="">消息标题消息111标题消息标题</a></td>
+								<td class="td_three"></td>
+								<td class="td_four">2015-12-17 12:12:12</td>
+							</tr>
+							<tr>
+								<td class="td_one"><input type="checkbox" name="checkone" value=""><span class="red_round"></span></td>
+								<td class="td_two"><a href="javascript:;" title="">消息标题消息111标题消息标题</a></td>
+								<td class="td_three"></td>
+								<td class="td_four">2015-12-17 12:12:12</td>
+							</tr>
+							<tr>
+								<td class="td_one"><input type="checkbox" name="checkone" value=""><span class="red_round"></span></td>
+								<td class="td_two"><a href="javascript:;" title="">消息标题消息111标题消息标题</a></td>
+								<td></td>
+								<td class="td_four">2015-12-17 12:12:12</td>
+							</tr>
+							<tr>
+								<td class="td_one"><input type="checkbox" name="checkone" value=""><span class="red_round"></span></td>
+								<td class="td_two"><a href="javascript:;" title="">消息标题消息111标题消息标题</a></td>
+								<td class="td_three"></td>
+								<td class="td_four">2015-12-17 12:12:12</td>
+							</tr>
+							<tr>
+								<td class="td_one"><input type="checkbox" name="checkone" value=""><span class="red_round"></span></td>
+								<td class="td_two"><a href="javascript:;" title="">消息标题消息111标题消息标题</a></td>
+								<td class="td_three"></td>
+								<td class="td_four">2015-12-17 12:12:12</td>
+							</tr>
+							<tr>
+								<td class="td_one"><input type="checkbox" name="checkone" value=""><span class="red_round"></span></td>
+								<td class="td_two"><a href="javascript:;" title="">消息标题消息111标题消息标题</a></td>
+								<td class="td_three"></td>
+								<td class="td_four">2015-12-17 12:12:12</td>
+							</tr>
+							<tr>
+								<td class="td_one"><input type="checkbox" name="checkone" value=""><span class="red_round"></span></td>
+								<td class="td_two"><a href="javascript:;" title="">消息标题消息111标题消息标题</a></td>
+								<td class="td_three"></td>
+								<td class="td_four">2015-12-17 12:12:12</td>
+							</tr>
+							<tr>
+								<td class="td_one"><input type="checkbox" name="checkone" value=""><span class="red_round"></span></td>
+								<td class="td_two"><a href="javascript:;" title="">消息标题消息111标题消息标题</a></td>
+								<td class="td_three"></td>
+								<td class="td_four">2015-12-17 12:12:12</td>
+							</tr>
+							<tr>
+								<td class="td_one"><input type="checkbox" name="checkone" value=""><span class="red_round"></span></td>
+								<td class="td_two"><a href="javascript:;" title="">消息标题消息111标题消息标题</a></td>
+								<td class="td_three"></td>
+								<td class="td_four">2015-12-17 12:12:12</td>
+							</tr>
+							<tr>
+								<td class="td_one"><input type="checkbox" name="checkone" value=""><span class="red_round"></span></td>
+								<td class="td_two"><a href="javascript:;" title="">消息标题消息111标题消息标题</a></td>
+								<td class="td_three"></td>
+								<td class="td_four">2015-12-17 12:12:12</td>
+							</tr>
+						</tbody>
+						<tbody class="tbody2">
+							<tr class="tr_opreate">
+								<td class="td_one"><input class="checkall" type="checkbox" name="checkall" value=""><span class="w_round"></span></td>
+								<td class="td_opreate td_two">
+									<span class="del btn_opreate">删除</span><span class="have_read btn_opreate">标记已读</span>
+								</td>
+								<td class="pageTo" colspan="2">
+									<div class="pagination"></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="shade"></div>
+	</body>
+</html>

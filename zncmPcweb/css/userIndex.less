@@ -1,0 +1,263 @@
+@the-border: 1px;
+@base-color: #111;
+@base-width: 10px;   
+@font-weight: bold;
+/* 左侧导航 start */
+body{
+    color: #666;
+}
+.caret {
+    border-top-width: 8px;
+    border-right-width: 6px;
+    border-left-width: 6px;
+}
+.td_public{
+    text-align: center;
+    line-height: 40px;
+    border-right: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+}
+div.tit{
+    height: @base-width*4.5;
+    border-bottom: @the-border solid @base-color*12;
+    margin-bottom: @base-width*3;  
+    ul{
+        li{
+            a{
+                display: block; 
+                width: @base-width*10;
+                height: @base-width*4.5;
+                line-height: @base-width*4.5;
+                border: @the-border solid @base-color*12; 
+                background-color: @base-color*14;
+                color: @base-color*6; 
+                text-align: center;
+                font-size: 16px;
+            }
+            a:hover{
+                border-top: @the-border*3 solid #3bafe5;
+                border-bottom: none;
+                background-color: @base-color*15;
+            }
+        }
+        .first{
+            a{
+                border-right: none;
+            }
+        }
+        .active{
+           a{
+                border-top: @the-border*3 solid #3bafe5;
+                border-bottom: none;
+                background-color: @base-color*15;
+                cursor: default;
+            }
+        }
+    }
+   .time{
+        margin: 0 9% 0 0;
+        width: 40%;
+        .timeDetails {
+            a{
+                display: block; 
+                height: @base-width*4.5; 
+                line-height: 33px; 
+                color: #2290d6; 
+                padding-right: @base-width*2;
+            }
+            a.active{
+                color: @base-color*6;
+            }
+            a.break{
+                width: @base-width*2;
+                background: url(../img/break.png) no-repeat center 6px;
+            }
+        }
+    }   
+}
+div.data_cont{
+    margin-bottom: 25px;
+    aside{
+        width: 16%;
+        height: 217px;
+        padding: 13px 0 0 27px;
+        border: 1px solid #ccc;
+        p{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    aside h3{
+        font: 16px 'Microsoft Yahei';
+        line-height: 50px;
+    }
+    .data_p{
+        line-height: 32px;
+        color: #666;
+        b{
+            color: #158cc3;
+        }
+    }
+    aside a{
+        display: inline-block;
+        line-height: 32px;
+        color: #666;
+        &:before{
+            content: '\e611';
+            font: 14px iconfont;
+            line-height: 32px;
+            margin-right: 3px;
+        }
+        &:hover{
+            color: #158cc3;
+        }
+    }
+    .data_chart{
+        width: 82%;
+        height: 217px;
+        padding-left: 20px;
+        border: 1px solid #ccc;
+        border-left: none;
+        .chart_left{
+            width: 16%;
+        }
+        .line{
+            width: 82%;
+        }
+    }
+    .chart_tit{
+        a{
+            display: inline-block;
+            font: 12px 'Microsoft Yahei';
+            line-height: 38px;
+            color: #666;
+        }
+        li{
+            width: 48.4%;
+            text-align: center;
+            margin: 1px;
+            cursor: pointer;
+        }
+        li.active a{
+            color: #158cc3;
+        }
+    }
+    .chart_cont{
+        position: relative;
+    }
+    .chart_cont li{
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 150px;
+        p{
+            text-align: center;
+            line-height: 24px;
+        }
+        div{
+            display: block;
+            width: 100%;
+        }
+    }
+    .chart_cont li.active{
+        opacity: 1;
+    }
+    
+}
+.dropdown-menu {
+  overflow: hidden;
+}
+@media screen and (max-width: 2000px){
+}
+@media screen and (max-width: 1800px){
+    .main .rightCon .tit .time {
+        margin: 0 9% 0 0;
+        width: 42%;
+    }
+}
+@media screen and (max-width: 1600px){
+    .main .rightCon .tit {
+        margin-bottom: 25px;
+    }
+    .main .rightCon .tit .time{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 1440px){
+     .main .rightCon .tit .time{
+        margin: 0 5% 0 0;
+        width: 53%;
+    }
+}
+
+@media screen and (max-width: 1366px){  
+    .main .rightCon .tit .time{
+        width: 53%;
+    }
+    div.data_cont aside{
+        width: 18%;
+        padding: 13px 0 0 18px;
+    }
+    div.data_cont .data_chart{
+        width: 80%;
+    }
+    .main .rightCon .tit {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .main .rightCon .tit ul li a {
+        width: 70px; 
+        height: 40px;
+        font-size: 13px;
+    }
+    .main .rightCon .tit{
+        height: 40px; 
+        margin-bottom: 20px;
+    }
+    .main .rightCon .tit .time .chaJian span{
+        height: 28px; 
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    div.data_cont aside{
+        height: 215px;
+        padding: 8px 0 0 8px;
+    }
+    div.data_cont .data_chart{
+        height: 215px;
+    }
+    .main .rightCon .tit .time {
+        margin: 0 5% 0 0;
+        width: 65%;
+    } 
+    .main .rightCon .exhibition ul li{
+        width: 24%; 
+        margin-bottom: 15px;
+    }
+    .main .rightCon .tit .time .chaJian span{
+        height: 28px; 
+        line-height: 28px;
+    }
+    div.data_cont .data_chart .chart_left{
+        width: 32%;
+    }
+    .chart_cont div{
+        height: 145px!important;
+    }
+    div.data_cont .data_chart .line{
+        width: 68%;
+    }
+    .data_chart .line{
+        height: 210px!important;
+    }
+}
+
+
+
+

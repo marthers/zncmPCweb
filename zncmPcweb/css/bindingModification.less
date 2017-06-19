@@ -1,0 +1,294 @@
+/*css reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, form, fieldset, input, textarea, blockquote, th, td{margin: 0; padding: 0;}
+body{font: 14px/1.5 arial,Microsoft YaHei; color: #666;}
+img{border: none; display: block;}
+ul, ol{list-style: none;}
+input, textarea{text-indent: 5px; outline: none; border: none; display: block; color: #666;}
+textarea{resize: none;}
+a,a:link,a:visited,a:hover,a:active{text-decoration: none;}
+// 公共样式
+.fl{float: left;}
+.fr{float: right!important;}
+.border(@bor: 1px, @style: solid, @color: #ccc){
+	border: @bor @style @color;
+}
+.ff_total{
+	display: inline-block;
+	margin-top: 5px;
+		font: 16px iconfont;
+}
+.bg_gradient( @point:top,@startColor: #75ccf5,@endColor: #469ed9){
+	background: linear-gradient(@point,@startColor,@endColor); 
+	background: -webkit-linear-gradient(@point,@startColor,@endColor); 
+	background: -moz-linear-gradient(@point,@startColor,@endColor); 
+	background: -ms-linear-gradient(@point,@startColor,@endColor); 
+	background: -o-linear-gradient(@point,@startColor,@endColor); 
+}
+@blue: #38a3d5;
+@green:#38d589;
+@red: #e92020;
+// 头部样式
+.navbar{
+	background-color: #eee;
+	margin-bottom: 0;
+	& .line{
+	    display: inline-block;
+	    line-height: 80px;
+	    height: 32px;
+	    width: 1px;
+	    background: #666;
+	    margin: 25px 15px 0 12px;		
+	}
+}
+h1{
+	font-size: 16px;
+	height: 80px;
+	line-height: 80px;
+}
+.nav > LI{
+	float: left;
+}
+.navbar-nav>li>a {
+    padding: 0;
+	height: 80px;
+	line-height: 80px;
+	color: #666;
+}
+// 主体内容
+.main{
+	margin-bottom: 50px;
+}
+p{
+	height: 80px;
+	line-height: 80px;
+}
+// 表单验证
+.modification{
+	.border;
+	.safetyTips{
+		color: @blue;
+		font-size: 18px;
+		margin: 50px 0 30px;
+		&:before{
+	   		content: '\e605';
+	   		font: 32px iconfont;
+	   		color: @blue;
+			vertical-align: middle;	
+			margin-right: 10px;	
+		}
+	}
+	.emailVerification{
+		margin-bottom: 30px;
+	}   
+	& .emailName{
+		color: @blue;
+		margin-right: 30px;	
+		&:before{
+	   		content: '\e606';
+	   		font: 32px iconfont;
+	   		color: @blue;
+			vertical-align: middle;	
+			margin-right: 10px;	
+		}
+	}
+	& .old{
+		width: 100px;
+		height: 28px;
+		.border;
+		margin-top: 3px;
+	}
+	& .prompt{
+		display: none;
+		font-size: 12px;
+		color:@blue;
+		margin: 7px 0 0 20px;
+
+	}
+	& .typeVer,.typeVerNew{
+		margin-bottom: 30px;
+		dt{
+			font-weight: normal;
+			line-height: 30px;
+		}
+		& .ff_icon:after{
+			display: inline-block;
+	   		content: '\e602';
+	   		color: @green;
+	   		.ff_total;
+		}
+		& .ff_icon2:after{
+			display: inline-block;
+			content: '\e604';
+			color: @red;
+			.ff_total;
+		}
+		& input{
+			width: 90px; 
+			height: 30px;
+			.border;
+			margin-right: 30px;
+		}
+		& .wrongP{
+			color: #ed1313;
+		}
+	}
+	.newEmail{
+		margin-bottom: 30px;
+		dt{
+			font-weight: normal;
+			line-height: 30px;
+		}
+		input{
+			width: 200px; 
+			height: 30px;
+			.border;
+			margin-right: 30px;
+		}
+		.new{
+			width: 100px;
+			height: 28px;
+			margin-right: 10px;
+		}
+	}
+	.ok{
+		width: 80px;
+		height: 28px;
+		.border;
+		margin-bottom: 40px;
+		margin-top: 40px;
+	} 
+	.ok.active{
+		.bg_gradient;
+		color: #fff;
+		.border(1px,solid,#fff);
+	}
+}
+.modCon{
+	padding-left: 150px;
+}
+.success{
+	position: relative;
+	display: none;
+	p{
+		position: absolute;
+		left: 50%;
+		top: 40%;
+		margin-left: -80px;
+		font-size: 20px;
+		&:before{
+			display: block;
+			content: "\e602";
+	   		color: @green;
+	   		font: 60px iconfont;
+	   		text-align: center;
+		}
+	}
+
+}
+// 脚部
+.footer .navbar {
+    background-color: #f2f2f2;
+    height: 60px;
+    margin-bottom: 0;
+}
+.footer .container{position: relative;}
+ .navbar .col-md-8 {position: absolute; width:430px; height: 42px; left: 50%; top: 0; margin: 10px 0 0 -215px; font-size: 12px; float: none; color: #999; padding: 0;}
+.col-md-8 a,.col-md-8 span{color: #999; padding-right: 15px; font-size: 12px;}
+.Copyright{margin: 6px auto 0;}
+// 适配1366*768
+@media (max-width: 1600px){
+	.navbar-nav>li>a {
+		line-height: 60px\9;
+	}
+}
+@media (max-width: 1380px){
+	body{font-size: 12px;}
+	// 头部样式
+	.navbar{
+		& .line{
+		    line-height: 60px;
+		    height: 24px;
+		    margin: 18px 15px 0 12px;		
+		}
+	}
+	h1{
+		font-size: 14px;
+		height: 60px;
+		line-height: 60px;
+	}
+	.navbar-nav>li>a {
+		height: 60px;
+		line-height: 60px;
+		line-height: 34px\9;
+	}
+	.main{
+		margin-top: 0px;
+	}
+// 表单验证
+.modification{
+	.safetyTips{
+		font-size: 16px;
+		margin: 40px 0 25px;
+		&:before{
+	   		font: 28px iconfont;
+		}
+	}
+	.emailVerification{
+		margin-bottom: 25px;
+	}   
+	& .emailName{
+		&:before{
+	   		font: 28px iconfont;
+		}
+	}
+	& .old{
+	    width: 80px;
+	    height: 25px;	
+	}
+	& .prompt{
+		margin: 7px 0 0 15px;
+
+	}
+	& .typeVer,.typeVerNew{
+		margin-bottom: 20px;
+		dt{
+			line-height: 25px;
+		}
+		input{
+			width: 90px; 
+    		height: 26px;			
+		}
+	}
+	.newEmail{
+		margin-bottom: 20px;
+		dt{
+			line-height: 26px;
+		}
+		input{
+			height: 26px;
+		}
+		.new{
+			width: 80px;
+			height: 25px;
+			line-height: 25px;			
+		}
+	}
+	.ok{
+		width: 70px;
+		height: 26px;
+		margin-bottom: 30px;
+		margin-top: 30px;
+	} 
+}
+	// 脚部
+	.footer .navbar {
+	    height: 50px;
+	}
+}
+
+// 适配1024*768
+@media (max-width: 1024px){
+	.container {
+	    width: 930px;
+	}
+}

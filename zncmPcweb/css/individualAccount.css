@@ -1,0 +1,491 @@
+.ok {
+  color: #5cb85c;
+}
+.no {
+  color: #e1c929;
+}
+.main .rightCon {
+  width: 80%;
+}
+.iACon {
+  padding: 30px 0;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+}
+.myself {
+  width: 16%;
+}
+.myself a {
+  display: block;
+  width: 125px;
+  margin: 0 auto;
+  height: 125px;
+  background: url(../img/myself.png) no-repeat center center;
+}
+.myselfInfor {
+  padding: 15px 0;
+  color: #666;
+}
+.myselfInfor dd,
+.myselfInfor dt {
+  line-height: 30px;
+  font-weight: normal;
+}
+dd.modifyPassword {
+  margin-left: 30px;
+}
+dd.modifyPassword a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  color: #3ba3e5;
+}
+.hideBox {
+  height: 130px;
+  display: none;
+  position: relative;
+  overflow: hidden;
+}
+.hideBox ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10000px;
+  height: 130px;
+}
+.hideBox ul li {
+  height: 130px;
+  padding: 30px 0;
+  transition: opacity .3s ease;
+}
+.hideBox ul h4 {
+  font-size: 14px;
+  padding: 0 0 30px;
+  color: #666;
+}
+.hideBox ul h4 .prompt {
+  display: none;
+  font-size: 12px;
+  color: #3ba3e5;
+  padding-left: 60px;
+  line-height: 15px;
+}
+.hideBox ul .passwordIn,
+.hideBox ul .fillInPassword {
+  font-size: 14px;
+  color: #666;
+  line-height: 28px;
+}
+.hideBox ul .passwordIn .btn,
+.hideBox ul .fillInPassword .btn {
+  border: 1px solid #cccccc;
+  background: #eee;
+  border-radius: 0;
+  color: #666;
+  padding: 3px 12px;
+}
+.hideBox ul .passwordIn .btn.Obtain,
+.hideBox ul .fillInPassword .btn.Obtain {
+  margin: 0 60px 0 30px;
+}
+.hideBox ul .passwordIn dt,
+.hideBox ul .fillInPassword dt {
+  font-weight: normal;
+  line-height: 28px;
+}
+.hideBox ul .passwordIn input,
+.hideBox ul .fillInPassword input {
+  height: 28px;
+  border: 1px solid #cccccc;
+  text-indent: 5px;
+}
+.hideBox ul .passwordIn a.cancel.btn,
+.hideBox ul .fillInPassword a.cancel.btn,
+.hideBox ul .passwordIn a.determine.btn,
+.hideBox ul .fillInPassword a.determine.btn,
+.hideBox ul .passwordIn a.next,
+.hideBox ul .fillInPassword a.next {
+  padding: 3px 20px;
+  height: 28px;
+  border-radius: 4px;
+  position: relative;
+  behavior: url(pie.htc);
+}
+.hideBox ul .passwordIn a.cancel.btn,
+.hideBox ul .fillInPassword a.cancel.btn,
+.hideBox ul .passwordIn a.determine.btn,
+.hideBox ul .fillInPassword a.determine.btn {
+  padding: 3px 29px;
+}
+.hideBox ul .passwordIn a.next,
+.hideBox ul .fillInPassword a.next {
+  margin: 0 30px 0 60px;
+}
+.hideBox ul .passwordIn a.cancel:hover,
+.hideBox ul .fillInPassword a.cancel:hover,
+.hideBox ul .passwordIn a.next.active,
+.hideBox ul .fillInPassword a.next.active,
+.hideBox ul .passwordIn a.cancel.active,
+.hideBox ul .fillInPassword a.cancel.active,
+.hideBox ul .passwordIn a.determine.active,
+.hideBox ul .fillInPassword a.determine.active {
+  background: linear-gradient(top, #93b9e5, #66a3d2);
+  background: -webkit-linear-gradient(top, #93b9e5, #66a3d2);
+  background: -moz-linear-gradient(top, #93b9e5, #66a3d2);
+  background: -ms-linear-gradient(top, #93b9e5, #66a3d2);
+  background: -o-linear-gradient(top, #93b9e5, #66a3d2);
+  border: 1px solid #89d5f2;
+  color: #fff;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#93b9e5', endColorstr='#66a3d2',GradientType='0')";
+  /* IE8 */
+}
+.hideBox ul .fillInPassword input {
+  width: 200px;
+  font-size: 12px;
+}
+.hideBox ul .fillInPassword .confirm {
+  margin: 0 100px 0 80px;
+}
+.hideBox ul .fillInPassword .determine {
+  margin-right: 40px;
+}
+.hideBox ul p {
+  margin-left: 45%;
+}
+.hideBox ul p span {
+  height: 60px;
+  line-height: 60px;
+}
+.hideBox ul .success {
+  margin-left: 40px;
+  color: #666;
+  display: block;
+}
+.hideBox ul .successIcon {
+  font-size: 40px;
+}
+.hideBox ul li:last-of-type {
+  display: none;
+}
+.passwordIn dl,
+.fillInPassword dl {
+  position: relative;
+}
+.passwordIn dl .wrongPrompt {
+  display: none;
+  position: absolute;
+  left: 112px;
+  top: 0;
+  top: -24px;
+  width: 300px;
+  height: 20px;
+  color: #eb2121;
+}
+.fillInPassword dl .wrongPrompt {
+  display: none;
+  position: absolute;
+  left: 100px;
+  top: 0;
+  top: -24px;
+  width: 300px;
+  height: 20px;
+  color: #eb2121;
+}
+.fillInPassword .confirm .wrongPrompt {
+  left: 70px;
+}
+.securityLevel,
+.mailboxBinding,
+.weixinBinding {
+  height: 100px;
+  border-bottom: 1px solid #cccccc;
+}
+.securityLevel dt,
+.mailboxBinding dt,
+.weixinBinding dt,
+.securityLevel dd,
+.mailboxBinding dd,
+.weixinBinding dd {
+  line-height: 99px;
+  font-weight: normal;
+  color: #666;
+}
+.securityLevel dd i,
+.mailboxBinding dd i,
+.weixinBinding dd i {
+  padding-right: 10px;
+}
+.securityLevel dd span,
+.mailboxBinding dd span,
+.weixinBinding dd span {
+  padding-right: 10px;
+}
+.securityLevel dd .txt,
+.mailboxBinding dd .txt,
+.weixinBinding dd .txt {
+  padding-top: 4px;
+  height: 80px;
+}
+.securityLevel dd .line,
+.mailboxBinding dd .line,
+.weixinBinding dd .line {
+  height: 80px;
+  padding-top: 2px;
+  font-size: 28px;
+}
+.securityLevel dd a,
+.mailboxBinding dd a,
+.weixinBinding dd a {
+  color: #3ba3e5;
+}
+.progress {
+  width: 250px;
+  margin: 37px 15px 0 10px;
+  height: 15px;
+  position: relative;
+  z-index: 2;
+  behavior: url(ie-css3.htc);
+}
+.progress-bar-success {
+  background-color: #00cc33;
+}
+.progress-bar-low {
+  background-color: #ffcc33;
+}
+.individualAccountpPop {
+  background-image: url(../img/individualAccount.png);
+  height: 290px;
+  margin-top: -145px;
+}
+.pop .close {
+  top: 44px;
+}
+.pop .ok {
+  bottom: 37px;
+}
+@media screen and (max-width: 1600px) {
+  .main .rightCon {
+    width: 77%;
+  }
+  .iACon {
+    padding: 20px 0;
+  }
+  .myself a {
+    background-size: 85%;
+  }
+  .hideBox {
+    height: 120px;
+  }
+  .hideBox ul {
+    height: 120px;
+  }
+  .hideBox ul li {
+    height: 120px;
+    padding: 30px 0;
+  }
+  .hideBox ul h4 {
+    padding: 0 0 25px;
+  }
+  .securityLevel,
+  .mailboxBinding,
+  .weixinBinding {
+    height: 90px;
+  }
+  .securityLevel dt,
+  .mailboxBinding dt,
+  .weixinBinding dt,
+  .securityLevel dd,
+  .mailboxBinding dd,
+  .weixinBinding dd {
+    line-height: 89px;
+  }
+  .pop .close {
+    right: 27px\9;
+    top: 33px\9;
+  }
+  .pop .ok {
+    right: 55px\9;
+    bottom: 27px\9;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .main .rightCon {
+    width: 78%;
+  }
+  .iACon {
+    padding: 10px 0;
+  }
+  .myself a {
+    background-size: 75%;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .navbar-nav > li > a {
+    line-height: 34px\9;
+  }
+  .iconfont {
+    font-size: 30px;
+  }
+  .main .rightCon {
+    width: 80%;
+  }
+  .myselfInfor {
+    padding: 20px 0;
+  }
+  .iACon {
+    padding: 5px 0;
+  }
+  .myselfInfor dd,
+  .myselfInfor dt {
+    line-height: 26px;
+  }
+  dd.modifyPassword a {
+    height: 26px;
+    line-height: 26px;
+  }
+  .hideBox {
+    height: 100px;
+  }
+  .hideBox ul {
+    height: 100px;
+  }
+  .hideBox ul li {
+    height: 100px;
+    padding: 20px 0;
+  }
+  .hideBox ul h4 {
+    padding: 0 0 20px;
+  }
+  .hideBox ul .passwordIn,
+  .hideBox ul .fillInPassword {
+    line-height: 25px;
+  }
+  .hideBox ul .passwordIn input {
+    font-size: 12px;
+  }
+  .hideBox ul .passwordIn dt,
+  .hideBox ul .fillInPassword dt {
+    line-height: 25px;
+  }
+  .hideBox ul .passwordIn a,
+  .hideBox ul .fillInPassword a {
+    font-size: 12px;
+  }
+  .hideBox ul .passwordIn input,
+  .hideBox ul .fillInPassword input {
+    height: 25px;
+  }
+  .passwordIn dt,
+  .fillInPassword dt {
+    line-height: 25px;
+  }
+  .hideBox ul .success {
+    margin-left: 20px;
+  }
+  .hideBox ul .successIcon {
+    font-size: 35px;
+  }
+  .securityLevel,
+  .mailboxBinding,
+  .weixinBinding {
+    height: 70px;
+  }
+  .securityLevel dt,
+  .mailboxBinding dt,
+  .weixinBinding dt,
+  .securityLevel dd,
+  .mailboxBinding dd,
+  .weixinBinding dd {
+    line-height: 69px;
+  }
+  .securityLevel dd .txt,
+  .mailboxBinding dd .txt,
+  .weixinBinding dd .txt {
+    padding-top: 4px;
+    height: 60px;
+    font-size: 12px;
+    padding-right: 6px;
+  }
+  .securityLevel dd .line,
+  .mailboxBinding dd .line,
+  .weixinBinding dd .line {
+    height: 60px;
+    padding-top: 2px;
+    font-size: 24px;
+    padding-right: 6px;
+  }
+  .hideBox ul .passwordIn a.cancel.btn,
+  .hideBox ul .fillInPassword a.cancel.btn,
+  .hideBox ul .passwordIn a.determine.btn,
+  .hideBox ul .fillInPassword a.determine.btn,
+  .hideBox ul .passwordIn a.next,
+  .hideBox ul .fillInPassword a.next {
+    padding: 3px 15px;
+    height: 25px;
+  }
+  .hideBox ul .passwordIn a.cancel.btn,
+  .hideBox ul .fillInPassword a.cancel.btn,
+  .hideBox ul .passwordIn a.determine.btn,
+  .hideBox ul .fillInPassword a.determine.btn {
+    padding: 3px 21px;
+  }
+  .progress {
+    width: 220px;
+    margin: 29px 15px 0 10px;
+    height: 12px;
+  }
+  .pop {
+    background-size: 100%;
+  }
+  .individualAccountpPop .close {
+    top: 33px;
+    right: 27px;
+  }
+  .individualAccountpPop .ok {
+    bottom: 27px;
+    right: 55px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .main .rightCon {
+    width: 81%;
+  }
+  .hideBox ul .passwordIn {
+    font-size: 13px;
+  }
+  .hideBox ul h4 {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main .rightCon {
+    width: 77%;
+  }
+  .myself {
+    width: 20%;
+  }
+  .iACon {
+    padding: 0;
+  }
+  .hideBox ul .passwordIn {
+    font-size: 12px;
+  }
+  .hideBox ul h4 {
+    font-size: 12px;
+  }
+  .hideBox ul .passwordIn .btn.Obtain {
+    margin: 0 30px 0 10px;
+  }
+  .passwordIn input {
+    width: 100px;
+  }
+  .hideBox ul .passwordIn a.next {
+    margin: 0 20px 0 40px;
+  }
+  .hideBox ul .fillInPassword .confirm {
+    margin: 0 30px 0 20px;
+  }
+  .hideBox ul .fillInPassword .determine {
+    margin-right: 10px;
+  }
+}

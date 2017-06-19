@@ -1,0 +1,41 @@
+/*css reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, form, fieldset, input, textarea, blockquote, th, td,select,option{margin: 0; padding: 0;}
+body{font: 14px/1.5 arial,Microsoft YaHei; color: #666;}
+img{border: none;}
+ul, ol{list-style: none;}
+a{color: #666; text-decoration: none; font-size: 12px; display: block;} 
+input, textarea{ outline: none;  border: none; display: block; color: #666;}
+/*input:focus,textarea:focus{
+     transition:border linear .2s,box-shadow linear .5s;
+     -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
+     -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
+     outline:none;border-color:rgba(32,136,224,.75);
+     box-shadow:0 0 8px rgba(32,136,214,.5);
+     -moz-box-shadow:0 0 8px rgba(32,136,214,.5);
+     -webkit-box-shadow:0 0 8px rgba(32,136,214,3);
+}*/
+textarea{resize: none;}
+a, button{cursor: pointer; border: none; outline: none;}
+/* 清除浮动 */
+.clearfix:after{content: ""; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix{display: inline-table;}
+*html .clearfix{height: 1%;}
+.clearfix{display: block;}
+* + html .clearfix{min-height: 1%;}
+/*公共样式*/
+.fl{float: left;}
+.fr{float: right;}
+.pofix{position: fixed;}
+/* * * * * * * * * * * * * * * * * 分割线 * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+
+
+
+
+
+
+
+
+

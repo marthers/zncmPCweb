@@ -1,0 +1,493 @@
+// less 公共样式
+.border(@bw: 1px, @style: solid, @color: #ccc ){
+  border: @bw @style @color;
+}
+.border-bottom(@bw: 1px, @style: solid, @color: #ccc ){
+  border-bottom: @bw @style @color;
+}
+.border-left(@bw: 1px, @style: solid, @color: #ccc ){
+  border-left: @bw @style @color;
+}
+.border-right(@bw: 1px, @style: solid, @color: #ccc ){
+  border-right: @bw @style @color;
+}
+.border-top(@bw: 1px, @style: solid, @color: #ccc ){
+  border-top: @bw @style @color;
+}
+
+//自定义动画
+@keyframes bigScale {
+  0% {
+    transform: scale(.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* banner轮播 start */
+.item {
+  position: relative;
+  .container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -500px;
+    h2 {
+      padding-bottom: 20px;
+      font-size: 32px;
+      font-weight: normal;
+      color: #fff;
+    }
+    h3 {
+      padding-bottom: 40px;
+      font-size: 28px;
+      font-weight: normal;
+      color: #fff;
+    }
+    p {
+      padding-bottom: 60px;
+      font-size: 16px;
+      color: #fff;
+    }
+    a {
+      display: block;
+      width: 80px;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+
+      .border(1px,solid,#fff);
+    }
+  }
+}
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > img {
+  width: 100%;
+}
+/* banner轮播 end */
+/* 客户端产品生态 start */
+.PE {
+  padding: 80px 0;
+  background-color: #f3f6f9;
+  h2 {
+    text-align: center;
+    margin: 0 0 15px;
+    font-size: 26px;
+    color: #2193bd;
+  }
+  .PEEnglish {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+  }
+  .PEEnglish:before,
+  .PEEnglish:after {
+    position: relative;
+    top: -6px;
+    display: inline-block;
+    width: 200px;
+    margin: 0 20px;
+
+    content: "";
+
+    .border-top;
+  }
+  .PEContent {
+    margin-top: 60px;
+    li {
+      margin: -10px;
+      a {
+        position: relative;
+        display: block;
+        width: 262px;
+        width: 255px\9;
+        height: 262px;
+        height: 255px\9;
+        padding: 5px;
+
+        cursor: default;
+        &:hover {
+          .circle {
+            border: 1px solid #2193bd;
+            border-radius: 50%;
+
+            animation: .5s bigScale linear;
+
+            behavior: url(pie.htc);
+          }
+          .icon01 {
+            background-image: url(../img/DTConversionHover.png);
+          }
+          .icon02 {
+            background-image: url(../img/DTProcessingHover.png);
+          }
+          .icon03 {
+            background-image: url(../img/DTManagementHover.png);
+          }
+          .icon04 {
+            background-image: url(../img/DTAnalysisHover.png);
+          }
+          .tit {
+            margin-bottom: 15px;
+            color: #2193bd;
+          }
+          .desc {
+            line-height: 20px;
+            font-size: 12px;
+            color: #38b3e0;
+          }
+        }
+        .circle {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 1px dashed #ccc;
+          border-radius: 50%;
+
+          behavior: url(pie.htc);
+        }
+        p {
+          text-align: center;
+          font-size: 18px;
+        }
+        .tit {
+          margin-bottom: 15px;
+          color: #444;
+        }
+        .desc {
+          line-height: 20px;
+          font-size: 12px;
+          color: #777;
+        }
+      }
+    }
+    & .icon {
+      position: relative;
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 27px auto 10px;
+    }
+    & .icon01 {
+      background: url(../img/DTConversion.png) no-repeat center;
+    }
+    & .icon02 {
+      background: url(../img/DTProcessing.png) no-repeat center;
+    }
+    & .icon03 {
+      background: url(../img/DTManagement.png) no-repeat center;
+    }
+    & .icon04 {
+      background: url(../img/DTAnalysis.png) no-repeat center;
+    }
+  }
+}
+/* 客户端产品生态 end */
+/* 产品特性 start */
+.PC {
+  padding: 80px 0 70px;
+  background-color: #fff;
+  h2 {
+    text-align: center;
+    margin: 0 0 15px;
+    font-size: 26px;
+    color: #2193bd;
+  }
+  .PCEnglish {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+  }
+  .PCEnglish:before,
+  .PCEnglish:after {
+    position: relative;
+    top: -6px;
+    display: inline-block;
+    width: 200px;
+    margin: 0 20px;
+
+    content: "";
+
+    .border-top;
+  }
+  .PCContent {
+    margin-top: 45px;
+    li {
+      &:first-child {
+        margin-left: 0px\9;
+      }
+      &:nth-child(2) {
+        margin: 0 20px;
+      }
+      a {
+        position: relative;
+        display: block;
+        width: 310px;
+        height: 280px;
+        padding: 5px;
+
+        cursor: default;
+
+        &:hover {
+          .square {
+            .border(1px,solid,#3aa6ce);
+          }
+
+          .desc {
+            line-height: 20px;
+            font-size: 14px;
+            color: #38b3e0;
+          }
+        }
+        .square {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          .border;
+        }
+        p {
+          text-align: left;
+          padding-left: 45px;
+        }
+        .desc {
+          line-height: 20px;
+          font-size: 14px;
+          color: #777;
+        }
+      }
+    }
+    & .pic {
+      position: relative;
+      display: block;
+      width: 300px;
+      height: 150px;
+      margin: 30px auto 24px;
+    }
+    & .pic01 {
+      background: url(../img/pc01.png) no-repeat center;
+      background-size: 95%;
+    }
+    & .pic02 {
+      background: url(../img/pc02.png) no-repeat center;
+      background-size: 93%;
+    }
+    & .pic03 {
+      background: url(../img/pc03.png) no-repeat center;
+      background-size: 92%;
+    }
+  }
+}
+/* 产品特性 end */
+/* 成功案例 start */
+.SC {
+  padding: 80px 0 70px;
+  background-color: #f3f6f9;
+  h2 {
+    text-align: center;
+    margin: 0 0 15px;
+    font-size: 26px;
+    color: #2193bd;
+  }
+  .SCEnglish {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+  }
+  .SCEnglish:before,
+  .SCEnglish:after {
+    position: relative;
+    top: -6px;
+    display: inline-block;
+    width: 200px;
+    margin: 0 20px;
+
+    content: "";
+
+    .border-top;
+  }
+  .SCContent {
+    margin-top: 45px;
+    li {
+      margin-left: 20px\9;
+      &:first-child {
+        margin-left: 0px\9;
+      }
+      &:nth-child(2) {
+        margin: 0 35px;
+      }
+      .SCList {
+        position: relative;
+        display: block;
+        width: 300px;
+        height: 290px;
+        padding: 5px;
+        .square {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+
+          .border;
+          behavior: url(pie.htc);
+        }
+        p {
+          text-align: left;
+          padding: 0 14px 0 25px;
+          font-size: 14px;
+        }
+        .desc {
+          line-height: 20px;
+          padding-top: 10px;
+          font-size: 12px;
+          color: #777;
+        }
+      }
+    }
+    & .SCPic {
+      position: relative;
+      display: block;
+      width: 250px;
+      height: 80px;
+      margin: 30px auto 40px;
+    }
+    & .sc01 {
+      background: url(../img/sc01.png) no-repeat center;
+    }
+    & .sc02 {
+      background: url(../img/sc02.png) no-repeat center;
+    }
+    & .sc03 {
+      background: url(../img/sc03.png) no-repeat center;
+    }
+  }
+}
+/* 成功案例 end */
+/* 合作伙伴 start */
+.CP {
+  padding: 80px 0 50px;
+  background-color: #fff;
+  h2 {
+    text-align: center;
+    margin: 0 0 15px;
+    font-size: 26px;
+    color: #2193bd;
+  }
+  .CPEnglish {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+  }
+  .CPEnglish:before,
+  .CPEnglish:after {
+    position: relative;
+    top: -6px;
+    display: inline-block;
+    width: 200px;
+    margin: 0 20px;
+
+    content: "";
+
+    .border-top;
+  }
+  .CPContent {
+    margin-top: 45px;
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+    }
+    ul {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3000px;
+      height: 220px;
+      overflow: hidden;
+      li {
+        width: 970px;
+        height: 220px;
+        a {
+          display: block;
+          margin: 0 16px 20px 0;
+          margin: 0 1px 20px 0\9;
+
+          cursor: default;
+          &:nth-child(4) {
+            margin: 0 0 20px;
+          }
+          &:nth-child(8) {
+            margin: 0 0 20px;
+          }
+        }
+      }
+    }
+    ol {
+      position: absolute;
+      top: 250px;
+      left: 50%;
+      width: 114px;
+      margin-left: -57px;
+      li {
+        width: 24px;
+        height: 6px;
+        margin-left: 5px\9;
+        background-color: #eee;
+
+        cursor: pointer;
+        .active {
+          background-color: #ccc;
+        }
+        &:nth-child(2) {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+/* 合作伙伴 end */
+// 适配1024
+@media screen and (max-width: 1380px) {
+  .item .container h2 {
+    padding-bottom: 15px;
+    font-size: 24px;
+  }
+  .item .container h3 {
+    padding-bottom: 30px;
+    font-size: 20px;
+  }
+  .item .container p {
+    padding-bottom: 40px;
+    font-size: 13px;
+  }
+  .PE h2,
+  .PC h2,
+  .SC h2,
+  .CP h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .item {
+    overflow: hidden;
+  }
+  .carousel-inner > .item > a > img,
+  .carousel-inner > .item > img {
+    width: 125%;
+  }
+  .carousel-inner > .item > a > img,
+  .carousel-inner > .item > img,
+  .img-responsive,
+  .thumbnail a > img,
+  .thumbnail > img {
+    max-width: 200%;
+  }
+}

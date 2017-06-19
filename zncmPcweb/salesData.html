@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<title>中南数据中心</title>
+	<link rel="stylesheet" type="text/css" href="css/inventoryData.css">
+	<!--[if IE 8]>
+		<script type="text/javascript" src="js/html5shiv.js"></script>
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header class="pofix">
+		<div class="top clearfix">
+			<h1 class="fl"><a href="javascript:;">中南数据中心</a></h1>
+			<div class="btn-group fr">
+			  <a href="javascript:;"  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    <span class="fl fs16">123456789</span>
+			    <span class="fl touXiang"></span>
+			  </a>
+			  <ul class="dropdown-menu">
+			    <li><a href="#">个人账号</a></li>
+			    <li><a href="#">退出</a></li>
+			  </ul>
+			</div>			
+		</div>
+		<div class="navbar navbar-default clearfix">
+		    <ul class="nav navbar-nav">
+		        <li class="first fs16 htmin">中南数据中心</li>
+		        <li class="fs16 htmin">
+		        	<a href="UserCenterIndex.html" class="clearfix">
+		        		<span class="fl icon dataStatistics htmin"></span>
+		        		<span class="fl fs16 htmin">数据统计中心</span>
+		        	</a>
+		        </li>
+		        <li class="active three htmin">
+		        	<a href="allDetail.html" class="clearfix">
+		        		<span class="fl icon dataSmoothing htmin"></span>
+		        		<span class="fl fs16 htmin">数据加工</span>
+		        	</a>
+		        </li>
+		        <li class="three htmin">
+		        	<a href="dataCheck.html" class="clearfix">
+		        		<span class="fl icon dataSmoothing htmin"></span>
+		        		<span class="fl fs16 htmin">数据审核</span>
+		        	</a>
+		        </li>
+		        <li class="three htmin">
+		        	<a href="dataRelease.html" class="clearfix">
+		        		<span class="fl icon dataSmoothing htmin"></span>
+		        		<span class="fl fs16 htmin">数据发布</span>
+		        	</a>
+		        </li>
+		    </ul>
+		</div>
+	</header>
+	<!-- 新增左侧导航 -->
+	<div class="main">
+		<div class="pofix leftNav">
+			<ul>
+				<li>
+					<div class="regionalBillboard" clshow="1">
+						<a href="javascript:;" class="clearfix">
+							<span class="fl icon lCIcon"></span>
+							<span class="fl tit fs16">地域排行榜</span>
+							<span class="fl triangleDown"></span>
+						</a>
+					</div>
+					<div class="sMDetails">
+                        <a href="infoProcess.html?p=regionalBillboard&s=infoProcess" class="corBlue infoProcess">销售库存分析</a>
+					</div>
+				</li>
+				<li>
+					<div class="salesStockAnalysis" clshow="1">
+						<a href="javascript:;" class="corBlue clearfix">
+							<span class="fl icon SSIcon"></span>
+							<span class="fl tit fs16">数据分析</span>
+							<span class="fl triangleDown"></span>
+						</a>
+					</div>
+					<div class="sMDetails">
+                        <a href="allDetail.html?p=salesStockAnalysis&s=allDetail" class="corBlue allDetail">书目展示</a>
+                        <a href="salesData.html?p=salesStockAnalysis&s=salesData" class="corBlue salesData active">销售展示</a>
+                        <a href="inventoryData.html?p=salesStockAnalysis&s=inventoryData" class="corBlue inventoryData">库存展示</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<section class="container">
+		<div class="pop">
+			<h2 class="mask_tit clearfix">
+				<span class="fl">详细说明：</span>
+				<i class="close fr">&#xe60e;</i>
+			</h2>
+			<div class="mask_cont">
+				<hgroup>
+					<h3>销售展示：</h3>
+					<h4>1.显示书目来源、ISBN、品名、定价、出版单位、销售时间、上传时间、数量、传输结果；</h4>
+					<h4>2.显示书目上传成功、失败总数量；</h4>
+					<h4>3.支持导出CSV格式数据.</h4>
+				</hgroup>
+			</div>
+			<footer class="mask_foot clearfix">
+				<i class="ok fr">确定</i>
+			</footer>
+		</div>
+		<h2 class="clearfix">
+			<span class="fl fs16">数据统计管理</span>
+			<span class="promit fl fs12">
+				<i>点击查看详细说明</i>
+			</span>
+		</h2>
+		<nav class="top_nav clearfix">
+			<ul class="fl" > 
+			    <li class="active fl first"><a href="javascript:;" class="fs13">出版端</a></li> 
+			    <li class="fl"><a href="javascript:;" class="fs13">发行端</a></li> 
+		    </ul>
+			<div class="timeDetails fr">
+	    		<a href="javascript:;" class="fl fs16">今天 </a>
+	    		<a href="javascript:;" class="fl fs16">昨天</a>
+	    		<a href="javascript:;" class="fl fs16">7天</a>
+	    		<a href="javascript:;" class="fl fs16">14天</a>
+	    		<a href="javascript:;" class="fl active fs16">30天</a>
+	    		<a href="javascript:;" class="break fl"></a>
+	    	</div>
+			<form class="search fr">
+				<input type="search" name="search" value="" placeholder="请输入ISBN号/书名搜索">
+				<i class="search_icon iconfont">&#xe60f;</i>
+			</form>
+		</nav>
+		<div class="tit_sort clearfix">
+			<ul class="fl tit_list">
+				<li class="fl active"><a class="tit_link" href="javascript:;" title="全部">全部：467831条</a></li>
+				<li class="fl"><a class="tit_link" href="StatisticsSucces.html" title="成功">成功：446263条</a></li>
+				<li class="fl"><a class="tit_link" href="bookRetrieval.html" title="失败">失败：2458条</a></li>
+			</ul>
+			<div class="fr tit_check">
+				<a class="fr" href="" title=""><i class="export_icon"></i>导出CSV格式数据</a>
+			</div>
+		</div>
+		<table class="data_cont">
+			<thead>
+				<tr>
+					<th>来源</th>
+					<th class="clearfix">ISBN号</th>
+					<th>品名</th>
+					<th>定价</th>
+					<th>出版单位</th>
+					<th>库存时间</th>
+					<th>上传时间</th>
+					<th>数量</th>
+					<th>传输结果</th>
+				</tr>
+			</thead>
+			<tbody class="tbody_check">
+				<!-- 未审核的tr条目默认添加背景为灰色的active类； -->
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div>9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td class="result9">
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+				<tr class="">
+					<td>
+						<div>高等教育出版社有限公司</div>
+					</td>
+					<td class="">
+						<div class="">9787539048567</div>
+					</td>
+					<td>
+						<div>e时代青少年百科全书（社会卷）</div>
+					</td>
+					<td>
+						<div>39.90</div>
+					</td>
+					<td>
+						<div>中文天地出版股份有限公司</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>20160502</div>
+					</td>
+					<td>
+						<div>132</div>
+					</td>
+					<td>
+						<div>成功</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="page_box clearfix">
+			<div class="pagination"></div>
+		</div>
+	</section>
+	<div class="shade"></div>
+	<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.placeholder.min.js"></script>
+	<script src="js/jquery.pagination.js"></script>
+	<script src="js/inventoryData.js"></script>
+</body>
+</html>

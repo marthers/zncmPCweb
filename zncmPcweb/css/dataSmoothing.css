@@ -1,0 +1,1207 @@
+@charset "UTF-8";
+.wrap {
+  position: relative;
+  width: 998px;
+  margin: 0; }
+
+.container {
+  width: auto;
+  padding-bottom: 30px;
+  margin: 161px 75px 0 75px; }
+
+.aside {
+  position: fixed;
+  top: 161px;
+  z-index: 99;
+  width: 185px;
+  padding-right: 20px;
+  background-color: #fff; }
+  .aside .circle {
+    width: 10px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background: url(../img/circle3.png) left center no-repeat; }
+  .aside .field_txt {
+    font: 14px/18px "Microsoft Yahei";
+    margin-right: 3px;
+    color: #333; }
+  .aside li.active .circle,
+  .aside li:hover .circle {
+    background: url(../img/circle1.png) left center no-repeat; }
+  .aside li:hover .field_txt {
+    font-weight: bold; }
+  .aside li.wrong .field_txt {
+    color: #f70808; }
+  .aside .vertical_line {
+    width: 2px;
+    height: 15px;
+    margin: 0 0 0 4px;
+    background-color: #ccc; }
+  .aside .legend {
+    display: block;
+    width: 120px;
+    height: 30px;
+    font: 12px/30px "宋体";
+    text-align: center;
+    margin: 20px 0;
+    color: #0c3f99; }
+  .aside .note {
+    width: 100%;
+    height: 30px;
+    font: 14px/28px "宋体";
+    text-align: center;
+    margin-top: 20px;
+    color: #076984; }
+  .aside .note_list {
+    height: 320px;
+    font: 12px/18px "宋体";
+    padding: 5px 5px 0 5px;
+    border: 1px solid #7aa5dc;
+    border-top: none;
+    color: #666;
+    background-color: #f8fcff;
+    overflow-y: auto; }
+    .aside .note_list > li {
+      margin-top: 5px; }
+
+.content {
+  padding-bottom: 20px;
+  margin-left: 200px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  overflow-y: auto; }
+
+/* 模块共用title样式 */
+.mod .mark_sel,
+.modal .mark_sel {
+  position: relative; }
+  .mod .mark_sel i,
+  .modal .mark_sel i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #b8b8b8;
+    -webkit-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    cursor: pointer; }
+  .mod .mark_sel .sel_txt,
+  .modal .mark_sel .sel_txt {
+    position: relative;
+    width: 76.92308%;
+    height: 30px;
+    font: 12px/28px "宋体";
+    padding-left: 10px;
+    border: 1px solid #a9a9a9;
+    color: #555;
+    overflow: hidden; }
+  .mod .mark_sel .sel_list,
+  .modal .mark_sel .sel_list {
+    display: none;
+    position: absolute;
+    bottom: -79px;
+    left: 0;
+    z-index: 2;
+    width: 76.92308%;
+    border: 1px solid #a9a9a9;
+    border-top: none;
+    background-color: #fff; }
+    .mod .mark_sel .sel_list > li,
+    .modal .mark_sel .sel_list > li {
+      float: left;
+      width: 100%;
+      height: 26px;
+      font: 12px/24px "宋体";
+      padding-left: 10px;
+      color: #555;
+      cursor: default; }
+    .mod .mark_sel .sel_list > li:hover,
+    .modal .mark_sel .sel_list > li:hover {
+      background-color: #f5f5f5; }
+
+.mod .sub_tit span,
+.modal .sub_tit span {
+  height: 30px;
+  font: 14px/30px "宋体";
+  color: #555; }
+
+.mod {
+  border: 1px solid #c1c0c0;
+  border-bottom: none; }
+  .mod .cont {
+    padding: 20px 20px 0 20px; }
+    .mod .cont > div {
+      height: 30px;
+      margin-bottom: 20px; }
+  .mod input {
+    height: 30px;
+    font: 13px/30px "宋体";
+    padding-left: 8px;
+    border: 1px solid #a9a9a9; }
+  .mod textarea {
+    width: 100%;
+    height: 60px;
+    font: 12px/26px "宋体";
+    padding-left: 10px;
+    border: 1px solid #a9a9a9; }
+  .mod .mod_tit {
+    position: relative;
+    width: 100%;
+    font: bold 14px/30px "宋体";
+    padding-left: 20px;
+    color: #333;
+    background-color: #eee; }
+  .mod mark {
+    display: none;
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    font: 12px/15px "Microsoft Yahei";
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #f70808; }
+  .mod .unit_sel {
+    position: relative; }
+    .mod .unit_sel > input[type='text'] {
+      width: 89.28571%;
+      padding-right: 28.06122%; }
+    .mod .unit_sel .sel_txt {
+      position: absolute;
+      width: 45px;
+      top: 0;
+      right: 21px;
+      height: 30px;
+      font: bold 14px/28px arial;
+      padding-left: 5px;
+      color: #168eb1;
+      overflow: hidden;
+      cursor: pointer; }
+    .mod .unit_sel i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 30px;
+      text-align: center;
+      font: bold 12px/30px '宋体';
+      color: #b8b8b8;
+      -webkit-transform: rotateZ(90deg);
+      -o-transform: rotateZ(90deg);
+      transform: rotateZ(90deg);
+      cursor: pointer; }
+    .mod .unit_sel .sel_list {
+      display: none;
+      position: absolute;
+      bottom: -53px;
+      right: 10.71429%;
+      z-index: 2;
+      width: 22.95918%;
+      border: 1px solid #a9a9a9;
+      border-top: none;
+      background-color: #fff; }
+      .mod .unit_sel .sel_list > li {
+        float: left;
+        width: 100%;
+        height: 26px;
+        font: bold 14px/24px arial;
+        padding-left: 5px;
+        color: #168eb1;
+        cursor: default; }
+      .mod .unit_sel .sel_list > li:hover {
+        background-color: #f5f5f5; }
+  .mod .record_inp > input {
+    width: 100%; }
+  .mod .red .sub_tit > span {
+    color: #f70808; }
+  .mod .prompt {
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: -20px;
+    left: 0;
+    height: 20px;
+    font: 12px/20px "宋体";
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #f70808; }
+  .mod:last-child {
+    border: 1px solid #a9a9a9; }
+
+.sort .sort_cont .booksort,
+.sort .sort_cont .Marketing,
+.sort .sort_cont .vocabulary,
+.sort .sort_cont .subject {
+  width: 48.33948%; }
+.sort .sort_cont .keyWord,
+.sort .sort_cont .subMarketing,
+.sort .sort_cont .common {
+  width: 51.66052%; }
+.sort .booksort > .sub_tit,
+.sort .Marketing > .sub_tit,
+.sort .vocabulary > .sub_tit,
+.sort .subject > .sub_tit {
+  width: 31.29771%; }
+.sort .booksort > .record_inp,
+.sort .Marketing > .record_inp,
+.sort .vocabulary > .record_inp,
+.sort .subject > .record_inp {
+  position: relative;
+  width: 68.70229%; }
+.sort .keyWord > .sub_tit,
+.sort .subMarketing > .sub_tit,
+.sort .common > .sub_tit {
+  width: 30.71429%; }
+.sort .keyWord > .record_inp,
+.sort .subMarketing > .record_inp,
+.sort .common > .record_inp {
+  position: relative;
+  width: 64.28571%; }
+
+.source input {
+  border: none;
+  margin-bottom: 5px; }
+.source > div + div {
+  border-top: 1px dashed #ccc; }
+.source .file {
+  padding: 10px; }
+  .source .file > .wrap {
+    padding-bottom: 10px; }
+  .source .file > button[type=submit] {
+    margin-left: 10px; }
+  .source .file > button[type=button] {
+    margin-left: 5px; }
+.source .file_tit {
+  font: normal 12px/18px "宋体";
+  margin-bottom: 10px;
+  color: #555; }
+  .source .file_tit > b {
+    font-weight: normal;
+    color: #f70808; }
+.source .img_cont {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  margin: 0 5px; }
+  .source .img_cont > img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+  .source .img_cont > span {
+    display: inline-block;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
+.introduce .introduce_cont > div,
+.introduce .list_cont > div,
+.introduce .summary_cont > div,
+.introduce .reader_cont > div,
+.list .introduce_cont > div,
+.list .list_cont > div,
+.list .summary_cont > div,
+.list .reader_cont > div,
+.summary .introduce_cont > div,
+.summary .list_cont > div,
+.summary .summary_cont > div,
+.summary .reader_cont > div,
+.reader .introduce_cont > div,
+.reader .list_cont > div,
+.reader .summary_cont > div,
+.reader .reader_cont > div {
+  height: 60px; }
+.introduce .aboutAuthor > .sub_tit,
+.introduce .catalogInfo > .sub_tit,
+.introduce .preface > .sub_tit,
+.introduce .editorChoice > .sub_tit,
+.introduce .digest > .sub_tit,
+.introduce .comment > .sub_tit,
+.introduce .probation > .sub_tit,
+.introduce .specificGroup > .sub_tit,
+.introduce .readerComments > .sub_tit,
+.list .aboutAuthor > .sub_tit,
+.list .catalogInfo > .sub_tit,
+.list .preface > .sub_tit,
+.list .editorChoice > .sub_tit,
+.list .digest > .sub_tit,
+.list .comment > .sub_tit,
+.list .probation > .sub_tit,
+.list .specificGroup > .sub_tit,
+.list .readerComments > .sub_tit,
+.summary .aboutAuthor > .sub_tit,
+.summary .catalogInfo > .sub_tit,
+.summary .preface > .sub_tit,
+.summary .editorChoice > .sub_tit,
+.summary .digest > .sub_tit,
+.summary .comment > .sub_tit,
+.summary .probation > .sub_tit,
+.summary .specificGroup > .sub_tit,
+.summary .readerComments > .sub_tit,
+.reader .aboutAuthor > .sub_tit,
+.reader .catalogInfo > .sub_tit,
+.reader .preface > .sub_tit,
+.reader .editorChoice > .sub_tit,
+.reader .digest > .sub_tit,
+.reader .comment > .sub_tit,
+.reader .probation > .sub_tit,
+.reader .specificGroup > .sub_tit,
+.reader .readerComments > .sub_tit {
+  display: table;
+  height: 60px; }
+  .introduce .aboutAuthor > .sub_tit > span,
+  .introduce .catalogInfo > .sub_tit > span,
+  .introduce .preface > .sub_tit > span,
+  .introduce .editorChoice > .sub_tit > span,
+  .introduce .digest > .sub_tit > span,
+  .introduce .comment > .sub_tit > span,
+  .introduce .probation > .sub_tit > span,
+  .introduce .specificGroup > .sub_tit > span,
+  .introduce .readerComments > .sub_tit > span,
+  .list .aboutAuthor > .sub_tit > span,
+  .list .catalogInfo > .sub_tit > span,
+  .list .preface > .sub_tit > span,
+  .list .editorChoice > .sub_tit > span,
+  .list .digest > .sub_tit > span,
+  .list .comment > .sub_tit > span,
+  .list .probation > .sub_tit > span,
+  .list .specificGroup > .sub_tit > span,
+  .list .readerComments > .sub_tit > span,
+  .summary .aboutAuthor > .sub_tit > span,
+  .summary .catalogInfo > .sub_tit > span,
+  .summary .preface > .sub_tit > span,
+  .summary .editorChoice > .sub_tit > span,
+  .summary .digest > .sub_tit > span,
+  .summary .comment > .sub_tit > span,
+  .summary .probation > .sub_tit > span,
+  .summary .specificGroup > .sub_tit > span,
+  .summary .readerComments > .sub_tit > span,
+  .reader .aboutAuthor > .sub_tit > span,
+  .reader .catalogInfo > .sub_tit > span,
+  .reader .preface > .sub_tit > span,
+  .reader .editorChoice > .sub_tit > span,
+  .reader .digest > .sub_tit > span,
+  .reader .comment > .sub_tit > span,
+  .reader .probation > .sub_tit > span,
+  .reader .specificGroup > .sub_tit > span,
+  .reader .readerComments > .sub_tit > span {
+    display: table-cell;
+    vertical-align: middle; }
+.introduce .aboutAuthor textarea,
+.introduce .catalogInfo textarea,
+.introduce .preface textarea,
+.introduce .editorChoice textarea,
+.introduce .digest textarea,
+.introduce .comment textarea,
+.introduce .probation textarea,
+.introduce .specificGroup textarea,
+.introduce .readerComments textarea,
+.list .aboutAuthor textarea,
+.list .catalogInfo textarea,
+.list .preface textarea,
+.list .editorChoice textarea,
+.list .digest textarea,
+.list .comment textarea,
+.list .probation textarea,
+.list .specificGroup textarea,
+.list .readerComments textarea,
+.summary .aboutAuthor textarea,
+.summary .catalogInfo textarea,
+.summary .preface textarea,
+.summary .editorChoice textarea,
+.summary .digest textarea,
+.summary .comment textarea,
+.summary .probation textarea,
+.summary .specificGroup textarea,
+.summary .readerComments textarea,
+.reader .aboutAuthor textarea,
+.reader .catalogInfo textarea,
+.reader .preface textarea,
+.reader .editorChoice textarea,
+.reader .digest textarea,
+.reader .comment textarea,
+.reader .probation textarea,
+.reader .specificGroup textarea,
+.reader .readerComments textarea {
+  height: 60px; }
+.introduce .probation textarea,
+.list .probation textarea,
+.summary .probation textarea,
+.reader .probation textarea {
+  height: 70px; }
+
+.required .description_cont .contentSummary,
+.required .description_cont .reader,
+.required .description_cont .adSlogan,
+.required .required_cont .contentSummary,
+.required .required_cont .reader,
+.required .required_cont .adSlogan,
+.description .description_cont .contentSummary,
+.description .description_cont .reader,
+.description .description_cont .adSlogan,
+.description .required_cont .contentSummary,
+.description .required_cont .reader,
+.description .required_cont .adSlogan {
+  height: 60px; }
+.required .contentSummary > .sub_tit,
+.required .reader > .sub_tit,
+.required .adSlogan > .sub_tit,
+.description .contentSummary > .sub_tit,
+.description .reader > .sub_tit,
+.description .adSlogan > .sub_tit {
+  display: table;
+  height: 60px; }
+  .required .contentSummary > .sub_tit > span,
+  .required .reader > .sub_tit > span,
+  .required .adSlogan > .sub_tit > span,
+  .description .contentSummary > .sub_tit > span,
+  .description .reader > .sub_tit > span,
+  .description .adSlogan > .sub_tit > span {
+    display: table-cell;
+    vertical-align: middle; }
+.required .contentSummary textarea,
+.required .reader textarea,
+.required .adSlogan textarea,
+.description .contentSummary textarea,
+.description .reader textarea,
+.description .adSlogan textarea {
+  height: 60px; }
+
+span.uploadBtn,
+span.cancel {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  font: 14px/30px "Microsoft Yahei";
+  text-align: center;
+  border: 1px solid  #ababab;
+  border-radius: 4px;
+  margin-right: 20px;
+  color: #454545;
+  background-color: #f5f5f5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer; }
+  span.uploadBtn:hover,
+  span.cancel:hover {
+    background-color: white; }
+  span.uploadBtn:active,
+  span.cancel:active {
+    background-color: gainsboro; }
+
+.fileWrap {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 30px;
+  border: 1px solid #4198e4;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #4198e4;
+  overflow: hidden;
+  cursor: pointer; }
+  .fileWrap:hover {
+    background-color: #6eb0ea; }
+  .fileWrap:active {
+    background-color: #1e7fd4; }
+
+.fileWrap input[type=file] {
+  position: absolute;
+  top: -50px;
+  left: 0; }
+
+.fileName {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  line-height: 30px; }
+
+.entryUser input[disabled],
+.goodsId input[disabled],
+.statu input[disabled],
+.taxRate input[disabled],
+.modify input[disabled],
+.inputTime input[disabled],
+.editTime input[disabled] {
+  cursor: not-allowed; }
+
+.record_inp {
+  position: relative;
+  width: 75%; }
+
+.sub_tit {
+  width: 25%;
+  text-align: right; }
+
+.contentSummary,
+.reader,
+.adSlogan,
+.catalogInfo,
+.preface,
+.subSummary,
+.editorChoice,
+.digest,
+.comment,
+.probation {
+  height: auto !important; }
+
+.w100 {
+  width: 100%; }
+
+.w75 {
+  width: 75%; }
+
+.w50 {
+  width: 50%; }
+
+.w35 {
+  width: 35%; }
+
+.w34 {
+  width: 34%; }
+
+.w33 {
+  width: 33%; }
+
+.w30 {
+  width: 30%; }
+
+.w25 {
+  width: 25%; }
+
+.w20 {
+  width: 20%; }
+
+.w15 {
+  width: 15%; }
+
+.price input[type=text],
+.barcode input[type=text],
+.wordCount input[type=text],
+.thickness input[type=text],
+.weight input[type=text],
+.bookHeight input[type=text],
+.bookWidth input[type=text] {
+  width: 100% !important;
+  padding-right: 55px; }
+.price .unit_sel .sel_txt,
+.barcode .unit_sel .sel_txt,
+.wordCount .unit_sel .sel_txt,
+.thickness .unit_sel .sel_txt,
+.weight .unit_sel .sel_txt,
+.bookHeight .unit_sel .sel_txt,
+.bookWidth .unit_sel .sel_txt {
+  right: 0;
+  width: 55px; }
+.price .unit_sel .sel_list,
+.barcode .unit_sel .sel_list,
+.wordCount .unit_sel .sel_list,
+.thickness .unit_sel .sel_list,
+.weight .unit_sel .sel_list,
+.bookHeight .unit_sel .sel_list,
+.bookWidth .unit_sel .sel_list {
+  right: 0;
+  bottom: -27px;
+  width: 55px; }
+
+.bookWidth .unit_sel .sel_list {
+  bottom: -53px; }
+
+.binding > .record_inp,
+.format > .record_inp,
+.cityzenship > .record_inp,
+.language > .record_inp,
+.barcode > .record_inp,
+.version > .record_inp,
+.printTime > .record_inp,
+.goodsAttr > .record_inp,
+.spine > .record_inp,
+.external > .record_inp,
+.annexType > .record_inp {
+  position: relative; }
+.binding > .mark_sel,
+.format > .mark_sel,
+.cityzenship > .mark_sel,
+.language > .mark_sel,
+.barcode > .mark_sel,
+.version > .mark_sel,
+.printTime > .mark_sel,
+.goodsAttr > .mark_sel,
+.spine > .mark_sel,
+.external > .mark_sel,
+.annexType > .mark_sel {
+  position: relative;
+  width: 75%; }
+  .binding > .mark_sel .sel_txt,
+  .format > .mark_sel .sel_txt,
+  .cityzenship > .mark_sel .sel_txt,
+  .language > .mark_sel .sel_txt,
+  .barcode > .mark_sel .sel_txt,
+  .version > .mark_sel .sel_txt,
+  .printTime > .mark_sel .sel_txt,
+  .goodsAttr > .mark_sel .sel_txt,
+  .spine > .mark_sel .sel_txt,
+  .external > .mark_sel .sel_txt,
+  .annexType > .mark_sel .sel_txt {
+    width: 100%; }
+  .binding > .mark_sel .sel_list,
+  .format > .mark_sel .sel_list,
+  .cityzenship > .mark_sel .sel_list,
+  .language > .mark_sel .sel_list,
+  .barcode > .mark_sel .sel_list,
+  .version > .mark_sel .sel_list,
+  .printTime > .mark_sel .sel_list,
+  .goodsAttr > .mark_sel .sel_list,
+  .spine > .mark_sel .sel_list,
+  .external > .mark_sel .sel_list,
+  .annexType > .mark_sel .sel_list {
+    bottom: -53px;
+    width: 100%; }
+
+.barcode > .sub_tit {
+  width: 120px; }
+.barcode > .mark_sel {
+  width: calc(100% - 120px); }
+
+.w15 .sub_tit,
+.w20 .sub_tit,
+.w25 .sub_tit,
+.w30 .sub_tit,
+.w33 .sub_tit,
+.w34 .sub_tit,
+.w35 .sub_tit,
+.w50 .sub_tit,
+.w75 .sub_tit,
+.w100 .sub_tit {
+  width: 94px; }
+.w15 .record_inp,
+.w15 .mark_sel,
+.w15 .unit_sel,
+.w20 .record_inp,
+.w20 .mark_sel,
+.w20 .unit_sel,
+.w25 .record_inp,
+.w25 .mark_sel,
+.w25 .unit_sel,
+.w30 .record_inp,
+.w30 .mark_sel,
+.w30 .unit_sel,
+.w33 .record_inp,
+.w33 .mark_sel,
+.w33 .unit_sel,
+.w34 .record_inp,
+.w34 .mark_sel,
+.w34 .unit_sel,
+.w35 .record_inp,
+.w35 .mark_sel,
+.w35 .unit_sel,
+.w50 .record_inp,
+.w50 .mark_sel,
+.w50 .unit_sel,
+.w75 .record_inp,
+.w75 .mark_sel,
+.w75 .unit_sel,
+.w100 .record_inp,
+.w100 .mark_sel,
+.w100 .unit_sel {
+  width: calc(100% - 94px); }
+
+.serialNum .sub_tit {
+  width: 104px; }
+.serialNum .record_inp {
+  width: calc(100% - 104px); }
+
+.catalogInfo .sub_tit,
+.preface .sub_tit,
+.editorChoice .sub_tit,
+.digest .sub_tit,
+.comment .sub_tit,
+.probation .sub_tit,
+.specificGroup .sub_tit,
+.subsidiaryBook .sub_tit,
+.originTitle .sub_tit,
+.tiedTogether .sub_tit,
+.readerComments .sub_tit,
+.keywords .sub_tit,
+.marketingSort .sub_tit,
+.subjectKeyWords .sub_tit,
+.commonKeywords .sub_tit {
+  width: 124px; }
+.catalogInfo .record_inp,
+.preface .record_inp,
+.editorChoice .record_inp,
+.digest .record_inp,
+.comment .record_inp,
+.probation .record_inp,
+.specificGroup .record_inp,
+.subsidiaryBook .record_inp,
+.originTitle .record_inp,
+.tiedTogether .record_inp,
+.readerComments .record_inp,
+.keywords .record_inp,
+.marketingSort .record_inp,
+.subjectKeyWords .record_inp,
+.commonKeywords .record_inp {
+  width: calc(100% - 124px); }
+
+.aboutAuthor .sub_tit {
+  width: 134px; }
+.aboutAuthor .record_inp {
+  width: calc(100% - 134px); }
+
+.binding > .mark_sel .sel_list,
+.format > .mark_sel .sel_list,
+.cityzenship > .mark_sel .sel_list,
+.version > .mark_sel .sel_list,
+.language > .mark_sel .sel_list,
+.printTime > .mark_sel .sel_list,
+.external > .mark_sel .sel_list,
+.annexType > .mark_sel .sel_list,
+.goodsAttr > .mark_sel .sel_list {
+  border-right: none;
+  border-bottom: none; }
+
+/* 下拉滚动条容器 */
+[id*=sideBar] {
+  position: relative;
+  display: none;
+  z-index: 998;
+  width: 100%;
+  max-height: 260px;
+  border-bottom: 1px solid #a9a9a9;
+  border-right: 1px solid #a9a9a9;
+  background-color: #fff;
+  overflow: hidden;
+  overflow-y: auto; }
+  [id*=sideBar] > ul {
+    position: relative !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: auto !important; }
+
+.format [id*=sideBar] {
+  border-right-width: 2px; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  display: table;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2); }
+  footer > div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 15px 0 15px 0; }
+    footer > div > input:first-child,
+    footer > div > button:first-child {
+      margin-right: 92px; }
+    footer > div > input,
+    footer > div > button {
+      display: inline-block;
+      width: 80px;
+      height: 30px;
+      font: 14px/28px "宋体";
+      text-align: center;
+      color: #0c3f99;
+      cursor: pointer; }
+    footer > div [name="submit"] {
+      border: 1px solid  #3ba3e5;
+      color: #fff;
+      background-color: #3ba3e5; }
+      footer > div [name="submit"]:hover {
+        background-color: #68b8eb; }
+      footer > div [name="submit"]:active {
+        background-color: #1c8bd1; }
+    footer > div [type="reset"] {
+      border: 1px solid  #ababab;
+      color: #454545;
+      background-color: #f5f5f5; }
+      footer > div [type="reset"]:hover {
+        background-color: white; }
+      footer > div [type="reset"]:active {
+        background-color: gainsboro; }
+
+@media screen and (max-width: 1650px) {
+  .aside .vertical_line {
+    height: 10px; }
+  .aside .legend {
+    margin: 15px 0 10px 0; }
+  .aside .note {
+    margin-top: 15px; }
+  .aside .note_list {
+    height: 210px; }
+
+  .w15 .sub_tit,
+  .w20 .sub_tit,
+  .w25 .sub_tit,
+  .w30 .sub_tit,
+  .w33 .sub_tit,
+  .w34 .sub_tit,
+  .w35 .sub_tit,
+  .w50 .sub_tit,
+  .w75 .sub_tit,
+  .w100 .sub_tit {
+    width: 80px; }
+  .w15 .record_inp,
+  .w15 .mark_sel,
+  .w15 .unit_sel,
+  .w20 .record_inp,
+  .w20 .mark_sel,
+  .w20 .unit_sel,
+  .w25 .record_inp,
+  .w25 .mark_sel,
+  .w25 .unit_sel,
+  .w30 .record_inp,
+  .w30 .mark_sel,
+  .w30 .unit_sel,
+  .w33 .record_inp,
+  .w33 .mark_sel,
+  .w33 .unit_sel,
+  .w34 .record_inp,
+  .w34 .mark_sel,
+  .w34 .unit_sel,
+  .w35 .record_inp,
+  .w35 .mark_sel,
+  .w35 .unit_sel,
+  .w50 .record_inp,
+  .w50 .mark_sel,
+  .w50 .unit_sel,
+  .w75 .record_inp,
+  .w75 .mark_sel,
+  .w75 .unit_sel,
+  .w100 .record_inp,
+  .w100 .mark_sel,
+  .w100 .unit_sel {
+    width: calc(100% - 80px); }
+
+  .barcode .sub_tit,
+  .spine .sub_tit,
+  .copyright .sub_tit,
+  .textbook .sub_tit,
+  .subTitle .sub_tit,
+  .originAuthor .sub_tit,
+  .co-publishers .sub_tit,
+  .specificGroup .sub_tit,
+  .readerComments .sub_tit {
+    width: 93px; }
+  .barcode .record_inp,
+  .barcode .mark_sel,
+  .barcode .unit_sel,
+  .spine .record_inp,
+  .spine .mark_sel,
+  .spine .unit_sel,
+  .copyright .record_inp,
+  .copyright .mark_sel,
+  .copyright .unit_sel,
+  .textbook .record_inp,
+  .textbook .mark_sel,
+  .textbook .unit_sel,
+  .subTitle .record_inp,
+  .subTitle .mark_sel,
+  .subTitle .unit_sel,
+  .originAuthor .record_inp,
+  .originAuthor .mark_sel,
+  .originAuthor .unit_sel,
+  .co-publishers .record_inp,
+  .co-publishers .mark_sel,
+  .co-publishers .unit_sel,
+  .specificGroup .record_inp,
+  .specificGroup .mark_sel,
+  .specificGroup .unit_sel,
+  .readerComments .record_inp,
+  .readerComments .mark_sel,
+  .readerComments .unit_sel {
+    width: calc(100% - 93px); }
+
+  .originTitle .sub_tit,
+  .tiedTogether .sub_tit,
+  .serialNum .sub_tit,
+  .collectionAuthor .sub_tit,
+  .subsidiaryBook .sub_tit,
+  .keywords .sub_tit,
+  .marketingSort .sub_tit,
+  .subjectKeyWords .sub_tit,
+  .commonKeywords .sub_tit,
+  .aboutAuthor .sub_tit {
+    width: 125px; }
+  .originTitle .record_inp,
+  .originTitle .mark_sel,
+  .originTitle .unit_sel,
+  .tiedTogether .record_inp,
+  .tiedTogether .mark_sel,
+  .tiedTogether .unit_sel,
+  .serialNum .record_inp,
+  .serialNum .mark_sel,
+  .serialNum .unit_sel,
+  .collectionAuthor .record_inp,
+  .collectionAuthor .mark_sel,
+  .collectionAuthor .unit_sel,
+  .subsidiaryBook .record_inp,
+  .subsidiaryBook .mark_sel,
+  .subsidiaryBook .unit_sel,
+  .keywords .record_inp,
+  .keywords .mark_sel,
+  .keywords .unit_sel,
+  .marketingSort .record_inp,
+  .marketingSort .mark_sel,
+  .marketingSort .unit_sel,
+  .subjectKeyWords .record_inp,
+  .subjectKeyWords .mark_sel,
+  .subjectKeyWords .unit_sel,
+  .commonKeywords .record_inp,
+  .commonKeywords .mark_sel,
+  .commonKeywords .unit_sel,
+  .aboutAuthor .record_inp,
+  .aboutAuthor .mark_sel,
+  .aboutAuthor .unit_sel {
+    width: calc(100% - 125px); }
+
+  .aboutAuthor .sub_tit {
+    width: 135px; }
+  .aboutAuthor .record_inp,
+  .aboutAuthor .mark_sel,
+  .aboutAuthor .unit_sel {
+    width: calc(100% - 135px); } }
+@media screen and (max-width: 1460px) {
+  .w15 .sub_tit,
+  .w20 .sub_tit,
+  .w25 .sub_tit,
+  .w30 .sub_tit,
+  .w33 .sub_tit,
+  .w34 .sub_tit,
+  .w35 .sub_tit,
+  .w50 .sub_tit,
+  .w75 .sub_tit,
+  .w100 .sub_tit {
+    width: 80px; }
+  .w15 .record_inp,
+  .w15 .mark_sel,
+  .w15 .unit_sel,
+  .w20 .record_inp,
+  .w20 .mark_sel,
+  .w20 .unit_sel,
+  .w25 .record_inp,
+  .w25 .mark_sel,
+  .w25 .unit_sel,
+  .w30 .record_inp,
+  .w30 .mark_sel,
+  .w30 .unit_sel,
+  .w33 .record_inp,
+  .w33 .mark_sel,
+  .w33 .unit_sel,
+  .w34 .record_inp,
+  .w34 .mark_sel,
+  .w34 .unit_sel,
+  .w35 .record_inp,
+  .w35 .mark_sel,
+  .w35 .unit_sel,
+  .w50 .record_inp,
+  .w50 .mark_sel,
+  .w50 .unit_sel,
+  .w75 .record_inp,
+  .w75 .mark_sel,
+  .w75 .unit_sel,
+  .w100 .record_inp,
+  .w100 .mark_sel,
+  .w100 .unit_sel {
+    width: calc(100% - 80px); }
+
+  .deputyTitle .sub_tit,
+  .subTitle .sub_tit,
+  .specificGroup .sub_tit,
+  .readerComments .sub_tit,
+  .barcode .sub_tit,
+  .copyright .sub_tit,
+  .textbook .sub_tit,
+  .spine .sub_tit,
+  .purchaseTime .sub_tit,
+  .printTime .sub_tit,
+  .handSeal .sub_tit,
+  .noticeStyle .sub_tit,
+  .dutyEditor .sub_tit,
+  .originPubPlace .sub_tit,
+  .originAuthor .sub_tit,
+  .co-publishers .sub_tit,
+  .collectionAuthor .sub_tit {
+    width: 95px; }
+  .deputyTitle .record_inp,
+  .deputyTitle .mark_sel,
+  .deputyTitle .unit_sel,
+  .subTitle .record_inp,
+  .subTitle .mark_sel,
+  .subTitle .unit_sel,
+  .specificGroup .record_inp,
+  .specificGroup .mark_sel,
+  .specificGroup .unit_sel,
+  .readerComments .record_inp,
+  .readerComments .mark_sel,
+  .readerComments .unit_sel,
+  .barcode .record_inp,
+  .barcode .mark_sel,
+  .barcode .unit_sel,
+  .copyright .record_inp,
+  .copyright .mark_sel,
+  .copyright .unit_sel,
+  .textbook .record_inp,
+  .textbook .mark_sel,
+  .textbook .unit_sel,
+  .spine .record_inp,
+  .spine .mark_sel,
+  .spine .unit_sel,
+  .purchaseTime .record_inp,
+  .purchaseTime .mark_sel,
+  .purchaseTime .unit_sel,
+  .printTime .record_inp,
+  .printTime .mark_sel,
+  .printTime .unit_sel,
+  .handSeal .record_inp,
+  .handSeal .mark_sel,
+  .handSeal .unit_sel,
+  .noticeStyle .record_inp,
+  .noticeStyle .mark_sel,
+  .noticeStyle .unit_sel,
+  .dutyEditor .record_inp,
+  .dutyEditor .mark_sel,
+  .dutyEditor .unit_sel,
+  .originPubPlace .record_inp,
+  .originPubPlace .mark_sel,
+  .originPubPlace .unit_sel,
+  .originAuthor .record_inp,
+  .originAuthor .mark_sel,
+  .originAuthor .unit_sel,
+  .co-publishers .record_inp,
+  .co-publishers .mark_sel,
+  .co-publishers .unit_sel,
+  .collectionAuthor .record_inp,
+  .collectionAuthor .mark_sel,
+  .collectionAuthor .unit_sel {
+    width: calc(100% - 95px); }
+
+  .serialNum .sub_tit {
+    width: 105px; }
+  .serialNum .record_inp,
+  .serialNum .mark_sel,
+  .serialNum .unit_sel {
+    width: calc(100% - 105px); }
+
+  .originTitle .sub_tit,
+  .subsidiaryBook .sub_tit,
+  .tiedTogether .sub_tit,
+  .keywords .sub_tit,
+  .marketingSort .sub_tit,
+  .subjectKeyWords .sub_tit,
+  .commonKeywords .sub_tit {
+    width: 125px; }
+  .originTitle .record_inp,
+  .originTitle .mark_sel,
+  .originTitle .unit_sel,
+  .subsidiaryBook .record_inp,
+  .subsidiaryBook .mark_sel,
+  .subsidiaryBook .unit_sel,
+  .tiedTogether .record_inp,
+  .tiedTogether .mark_sel,
+  .tiedTogether .unit_sel,
+  .keywords .record_inp,
+  .keywords .mark_sel,
+  .keywords .unit_sel,
+  .marketingSort .record_inp,
+  .marketingSort .mark_sel,
+  .marketingSort .unit_sel,
+  .subjectKeyWords .record_inp,
+  .subjectKeyWords .mark_sel,
+  .subjectKeyWords .unit_sel,
+  .commonKeywords .record_inp,
+  .commonKeywords .mark_sel,
+  .commonKeywords .unit_sel {
+    width: calc(100% - 125px); }
+
+  .aboutAuthor .sub_tit {
+    width: 135px; }
+  .aboutAuthor .record_inp,
+  .aboutAuthor .mark_sel,
+  .aboutAuthor .unit_sel {
+    width: calc(100% - 135px); } }
+@media screen and (max-width: 1386px) {
+  .container {
+    margin: 131px 25px 0 25px; }
+    .container .content {
+      margin-left: 170px; }
+
+  .aside {
+    top: 131px;
+    width: 165px;
+    padding-right: 0; }
+    .aside .vertical_line {
+      height: 8px; }
+    .aside .legend {
+      margin: 10px 0; }
+    .aside .note {
+      height: 25px;
+      font: 14px/23px "宋体";
+      margin-top: 10px; }
+    .aside .note_list {
+      height: 111px; }
+      .aside .note_list > li {
+        margin-top: 3px; } }
+@media screen and (max-width: 1300px) {
+  .aside {
+    top: 131px;
+    width: 160px; }
+    .aside .vertical_line {
+      height: 12px; }
+    .aside .legend {
+      margin: 15px 0 10px 0; }
+    .aside .note {
+      margin-top: 15px; }
+    .aside .note_list {
+      height: 255px; }
+
+  .container {
+    margin: 131px 45px 0 45px; }
+    .container .content {
+      margin-left: 160px; } }
+@media screen and (max-width: 1034px) {
+  .container {
+    width: 970px;
+    margin: 131px 15px 0 5px; }
+    .container .content {
+      width: 90%;
+      margin-left: 130px; }
+
+  .aside {
+    width: 125px;
+    padding: 0;
+    background-color: #fff; }
+    .aside .vertical_line {
+      height: 8px; }
+    .aside .legend {
+      margin: 10px 0; }
+    .aside .note {
+      height: 25px;
+      font: 14px/23px "宋体";
+      margin-top: 10px; }
+    .aside .note_list {
+      height: 111px; }
+      .aside .note_list > li {
+        margin-top: 3px; } }
+
+/*# sourceMappingURL=dataSmoothing.css.map */

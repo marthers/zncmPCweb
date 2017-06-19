@@ -1,0 +1,693 @@
+@the-border: 1px;
+@base-color: #111;
+@base-width: 10px;   
+@font-weight: bold;
+/* 左侧导航 start */
+body{
+    color: #666;
+}
+.caret {
+    border-top-width: 8px;
+    border-right-width: 6px;
+    border-left-width: 6px;
+}
+.td_public{
+    text-align: center;
+    line-height: 40px;
+    border-right: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+}
+.main{
+    .rightCon{        
+        .tit{
+            height: @base-width*4.5;
+            border-bottom: @the-border solid @base-color*12;
+            margin-bottom: @base-width*3;  
+            ul{
+                li{
+                    a{
+                        display: block; 
+                        width: @base-width*10;
+                        height: @base-width*4.5;
+                        line-height: @base-width*4.5;
+                        border: @the-border solid @base-color*12; 
+                        background-color: @base-color*14;
+                        color: @base-color*6; 
+                        text-align: center;
+                        font-size: 16px;
+                    }
+                    a:hover{
+                        border-top: @the-border*3 solid #3bafe5;
+                        border-bottom: none;
+                        background-color: @base-color*15;
+                    }
+                }
+                .active{
+                   a{
+                        border-top: @the-border*3 solid #3bafe5;
+                        border-bottom: none;
+                        background-color: @base-color*15;
+                        cursor: default;
+                    }
+                }
+                .first{
+                    a{
+                        border-right: none;
+                    }
+                }
+            }
+           .time{
+                margin: 0 9% 0 0;
+                width: 40%;
+                .timeDetails {
+                    a{
+                        display: block; 
+                        height: @base-width*4.5; 
+                        line-height: 33px; 
+                        color: #2290d6; 
+                        padding-right: @base-width*2;
+                    }
+                    a.active{
+                        color: @base-color*6;
+                    }
+                    a.break{
+                        width: @base-width*2;
+                        background: url(../img/break.png) no-repeat center 6px;
+                    }
+                }
+            }   
+        }
+        .exhibition{
+            width: 97%;
+            margin-bottom: @base-width*3.5;
+            ul{
+                width: 100%;
+                li{
+                    width: 25%;
+                    dl{
+                        width: 92%;
+                        border: 1px solid #ccc;
+                        dt{
+                            width: 24%;
+                            height: 240px;
+                        }
+                        dd{
+                            width: 76%;
+                            height: auto;
+                            font: 14px 'Microsoft Yahei';
+                            padding: @base-width @base-width @base-width * .5 @base-width * 9; 
+                            box-sizing: border-box; 
+                            position: relative;
+                            h4{
+                                line-height: @base-width*2; 
+                                font-weight: normal;
+                                font-size: 16px;
+                                // padding-bottom: @base-width*0.6;
+                            }
+                            span{
+                                display: inline-block;
+                                line-height: 20px;
+                                color: #005ce7;
+                            }
+                            a{
+                                color: #666;
+                                i.detail_icon:after{
+                                    content: '\e611';
+                                    font: 14px 'iconfont';
+                                    margin-right: 5px;
+                                    color: #666;
+
+                                }
+                            }
+                            a:hover i:after,a:hover{
+                                color: #f96;
+                            }
+                        }
+                    }
+                }
+                .upload{
+                    dt{
+                        background:#38a3d5 url(../img/upload.png) no-repeat center center;
+                    }
+                    dt:hover{
+                        background-color:fade(#38a3d5, 80%);
+                    }
+                }
+                .transformation{
+                    dt{
+                        background:#2ec5b9 url(../img/transformation.png) no-repeat center center;
+                    }
+                    dt:hover{
+                        background-color:fade(#2ec5b9, 80%);
+                    }
+                }
+                .uploadFTP{
+                    dt{
+                        background:#e68b4e url(../img/uploadFTP.png) no-repeat center center;
+                    }
+                    dt:hover{
+                        background-color:fade(#e68b4e, 80%);
+                    }
+                }
+                .download{
+                    dt{
+                        background:#3cbd60 url(../img/download.png) no-repeat center center;
+                    }
+                    dt:hover{
+                        background-color:fade(#3cbd60, 80%);
+                    }
+                }
+                .stock{
+                    dt{
+                        background:#9846d7 url(../img/stock.png) no-repeat center center;
+                    }
+                    dt:hover{
+                        background-color:fade(#9846d7, 80%);
+                    }
+                }
+                .bookDownloadTotal{
+                    dt{
+                        background:#e44b84 url(../img/issueDownload.png) no-repeat center center;
+                    }
+                    dt:hover{
+                        background-color:fade(#e44b84, 80%);
+                    }
+                }
+                .salesUploadTotal{
+                    dt{
+                        background:#3cbd60 url(../img/download.png) no-repeat center center;
+                    }
+                    dt:hover{
+                        background-color:fade(#3cbd60, 80%);
+                    }
+                }
+                .stockUploadTotal{
+                    dt{
+                        background:#9846d7 url(../img/stock.png) no-repeat center center;
+                    }
+                    dt:hover{
+                        background-color:fade(#9846d7, 80%);
+                    }
+                }                
+            }
+        }
+        h3{
+            width: 95.5%; 
+            height: @base-width*4.4;
+            dl{
+                dt{
+                    width: 15%;
+                    span{
+                        display: block; 
+                        line-height: @base-width*4.4; 
+                        font-weight: normal; 
+                        color: @base-color*6;
+                    }
+                    .lineBg{
+                        width: @the-border*4; 
+                        height: @base-width*1.8; 
+                        background-color: #3ba3e5; 
+                        margin: @base-width*1.3 @base-width*1.3 @base-width*1.3 @base-width;
+                    }
+                }
+                dd{
+                    width: 85%;
+                    ul{
+                        li{
+                            width: 25%;
+                            span{
+                                display: inline-block; 
+                                width: 100%; 
+                                text-align: center;
+                            }
+                            & .upload{ 
+                                color: #38a3d5;
+                            }
+                            span.transformation{
+                                color: #2ec5b9;
+                            }
+                            span.uploadFTP{ 
+                                color: #e68b4e;
+                            }
+                            span.download{
+                                color: #3cbd60;
+                            }
+                            span.stock{
+                                color: #9846d7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .chart{
+            width: 95.5%;
+            height: @base-width*28;
+        }  
+        h3{
+            dd{
+                .btn-group{
+                    height: @base-width*4.4; 
+                    width: @base-width*22; 
+                    margin-right: @base-width*8;
+                    a.dropdown-toggle{
+                        display: block; 
+                        margin-right: @base-width*8; 
+                        height: @base-width*2.8; 
+                        line-height: @base-width*2.8; 
+                        width: @base-width*22; 
+                        border: @the-border solid @base-color*12; 
+                        text-align: center; 
+                        background-color: @base-color*15; 
+                        margin-top: @base-width*0.6;
+                        span{
+                            color: @base-color*6;
+                            font-size: 14px;
+                        }
+                    }
+                    .dropdown-menu{
+                        li{
+                            a{
+                                width: 220px; 
+                                text-align: center; 
+                                color: @base-color*6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .man{ 
+            margin: @base-width*2 0 0 @base-width*6;
+            li{
+                .tu{
+                    width: @base-width*15; 
+                    height: @base-width*15; 
+                    line-height: @base-width*20; 
+                    margin-right: @base-width*11;
+                    background: url(../img/semiCircle.png) no-repeat center center;
+                    text-align: center;
+                }
+                span{
+                    display: block; 
+                    width: @base-width*15; 
+                    height: 42px;
+                    text-align: center;
+                }
+            }
+        }
+        .data_total{
+            width: 96%;
+            border-top: 1px solid #bdbdbd;
+            border-left: 1px solid #bdbddb;
+            border-collapse: inherit;
+            thead>tr>th{
+                font-size: 14px;
+            }
+            thead>tr>th,thead>tr>td{
+                .td_public;
+            }
+            thead>tr>td.total_bg{
+                background-color: #f5f5f5;
+            }
+            tbody>tr>td.total_bg{
+                background-color: #f5f5f5;
+            }
+            tbody>tr:hover{
+                background-color: #f5f5f5;
+            }
+            tbody>tr.No_updates>td{
+                font-weight: bold;
+                color: #c33232;
+            }
+            tbody>tr>td{
+                .td_public;
+                a.view_icon:after{
+                    content: '\e612';
+                    font: 22px iconfont;
+                    color: #666;
+                }
+                a.view_icon:hover::after{
+                    color: #f96;
+                }
+            }
+        }
+    }
+}
+.dropdown-menu {
+  overflow: hidden;
+}
+@media screen and (max-width: 2000px){
+    .main .rightCon .exhibition ul li dl dd{  
+        padding: 10px 10px 10px 40px;
+    }
+}
+@media screen and (max-width: 1800px){
+    .main .rightCon .exhibition ul li dl dd{  
+        padding: 10px 10px 10px 50px;
+    }
+    .main .rightCon .tit .time {
+        margin: 0 9% 0 0;
+        width: 42%;
+    }
+}
+@media screen and (max-width: 1600px){
+    .main .rightCon .tit {
+        margin-bottom: 25px;
+    }
+    .main .rightCon .tit .time{
+        width: 48%;
+    }
+    .main .rightCon .exhibition {
+        margin-bottom: 30px;
+    }
+    .main .rightCon .exhibition ul li dl dd{  
+        padding: 10px 10px 10px 35px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .main .rightCon .exhibition ul li dl dd p { 
+        bottom: 3px;
+        font-size: 12px;
+    }
+    .pop .close{
+       right: 28px\9; 
+       top: 34px\9;
+    }
+    .pop .ok{
+       right: 55px\9;
+       bottom: 28px\9;  
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .main .rightCon .exhibition ul li dl dd{
+        padding: 10px 9px 10px 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .main .rightCon .exhibition ul li dl dd p {
+        bottom: 2px;
+        font-size: 12px;
+    }
+    .main .rightCon .exhibition ul li dl dd h4{
+        line-height: 20px;
+    }
+    .main .rightCon .exhibition ul li dl dd p .middle{
+        padding: 0;
+    }
+     .main .rightCon .tit .time{
+        margin: 0 5% 0 0;
+        width: 53%;
+    } 
+    .main .rightCon h3 dl dt span{
+        font-size: 14px;
+        font-size: 12px\9;
+    }
+    .main .rightCon h3 dl dt .lineBg {
+        margin: 13px 7px 13px 8px;
+        display: none\9;
+    }
+    .main .rightCon h3 dl dt {
+        width: 11%;
+    }
+    .main .rightCon h3 dl dd {
+        width: 89%;
+    }
+    .main .rightCon h3:last-of-type dl dt{
+        width: 15%;
+    }
+    .main .rightCon h3:last-of-type dl dd{
+        width: 85%;
+    }
+    .main .rightCon h3 dd .btn-group {
+        margin-right: 50px;
+    }
+
+}
+
+@media screen and (max-width: 1366px){  
+    .main .rightCon .tit {
+        margin-bottom: 20px;
+    }
+    .main .rightCon .exhibition {
+        margin-bottom: 25px;
+    }
+    .main .rightCon .exhibition { 
+        width: 100%;
+    }
+    .main .rightCon .exhibition ul { 
+        width: 100%;
+    }
+    .main .rightCon .exhibition ul li {
+        width: 25%;
+    }
+    .main .rightCon .exhibition ul li dl{ 
+        width: 92%;
+    }
+    .main .rightCon .exhibition ul li dl dt{ 
+        width: 20%;
+        height: 186px;
+    }
+    .main .rightCon .exhibition ul li dl dd{  
+        width: 80%; 
+        padding: 6px 10px 5px 25px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .main .rightCon .exhibition ul li dl dd h4{
+        line-height: 20px;
+    }
+    .main .rightCon .exhibition ul li dl dd p{
+        font-size: 12px;  
+        bottom: 0;
+    }
+    .main .rightCon .chart {
+        height: 250px;
+    }
+    .main .rightCon h3{  
+        width: 100%;
+    }
+    .main .rightCon h3 dl dt{  
+        width: 12%;
+    }
+    .main .rightCon h3:last-of-type dl dt{
+        width: 15%;
+    }
+    .main .rightCon h3 dl dd{
+        width: 88%;
+    }
+    .main .rightCon h3:last-of-type dl dd{
+        width: 85%;
+    }
+    .main .rightCon h3 dl dt span{
+        font-size: 14px;
+    }
+    .main .rightCon .man{
+        margin: 20px 0 0 40px;
+    } 
+    .main .rightCon .man li .tu {
+        margin-right: 60px;
+    }
+    .main .rightCon h3 dl dt span{
+        font-size: 12px\9;
+    }
+    .main .rightCon h3 dl dt .lineBg {
+        display: none\9;
+    }
+    .pop .close {
+        right: 84px;
+        top: 110px;
+        right: 27px\9;
+        top: 34px\9;
+    }
+    .pop .ok {
+        right: 97px;
+        bottom: 104px;
+        right: 55px\9;
+        bottom: 28px\9;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .main .rightCon .tit ul li a {
+        width: 70px; 
+        height: 40px;
+        font-size: 13px;
+    }
+    .main .rightCon .tit{
+        height: 40px; 
+        margin-bottom: 20px;
+    }
+    .main .rightCon .exhibition{
+        margin-bottom: 5px;
+    } 
+    .main .rightCon .exhibition ul li{
+        margin-bottom: 15px;
+    }
+    .main .rightCon .exhibition ul li dl{
+        width: 90%;
+    }
+    .main .rightCon .exhibition ul li dl dt{
+        height: 186px;
+    }  
+    .main .rightCon .exhibition ul li dl dd{
+        padding: 6px 10px 5px 25px;
+    }
+    .main .rightCon .exhibition ul li dl dd p{
+        bottom: 0;
+    }
+    .main .rightCon .tit .time .chaJian span{
+        height: 28px; 
+        line-height: 28px;
+    }
+    .main .rightCon .exhibition ul li dl dd h4 {
+        line-height: 19px;
+    }
+    .main .rightCon h3 dl dt .lineBg{
+        width: 3px; 
+        height: 16px; 
+        margin: 7px 10px 12px 7px;
+    }
+    .main .rightCon h3 dl dt span{
+        font-size: 12px\9;
+    }
+    .main .rightCon h3 dl dt .lineBg {
+        display: none\9;
+    }
+    .main .rightCon h3 dl dt span{
+        line-height: 30px;
+    }
+    .main .rightCon h3 dl dd ul{
+        padding-top: 2px;
+    }
+    .main .rightCon h3 dl dd ul li {
+        line-height: 22px;
+    }
+    .main .rightCon .chart{
+        height: 200px;
+    }
+    .main .rightCon h3:last-of-type{
+        height: 44px;
+    }
+    .main .rightCon h3:last-of-type dl dt .lineBg{
+        margin: 13px 10px 13px 7px;
+    }
+    .main .rightCon h3:last-of-type dl dt span{
+        line-height: 44px;
+    }
+    .main .rightCon h3 dd .btn-group{
+        margin-right: 30px;
+    }
+    .main .rightCon h3 dd .btn-group a.dropdown-toggle{
+        margin-top: 7px;
+    }
+    .main .rightCon .issueH3{
+        height: 44px;
+    }
+    .main .rightCon .issueH3 dl dt .lineBg{
+        margin: 13px 10px 13px 7px;
+    }
+    .main .rightCon .issueH3 dl dt span{
+        line-height: 44px;
+    }
+    .main .rightCon .issueH3 dl dd ul li{
+        line-height: 34px;
+    }
+    .main .rightCon h3:last-of-type dl dt {
+        width: 20%;
+    }
+    .main .rightCon h3:last-of-type dl dd {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main .rightCon .tit .time {
+        margin: 0 5% 0 0;
+        width: 65%;
+    } 
+    .main .rightCon .exhibition ul li{
+        width: 24%; 
+        margin-bottom: 15px;
+    }/* 
+    .main .rightCon .exhibition ul li dl dt{
+        height: 215px;
+    } */
+    .main .rightCon .exhibition ul li dl dd{
+        padding: 6px 10px 5px 4px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .main .rightCon .exhibition ul li dl dd>h4{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .main .rightCon .exhibition ul li dl dd p{
+        bottom: 3px;
+    }
+    .main .rightCon .tit .time .chaJian span{
+        height: 28px; 
+        line-height: 28px;
+    }
+    .main .rightCon h3{
+        height: 35px;
+    }
+    .main .rightCon h3 dl dt {
+        width: 20%;
+    }
+    .main .rightCon h3 dl dd {
+        width: 80%;
+    }/* 
+    .main .rightCon .exhibition ul dt,.main .rightCon .exhibition ul dd{
+        height: 50px!important;
+    } */
+    .main .rightCon h3 dl dt .lineBg{
+        width: 3px; 
+        height: 16px; 
+        margin: 7px 10px 12px 7px;
+    }
+    .main .rightCon h3 dl dt span{
+        line-height: 30px;
+    }
+    .main .rightCon h3 dl dt span{
+        font-size: 12px\9;
+    }
+    .main .rightCon h3 dl dt .lineBg {
+        display: none\9;
+    }
+    .main .rightCon h3 dl dd ul{
+        padding-top: 2px;
+    }
+    .main .rightCon h3 dl dd ul li {
+        width: 33%; 
+        line-height: 22px;
+    }
+    .main .rightCon .chart{
+        height: 200px;
+    }
+    .main .rightCon h3:last-of-type{
+        height: 44px;
+    }
+    .main .rightCon h3:last-of-type dl dt .lineBg{
+        margin: 13px 10px 13px 7px;
+    }
+    .main .rightCon h3:last-of-type dl dt span{
+        line-height: 44px;
+    }
+    .main .rightCon h3 dd .btn-group{
+        margin-right: 30px;
+    }
+    .main .rightCon h3 dd .btn-group a.dropdown-toggle{
+        margin-top: 7px;
+    }
+}
+
+
+
+

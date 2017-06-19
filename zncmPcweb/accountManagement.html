@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<title>中南数据中心</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/accountManagement.css"/>		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/accountManagement.js"></script>		
+		<!--[if IE 8]>
+			<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
+			<script src="js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+<body>
+	<header class="pofix">
+		<div class="top clearfix">
+			<h1 class="fl"><a href="javascript:;">中南数据中心</a></h1>
+			<div class="btn-group fr">
+			  <a href="javascript:;"  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    <span class="fl fs16">123456789 </span>
+			    <span class="fl touXiang"></span>
+			  </a>
+			  <ul class="dropdown-menu">
+			    <li><a href="#">个人账号</a></li>
+			    <li><a href="#">退出</a></li>
+			  </ul>
+			</div>			
+		</div>
+		<div class="navbar navbar-default">
+		    <ul class="nav navbar-nav">
+		        <li class="first fs16 htmin">中南数据中心</li>
+		        <li class="active fs16 htmin">
+		        	<a href="UserCenterIndex.html" class="clearfix">
+		        		<span class="fl icon dataStatistics htmin"></span>
+		        		<span class="fl fs16 htmin">数据统计中心</span>
+		        	</a>
+		        </li>
+		        <li class="three htmin">
+		        	<a href="allDetail.html" class="clearfix">
+		        		<span class="fl icon dataSmoothing htmin"></span>
+		        		<span class="fl fs16 htmin">数据加工</span>
+		        	</a>
+		        </li>
+		        <li class="three htmin">
+		        	<a href="dataCheck.html" class="clearfix">
+		        		<span class="fl icon dataCheck htmin"></span>
+		        		<span class="fl fs16 htmin">数据审核</span>
+		        	</a>
+		        </li>
+		        <li class="three htmin">
+		        	<a href="dataRelease.html" class="clearfix">
+		        		<span class="fl icon dataRelease htmin"></span>
+		        		<span class="fl fs16 htmin">数据发布</span>
+		        	</a>
+		        </li>
+		    </ul>
+		</div>
+	</header>
+	<div class="main">
+		<div class="pop">
+			<h2 class="mask_tit clearfix">
+				<span class="fl">详细说明：</span>
+				<i class="close fr">&#xe60e;</i>
+			</h2>
+			<div class="mask_cont">
+				<hgroup>
+					<h3>书目数据上传总量：</h3>
+					<h4>1.显示用户头像、帐号类型，当前帐号的操作权限；</h4>
+					<h4>2.企业用户管理普通用户账户，包括“添加”、“删除”、“修改”、“密码初始化”等操作.</h4>
+				</hgroup>
+			</div>
+			<footer class="mask_foot clearfix">
+				<i class="ok fr">确定</i>
+			</footer>
+		</div>
+		<div class="pofix leftNav" >
+			<ul>
+				<li>
+					<div class="statisticalManagement" clshow="1">
+						<a href="javascript:;" class="clearfix">
+							<span class="fl icon sMIcon"></span>
+							<span class="fl tit fs16">统计管理</span>
+							<span class="fl triangleDown"></span>
+						</a>
+					</div>
+					<div class="sMDetails">
+                        <a href="UserCenterIndex.html?p=statisticalManagement&s=UserCenterIndex" class="corBlue UserCenterIndex">数据统计管理</a>
+					</div>
+				</li>
+				<!-- <li>
+					<div class="dataTransmission" clshow="1">
+						<a href="javascript:;" class="corBlue clearfix">
+							<span class="fl icon dTIcon"></span>
+							<span class="fl tit fs16">数据传输</span>
+							<span class="fl triangleDown"></span>
+						</a>
+					</div>
+					<div class="dTDetails ">
+				                        <a href="dataUpload.html?p=dataTransmission&s=dataUpload" class="corBlue dataUpload">书目上传并解析</a>
+				                        <a href="dataTransformation.html?p=dataTransmission&s=dataTransformation" class="corBlue dataTransformation">书目转换并下载</a>
+				                        <a href="dataUploadFTP.html?p=dataTransmission&s=dataUploadFTP" class="corBlue dataUploadFTP">书目上传到FTP</a>
+				                        <a href="dataSaleDownload.html?p=dataTransmission&s=dataSaleDownload" class="corBlue dataSaleDownload">销售库存下载</a>
+				                        <a href="dataBookDownload.html?p=dataTransmission&s=dataBookDownload" class="corBlue dataBookDownload">书目下载</a>
+				                        <a href="dataSaleUpload.html?p=dataTransmission&s=dataSaleUpload" class="corBlue dataSaleUpload">销售库存上传</a>
+					</div>
+				</li> -->
+				<li>
+					<div class="authorityManagement" clshow="1">
+						<a href="javascript:;" class="corBlue clearfix">
+							<span class="fl icon aMIcon"></span>
+							<span class="fl tit fs16">权限管理</span>
+							<span class="fl triangleDown"></span>
+						</a>
+					</div>
+					<div class="aMDetails">
+                        <a href="individualAccount.html?p=authorityManagement&s=individualAccount" class="corBlue individualAccount">个人账户</a>
+                        <a href="accountManagement.html?p=authorityManagement&s=accountManagement" class="corBlue accountManagement active">账号管理体系</a>
+                        <a href="operatingStatistics.html?p=authorityManagement&s=operatingStatistics" class="corBlue operatingStatistics">用户操作统计</a>
+					</div>
+				</li>
+				<li>
+					<div class="messageNotification" clshow="1">
+						<a href="javascript:;" class="corBlue clearfix">
+							<span class="fl icon mNIcon"></span>
+							<span class="fl tit fs16">消息通知</span>
+							<span class="fl triangleDown"></span>
+						</a>
+					</div>
+					<div class="mNDetails">
+                        <a href="dataNotice.html?p=dataNotice&s=messageNotification" class="corBlue dataNotice">数据传输通知</a>
+                        <a href="systemNews.html?p=systemNews&s=messageNotification" class="corBlue systemNews">系统消息</a>
+                        <a href="productTrend.html?p=productTrend&s=messageNotification" class="corBlue productTrend">产品动态</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="rightCon">
+			<h2 class="clearfix">
+				<span class="fl fs16">账号管理体系</span>
+				<span class="promit fl fs12">
+					<i>点击查看详细说明</i>
+				</span>
+			</h2>
+			<!-- 个人信息 -->
+			<dl class="personalInformation clearfix">
+				<dt class="fl">
+					<a href="javascript:;" title="点击添加照片">
+						<img src="img/myself.png" height="125" width="125">
+					</a>
+				</dt>
+				<dd class="fl">
+					<p>您好，<span>2317195590@qq.com</span>用户</p>
+					<p>您是<span>中南传媒集团企业账号</span></p>
+				</dd>
+			</dl>
+			<!-- vip等级 -->
+			<div class="vip clearfix">
+				<div class="v1 fl">
+					<a href="javascript:;" class="iconfont">&#xe608;</a>
+						<div class="explanation Vip1">
+							<b class="sj one">◆</b>
+							<b class="sj two">◆</b>
+							<dl>
+								<dt>用户权限：</dt>
+								<dd>出版端普通用户进行书目上传、销售库存下载操作；<br>
+								发行端普通用户进行销售库存上传、书目下载操作；<br>
+								查看本人传输数据统计。
+								</dd>
+							</dl>
+						</div>
+				</div>
+				<span class="line12 upgradeV2 fl"></span><!-- 添加“upgradeV2”可以让线变vip色 -->
+				<div class="v2 fl"><!-- 添加“ v2Color”可以实现vip效果 -->
+					<a href="javascript:;" class="iconfont">&#xe609;</a>
+						<div class="explanation Vip2">
+							<b class="sj one">◆</b>
+							<b class="sj two">◆</b>
+							<dl>
+								<dt>用户权限：</dt>
+								<dd>工具里的所有操作；<br>
+									查看并管理普通用户操作；<br>
+									管理普通用户。
+								</dd>
+							</dl>
+						</div>
+				</div>
+				<span class="line23 fl"></span><!-- 添加“upgradeV3”可以让线变vip色 -->
+				<div class="v3 fl"><!-- 添加“ v3Color”可以实现vip效果 -->
+					<a href="javascript:;" class="iconfont">&#xe60a;</a>
+						<div class="explanation Vip3">
+							<b class="sj one">◆</b>
+							<b class="sj two">◆</b>
+							<dl>
+								<dt>用户权限：</dt>
+								<dd>管理各企业的数据传输情况；<br>
+									管理企业用户操作。
+								</dd>
+							</dl>
+						</div>
+				</div>
+			</div>
+			<!-- 用户管理统计表格 -->
+			<div class="tableDisplay">
+				<dl class="clearfix">
+					<dt class="clearfix fl">
+						<span class="lineBg fl"></span>
+						<span class="fl fs16">用户管理统计</span>
+					</dt>
+					<dd class="fr addBtn" >
+						<a href="javascript:;" class="clearfix">
+							<span class="iconfont fl">&#xe60b;</span>
+							<span class="fl">添加普通用户</span>
+						</a>
+					</dd>
+				</dl>
+				<!-- 点击"添加普通用户"按钮时，下面这个隐藏结构出现 -->
+				<div class="addBox">
+					<ul>
+						<li>
+							<input placeholder="请输入用户名" class="userN">
+							<span>*</span>
+							<span>（必填项）</span>
+							<input placeholder="请输入用户邮箱" class="userE">
+							<span>*</span>
+							<span>（必填项）</span>								
+							<a href="javascript:;" class="determine btn">确定</a>
+							<a href="javascript:;" class="cancel btn">取消</a>
+							<span class="wrong"><!-- 请输入用户名 --><!-- 请输入正确的邮箱地址 --></span>
+						</li>
+						<li class="clearfix">
+							<span class="ok successIcon iconfont fl">&#xe602;</span>
+							<span class="success fs16 fl">添加成功！</span>
+						</li>					
+					</ul>
+				</div>
+			<!-- table表格 -->
+				<table>
+					<thead>
+						<tr>
+							<td class="userAccount">普通用户账号</td>
+							<td class="userEmail">操作用户邮箱</td>
+							<td class="user">操作用户</td>
+							<td class="modifyPermissions">修改权限</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="userAccount">zhongwenchuanmei</td>
+							<td class="userEmail">1234567890@qq.com</td>
+							<td class="user">张三</td>
+							<td class="modifyPermissions">
+								<a href="javascript:;" class="delete">删除</a>
+								<a href="javascript:;" class="modify">修改</a>
+								<a href="javascript:;" class="view">查看</a>
+								<a href="javascript:;">密码初始化</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="userAccount">zhongwenchuanmei</td>
+							<td class="userEmail">1234567890@qq.com</td>
+							<td class="user">张三</td>
+							<td class="modifyPermissions">
+								<a href="javascript:;" class="delete">删除</a>
+								<a href="javascript:;" class="modify">修改</a>
+								<a href="javascript:;" class="view">查看</a>
+								<a href="javascript:;">密码初始化</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="userAccount">zhongwenchuanmei</td>
+							<td class="userEmail">1234567890@qq.com</td>
+							<td class="user">张三</td>
+							<td class="modifyPermissions">
+								<a href="javascript:;" class="delete">删除</a>
+								<a href="javascript:;" class="modify">修改</a>
+								<a href="javascript:;" class="view">查看</a>
+								<a href="javascript:;">密码初始化</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="userAccount">zhongwenchuanmei</td>
+							<td class="userEmail">1234567890@qq.com</td>
+							<td class="user">张三</td>
+							<td class="modifyPermissions">
+								<a href="javascript:;" class="delete">删除</a>
+								<a href="javascript:;" class="modify">修改</a>
+								<a href="javascript:;" class="view">查看</a>
+								<a href="javascript:;">密码初始化</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="userAccount">zhongwenchuanmei</td>
+							<td class="userEmail">1234567890@qq.com</td>
+							<td class="user">张三</td>
+							<td class="modifyPermissions">
+								<a href="javascript:;" class="delete">删除</a>
+								<a href="javascript:;" class="modify">修改</a>
+								<a href="javascript:;" class="view">查看</a>
+								<a href="javascript:;">密码初始化</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="userAccount">zhongwenchuanmei</td>
+							<td class="userEmail">1234567890@qq.com</td>
+							<td class="user">张三</td>
+							<td class="modifyPermissions">
+								<a href="javascript:;" class="delete">删除</a>
+								<a href="javascript:;" class="modify">修改</a>
+								<a href="javascript:;" class="view">查看</a>
+								<a href="javascript:;">密码初始化</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="userAccount">zhongwenchuanmei</td>
+							<td class="userEmail">1234567890@qq.com</td>
+							<td class="user">张三</td>
+							<td class="modifyPermissions">
+								<a href="javascript:;" class="delete">删除</a>
+								<a href="javascript:;" class="modify">修改</a>
+								<a href="javascript:;" class="view">查看</a>
+								<a href="javascript:;">密码初始化</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="userAccount">zhongwenchuanmei</td>
+							<td class="userEmail">1234567890@qq.com</td>
+							<td class="user">张三</td>
+							<td class="modifyPermissions">
+								<a href="javascript:;" class="delete">删除</a>
+								<a href="javascript:;" class="modify">修改</a>
+								<a href="javascript:;" class="view">查看</a>
+								<a href="javascript:;">密码初始化</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="userAccount">zhongwenchuanmei</td>
+							<td class="userEmail">1234567890@qq.com</td>
+							<td class="user">张三</td>
+							<td class="modifyPermissions">
+								<a href="javascript:;" class="delete">删除</a>
+								<a href="javascript:;" class="modify">修改</a>
+								<a href="javascript:;" class="view">查看</a>
+								<a href="javascript:;">密码初始化</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="userAccount">zhongwenchuanmei</td>
+							<td class="userEmail">1234567890@qq.com</td>
+							<td class="user">张三</td>
+							<td class="modifyPermissions">
+								<a href="javascript:;" class="delete">删除</a>
+								<a href="javascript:;" class="modify">修改</a>
+								<a href="javascript:;" class="view">查看</a>
+								<a href="javascript:;">密码初始化</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="page">
+					
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- 删除提示框 -->
+	<div class="deletePop">
+		<a href="javascript:;" class="yes"></a>
+		<a href="javascript:;" class="no"></a>		
+	</div>
+	<!-- 查看操作框 -->
+	<div class="viewPop">
+		<h4>查看用户权限</h4>
+		<ul>
+			<li>
+				<span class="tit">1、书目上传并解析操作</span>
+				<a href="javascript:;" class="icon1"></a>
+				<span class="fr">有权限</span>
+			</li>
+			<li>
+				<span class="tit">2、书目转换并下载操作</span>
+				<a href="javascript:;" class="icon1"></a>
+				<span class="fr">有权限</span>
+			</li>
+			<li>
+				<span class="tit">3、书目上传到FTP操作</span>
+				<a href="javascript:;" class="icon1"></a>
+				<span class="fr">有权限</span>
+			</li>
+			<li>
+				<span class="tit">4、销售库存下载操作</span>
+				<a href="javascript:;" class="icon1"></a>
+				<span class="fr">有权限</span>
+			</li>
+		</ul>		
+		<a href="javascript:;" class="yes">确定</a>
+		<a href="javascript:;" class="closeBtn iconfont">&#xe60e;</a>	
+	</div>	
+	<!-- 修改操作框 -->
+	<div class="modifyPop">
+		<h4>修改用户权限</h4>
+		<ul>
+			<li>
+				<span class="tit">1、书目上传并解析操作</span>
+				<a href="javascript:;" class="icon1"></a>
+				<span class="fr">有权限</span>
+			</li>
+			<li>
+				<span class="tit">2、书目转换并下载操作</span>
+				<a href="javascript:;" class="icon1"></a>
+				<span class="fr">有权限</span>
+			</li>
+			<li>
+				<span class="tit">3、书目上传到FTP操作</span>
+				<a href="javascript:;" class="icon1"></a>
+				<span class="fr">有权限</span>
+			</li>
+			<li>
+				<span class="tit">4、销售库存下载操作</span>
+				<a href="javascript:;" class="icon1"></a>
+				<span class="fr">有权限</span>
+			</li>
+			<li class="wu">
+				<span class="tit">5、书目下载操作</span>
+				<a href="javascript:;" class="icon2"></a>
+				<span class="fr">无权限</span>
+			</li>
+			<li class="wu">
+				<span class="tit">6、销售库存上传操作</span>
+				<a href="javascript:;" class="icon2"></a>
+				<span class="fr">无权限</span>
+			</li>
+		</ul>
+		<a href="javascript:;" class="ok">保存</a>
+		<a href="javascript:;" class="closeBtn iconfont">&#xe60e;</a>
+	</div>	
+	<!-- 模态窗口 -->
+	<div class="shade"></div>
+	<div class="mask_txt">
+		<h3 class="mask_tit clearfix">
+			<span class="fl">操作提示</span>
+			<i class="fr">&#xe60e;</i>
+		</h3>
+		<div class="mask_cont">
+			<P>操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示操作提示</P>
+		</div>
+		<footer class="mask_foot clearfix">
+			<i class="fr">确定</i>
+		</footer>
+	</div>
+</body>
+</html>

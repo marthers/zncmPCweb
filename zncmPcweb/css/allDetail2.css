@@ -1,0 +1,671 @@
+@import url(base.css);
+/* css reset file */
+body {
+  color: #666;
+}
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  border: none;
+  display: block;
+}
+input,
+textarea {
+  padding: none;
+  border: none;
+  margin: 0;
+  outline: none;
+  resize: none;
+}
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+/* 清除ie中input的默认行为 */
+input,
+button {
+  outline: none!important;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+a:focus {
+  outline: none!important;
+  -moz-outline: none;
+}
+i,
+em {
+  font-style: normal;
+}
+strong,
+b {
+  font-weight: normal;
+}
+table {
+  border-collapse: inherit;
+  border-spacing: 0;
+}
+th,
+td {
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/* base var */
+.down_icon {
+  /* 自定义字体--下拉按钮公用样式； */
+  content: '\e614';
+  font: 16px iconfont;
+  margin-left: 2px;
+}
+/* 主体内容部分 */
+.container {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 131px;
+}
+.top_nav {
+  position: relative;
+  line-height: 45px;
+}
+.top_nav ul {
+  position: absolute;
+  bottom: -1px;
+}
+.top_nav ul > li a {
+  display: block;
+  width: 100px;
+  height: 45px;
+  line-height: 45px;
+  border: 1px solid #cccccc;
+  background-color: #eeeeee;
+  color: #666666;
+  text-align: center;
+  font-size: 16px;
+}
+.top_nav ul > li a:hover {
+  border-top: 3px solid #3bafe5;
+  background-color: #ffffff;
+}
+.top_nav ul > li.first a {
+  border-right: none;
+}
+.top_nav ul > li.active a {
+  border-top: 3px solid #3bafe5;
+  background-color: #ffffff;
+  cursor: default;
+}
+.top_nav .allDetailsearch {
+  position: relative;
+  bottom: 10px;
+  margin-right: 45px;
+}
+.top_nav .allDetailsearch input {
+  display: inline-block;
+  width: 380px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  border: 1px solid #cccccc;
+}
+.top_nav .allDetailsearch input:focus {
+  border: 1px solid #fff;
+  border: 1px solid #ccc\9;
+  line-height: 38px\9;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+.top_nav .allDetailsearch i {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 22px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.top_nav .timeDetails {
+  position: relative;
+  bottom: 10px;
+  border: none;
+  margin-right: 25px;
+}
+.top_nav .timeDetails a {
+  height: 40px;
+  line-height: 40px;
+  padding-right: 20px;
+  color: #2290d6;
+}
+.top_nav .timeDetails a.break {
+  width: 20px;
+  background: url(../img/break.png) no-repeat center center;
+}
+.top_nav .timeDetails a.active {
+  color: #666;
+}
+.tit_sort {
+  padding: 23px 0;
+  border: 1px solid #cccccc;
+}
+.tit_sort .tit_list > li,
+.tit_sort .tit_check > span,
+.tit_sort .tit_check > a {
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #cccccc;
+  margin-right: 20px;
+  cursor: pointer;
+  -ms-transition: .3s;
+  transition: .3s;
+}
+.tit_sort .tit_check > a.check {
+  height: 34px;
+  line-height: 34px;
+  padding: 0 20px;
+  margin-right: 20px;
+  border: 1px solid #cccccc;
+  color: #888;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.tit_sort .tit_check > a.check:active {
+  color: #fff;
+}
+.tit_sort .tit_check .check {
+  background-image: -moz-linear-gradient(top, #ffffff, #d3d7de);
+  background-image: -ms-linear-gradient(top, #ffffff, #d3d7de);
+  background-image: -webkit-linear-gradient(top, #ffffff, #d3d7de);
+  background-image: linear-gradient(top, #ffffff, #d3d7de);
+}
+.tit_sort .tit_list > li:first-child {
+  margin-left: 20px;
+}
+.tit_sort .tit_list > li.active,
+.tit_sort .tit_check span.active {
+  border: 1px solid #49c2f9;
+  color: #fff;
+  background-color: #49c2f9;
+}
+.tit_sort .tit_list > li.active > a {
+  color: #fff;
+  cursor: default;
+}
+.tit_sort .tit_list > li {
+  cursor: pointer;
+}
+.tit_sort .tit_list > li i.down_btn {
+  font: 16px iconfont;
+}
+.tit_sort .tit_list > li a {
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px;
+}
+.tit_sort .tit_check > a i.export_icon:after {
+  content: '\e615';
+  font: 16px iconfont;
+  line-height: 34px;
+  margin-right: 5px;
+}
+.tit_sort .tit_check > a.fr {
+  border: none;
+}
+.tit_sort .tit_check > a.fr:hover {
+  color: #49c2f9;
+}
+.tit_sort .tit_check > a.fr:hover i.export_icon:after {
+  color: #49c2f9;
+}
+.data_cont {
+  width: 100%;
+  border-left: 1px solid #cccccc;
+}
+.data_cont thead th,
+.data_cont tbody td {
+  height: 50px;
+  font-weight: normal;
+  border: 1px solid #cccccc;
+  border-top: none;
+  border-left: none;
+  text-align: center;
+}
+.data_cont thead th input,
+.data_cont tbody td input {
+  margin-top: 4px;
+}
+.data_cont thead th.clearfix {
+  width: 20%;
+}
+.data_cont thead th.clearfix div.th_check {
+  position: relative;
+  width: 210px;
+  max-width: 210px;
+  font-size: 16px;
+  margin: 0 auto;
+  color: #555;
+}
+.data_cont thead th.clearfix div.th_check form {
+  position: relative;
+  padding: 0 25px;
+  cursor: pointer;
+  transition: .5s;
+}
+.data_cont thead th.clearfix div.th_check .check_sort {
+  -webkit-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.5);
+  /* 点击下拉时添加 */
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.5);
+  /* 点击下拉时添加 */
+}
+.data_cont thead th.clearfix div.th_check form > i.down_btn:after {
+  position: absolute;
+  top: 2px;
+  left: 40px;
+  /* 自定义字体--下拉按钮公用样式； */
+  content: '\e614';
+  font: 16px iconfont;
+  margin-left: 2px;
+}
+.data_cont thead th.clearfix div.th_check div.check_box {
+  display: none;
+  position: absolute;
+  top: 21px;
+  left: 0;
+  z-index: 99;
+  width: 63px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.data_cont thead th.clearfix div.th_check div.check_box span {
+  width: 100%;
+  height: 24px;
+  font-size: 12px;
+  line-height: 24px;
+}
+.data_cont thead th.clearfix div.th_check div.check_box span:hover {
+  color: #49c2f9;
+}
+.data_cont thead th.clearfix div.th_check > span {
+  padding-left: 42px;
+}
+.data_cont thead th {
+  font-size: 16px;
+  color: #555;
+}
+.data_cont tbody tr:hover {
+  background-color: #f5f5f5;
+}
+.data_cont tbody tr.active {
+  background-color: #f5f5f5;
+}
+.data_cont .isbn {
+  width: 20%;
+}
+.data_cont .isbn div {
+  display: inline-block;
+  width: 210px;
+  max-width: 210px;
+}
+.data_cont .td_name {
+  width: 20%;
+}
+.data_cont .td_name div {
+  display: inline-block;
+  width: 207px;
+  max-width: 207px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.data_cont .td_time {
+  width: 11%;
+}
+.data_cont .td_time div {
+  width: 175px;
+  max-width: 175px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.data_cont .td_source {
+  width: 20%;
+}
+.data_cont .td_source div {
+  display: inline-block;
+  width: 207px;
+  max-width: 207px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.data_cont .td_check {
+  width: 11%;
+}
+.data_cont .td_state {
+  width: 11%;
+}
+.data_cont .td_icon {
+  width: 8%;
+}
+.data_cont .td_icon div {
+  width: 71px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.data_cont tbody td div {
+  position: relative;
+}
+.data_cont tbody td div input {
+  position: absolute;
+  left: 25px;
+}
+.data_cont tbody td div span {
+  display: inline-block;
+  max-width: 167px;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.data_cont tbody td a.opreat_check:after {
+  content: '\e616';
+  font: bold 24px iconfont;
+}
+.data_cont tbody td a.opreat_icon:after {
+  content: '\e621';
+  font: 20px iconfont;
+  color: #888;
+  cursor: default;
+}
+.data_cont tbody td a.opreat_icon {
+  cursor: default;
+}
+.data_cont tbody td a.opreat:hover {
+  color: #49c2f9;
+}
+/* 分页部分 */
+.page_box {
+  width: 100%;
+  height: 70px;
+  border: 1px solid #cccccc;
+  border-top: none;
+  margin-bottom: 30px;
+}
+.pagination {
+  font-size: 12px;
+  float: right;
+}
+.pagination a {
+  text-decoration: none;
+  color: #666;
+  border: 1px solid #dedede;
+  background-color: #fff;
+}
+.pagination > a,
+.pagination > span {
+  display: block;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: .3em .7em;
+}
+.pagination > a:hover {
+  border: 1px solid #43b4e8;
+}
+.pagination .total {
+  font-size: 13px;
+  line-height: 10px;
+  margin-top: 4px;
+  color: #666;
+}
+.pagination .current {
+  color: #fff;
+  border: 1px solid #43b4e8;
+  background: none repeat scroll 0 0 #43b4e8;
+}
+.pagination .current.prev,
+.pagination .current.next {
+  color: #999;
+  border-color: #999;
+  background: none repeat scroll 0 0 #fff;
+}
+@media screen and (min-width: 1900px) {
+  .container {
+    width: 1320px;
+  }
+}
+@media screen and (max-width: 1760px) {
+  .container {
+    width: 1100px;
+    margin-left: 290px;
+  }
+}
+@media screen and (max-width: 1660px) {
+  .container {
+    width: 1100px;
+    margin-left: 290px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 1100px;
+    margin-left: 295px;
+  }
+}
+@media screen and (max-width: 1386px) {
+  .container {
+    width: 1080px;
+    margin: 101px 0 0 232px;
+  }
+  .data_cont td div {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .data_cont td div input {
+    position: absolute;
+    left: 25px;
+  }
+  .data_cont td div span {
+    display: block;
+    max-width: 154px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .data_cont td .bookName {
+    width: 200px;
+    max-width: 200px;
+  }
+  .data_cont td a.opreat_check:after {
+    font: 18px iconfont;
+  }
+  .data_cont td a.opreat_icon:after {
+    font: 16px iconfont;
+  }
+  .data_cont .isbn {
+    width: 20%;
+  }
+  .data_cont .isbn div {
+    width: 210px;
+    max-width: 210px;
+  }
+  .data_cont .td_name {
+    width: 20%;
+  }
+  .data_cont .td_name div {
+    width: 150px;
+    max-width: 150px;
+  }
+  .data_cont .td_time {
+    width: 11%;
+  }
+  .data_cont .td_time div {
+    width: 150px;
+    max-width: 150px;
+  }
+  .data_cont .td_source {
+    width: 20%;
+  }
+  .data_cont .td_source div {
+    width: 158px;
+    max-width: 158px;
+  }
+  .data_cont .td_check {
+    width: 10%;
+  }
+  .data_cont .td_check {
+    width: 10%;
+  }
+  .main .leftNav {
+    width: 173px;
+    margin-left: 46px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 1057px;
+    margin-left: 190px;
+  }
+  .top_nav {
+    padding-bottom: 0;
+  }
+  .top_nav .allDetailsearch input {
+    width: 220px;
+  }
+  .top_nav .timeDetails a {
+    padding-right: 10px;
+  }
+  .data_show {
+    margin-top: 28px;
+  }
+  .tit_sort .tit_list > li a {
+    padding: 0 10px;
+  }
+  .main .leftNav {
+    width: 163px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 1064px) {
+  .header h1 {
+    width: 955px;
+  }
+  .container {
+    width: 787px;
+    margin-left: 190px;
+  }
+  .tit_sort .tit_list > li {
+    margin-right: 8px;
+  }
+  .tit_sort .tit_list > li a {
+    padding: 0 4px;
+  }
+  .tit_sort .tit_list > li:first-child {
+    margin-left: 10px;
+  }
+  .tit_sort .tit_check a.check {
+    padding: 0 10px;
+    margin-right: 10px;
+  }
+  .tit_sort .tit_check a:nth-of-type(2) {
+    margin-right: 10px;
+  }
+  .tit_sort .tit_down {
+    width: 100px;
+  }
+  .data_cont thead th.clearfix {
+    width: 20%;
+  }
+  .data_cont thead th.clearfix div.th_check {
+    width: 171px;
+    max-width: 171px;
+  }
+  .data_cont thead th.clearfix div.th_check form {
+    padding: 0 35px 0 15px;
+  }
+  .data_cont thead th.clearfix div.th_check > span {
+    width: 100%;
+    padding-left: 0;
+  }
+  .data_cont thead th.clearfix div.th_check form > i.down_btn:after {
+    left: 28px;
+  }
+  .data_cont .isbn {
+    width: 20%;
+  }
+  .data_cont .isbn div {
+    width: 171px;
+    max-width: 171px;
+  }
+  .data_cont .td_name {
+    width: 20%;
+  }
+  .data_cont .td_name div {
+    width: 171px;
+    max-width: 171px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .data_cont .td_time {
+    width: 11%;
+  }
+  .data_cont .td_time div {
+    width: 94px;
+    max-width: 94px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .data_cont .td_source {
+    width: 20%;
+  }
+  .data_cont .td_source div {
+    width: 171px;
+    max-width: 171px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .data_cont .td_check {
+    width: 11%;
+  }
+  .data_cont .td_state {
+    width: 11%;
+  }
+  .data_cont .td_icon {
+    width: 8%;
+  }
+  .data_cont .td_icon a {
+    width: 56px;
+    max-width: 56px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .data_cont tbody td div input {
+    left: 15px;
+  }
+  .data_cont tbody td div span {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 0;
+  }
+}
